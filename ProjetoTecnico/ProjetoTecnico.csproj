@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13F3966C-8578-41CF-99DE-7EEB7BEEC4E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetoTecnico</RootNamespace>
+    <AssemblyName>ProjetoTecnico</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acao_Tela.cs" />
+    <Compile Include="frmCadastroJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroJuridico.Designer.cs">
+      <DependentUpon>frmCadastroJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enumeradores.cs" />
+    <Compile Include="frmCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroProduto.Designer.cs">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastros.Designer.cs">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroServico.Designer.cs">
+      <DependentUpon>frmCadastroServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFabricantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFabricantes.Designer.cs">
+      <DependentUpon>FrmFabricantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdemServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdemServico.Designer.cs">
+      <DependentUpon>frmOrdemServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarCadastroFisico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarCadastroFisico.Designer.cs">
+      <DependentUpon>frmPesquisarCadastroFisico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPesquisarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesquisarPedidos.Designer.cs">
+      <DependentUpon>FrmPesquisarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPreco.Designer.cs">
+      <DependentUpon>FrmPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPedido2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedido2.Designer.cs">
+      <DependentUpon>FrmPedido2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelecao.Designer.cs">
+      <DependentUpon>frmSelecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastroJuridico.resx">
+      <DependentUpon>frmCadastroJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroProduto.resx">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastros.resx">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroServico.resx">
+      <DependentUpon>frmCadastroServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFabricantes.resx">
+      <DependentUpon>FrmFabricantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdemServico.resx">
+      <DependentUpon>frmOrdemServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarCadastroFisico.resx">
+      <DependentUpon>frmPesquisarCadastroFisico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPesquisarPedidos.resx">
+      <DependentUpon>FrmPesquisarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPreco.resx">
+      <DependentUpon>FrmPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPedido2.resx">
+      <DependentUpon>FrmPedido2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelecao.resx">
+      <DependentUpon>frmSelecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apoio\Apoio.csproj">
+      <Project>{0b0c12f5-8993-4447-8f3a-e81de651a69e}</Project>
+      <Name>Apoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{20f13c37-4b08-44ce-8b9f-77a8b48f80e7}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objetos\Objetos.csproj">
+      <Project>{c31fccfb-e452-452d-ba05-6a6128c3bbf3}</Project>
+      <Name>Objetos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SGN_10_05_2021_1633453034999[1].png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,27 @@
+C:\Users\marca\Desktop\ProjetoTecnico\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\ProjetoTecnico\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\ProjetoTecnico\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.pdb
+D:\ProjetoTecnico\AcessoDados\bin\Debug\AcessoDados.dll.config
+D:\ProjetoTecnico\AcessoDados\bin\Debug\AcessoDados.dll
+D:\ProjetoTecnico\AcessoDados\bin\Debug\AcessoDados.pdb
+D:\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+D:\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+D:\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.dll
+D:\ProjetoTecnico\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.pdb

@@ -1,0 +1,22 @@
+C:\Users\marca\Desktop\ProjetoTecnico\Apoio\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Apoio\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\ProjetoTecnico\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\ProjetoTecnico\Apoio\obj\Debug\Apoio.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Apoio\obj\Debug\Apoio.pdb
+D:\ProjetoTecnico\Apoio\bin\Debug\Apoio.dll
+D:\ProjetoTecnico\Apoio\bin\Debug\Apoio.pdb
+D:\ProjetoTecnico\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
+D:\ProjetoTecnico\Apoio\obj\Debug\Apoio.dll
+D:\ProjetoTecnico\Apoio\obj\Debug\Apoio.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Apoio\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\Informax\Informax2\Apoio\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Apoio\obj\Debug\Apoio.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\Informax\Informax2\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\Informax\Informax2\Apoio\obj\Debug\Apoio.dll
+C:\Users\marca\Desktop\Informax\Informax2\Apoio\obj\Debug\Apoio.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Apoio\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Apoio\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Apoio\obj\Debug\Apoio.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Apoio\obj\Debug\Apoio.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Apoio\obj\Debug\Apoio.pdb

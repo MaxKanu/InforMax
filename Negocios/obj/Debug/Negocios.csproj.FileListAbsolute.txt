@@ -1,0 +1,70 @@
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\Negocios.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\Negocios.pdb
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\Objetos.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\bin\Debug\Objetos.pdb
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\obj\Debug\Negocios.dll
+C:\Users\marca\Desktop\ProjetoTecnico\Negocios\obj\Debug\Negocios.pdb
+D:\ProjetoTecnico\Negocios\bin\Debug\Negocios.dll
+D:\ProjetoTecnico\Negocios\bin\Debug\Negocios.pdb
+D:\ProjetoTecnico\Negocios\bin\Debug\AcessoDados.dll
+D:\ProjetoTecnico\Negocios\bin\Debug\Apoio.dll
+D:\ProjetoTecnico\Negocios\bin\Debug\Objetos.dll
+D:\ProjetoTecnico\Negocios\bin\Debug\AcessoDados.pdb
+D:\ProjetoTecnico\Negocios\bin\Debug\AcessoDados.dll.config
+D:\ProjetoTecnico\Negocios\bin\Debug\Apoio.pdb
+D:\ProjetoTecnico\Negocios\bin\Debug\Objetos.pdb
+D:\ProjetoTecnico\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+D:\ProjetoTecnico\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+D:\ProjetoTecnico\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+D:\ProjetoTecnico\Negocios\obj\Debug\Negocios.dll
+D:\ProjetoTecnico\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\AcessoDados.dll
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\Apoio.dll
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\Objetos.dll
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\AcessoDados.pdb
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\AcessoDados.dll.config
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\Apoio.pdb
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\bin\Debug\Objetos.pdb
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Marco Lau\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\Negocios.dll
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\Objetos.dll
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\bin\Debug\Objetos.pdb
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.dll
+C:\Users\marca\Desktop\Informax\Informax2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\Negocios.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\Objetos.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\bin\Debug\Objetos.pdb
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\obj\Debug\Negocios.dll
+C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Negocios\obj\Debug\Negocios.pdb
