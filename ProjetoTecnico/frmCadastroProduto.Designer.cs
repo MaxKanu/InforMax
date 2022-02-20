@@ -35,9 +35,6 @@
             this.BtnSair = new System.Windows.Forms.Button();
             this.PnPrincipal = new System.Windows.Forms.Panel();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
-            this.IdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboFabricante = new System.Windows.Forms.ComboBox();
             this.LblFabricante = new System.Windows.Forms.Label();
             this.LblCadastro = new System.Windows.Forms.Label();
@@ -47,6 +44,9 @@
             this.LblId = new System.Windows.Forms.Label();
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.IdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnBotoes.SuspendLayout();
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -141,27 +141,6 @@
             this.dgwPrincipal.TabIndex = 8;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
             // 
-            // IdProduto
-            // 
-            this.IdProduto.DataPropertyName = "IdProduto";
-            this.IdProduto.HeaderText = "Id_Produto";
-            this.IdProduto.Name = "IdProduto";
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "Descricao";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Width = 250;
-            // 
-            // Fabricante
-            // 
-            this.Fabricante.DataPropertyName = "Fabricante.Descricao";
-            this.Fabricante.HeaderText = "Fabricante";
-            this.Fabricante.Name = "Fabricante";
-            this.Fabricante.ReadOnly = true;
-            this.Fabricante.Width = 300;
-            // 
             // comboFabricante
             // 
             this.comboFabricante.Font = new System.Drawing.Font("Segoe Print", 9F);
@@ -252,6 +231,27 @@
             this.lblTitulo.Size = new System.Drawing.Size(259, 38);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Cadastro De Produtos";
+            // 
+            // IdProduto
+            // 
+            this.IdProduto.DataPropertyName = "IdProdutos";
+            this.IdProduto.HeaderText = "Id_Produto";
+            this.IdProduto.Name = "IdProduto";
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "Descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.Width = 250;
+            // 
+            // Fabricante
+            // 
+            this.Fabricante.DataPropertyName = "Fabricante.Descricao";
+            this.Fabricante.HeaderText = "Fabricante";
+            this.Fabricante.Name = "Fabricante";
+            this.Fabricante.ReadOnly = true;
+            this.Fabricante.Width = 300;
             // 
             // frmCadastroProduto
             // 

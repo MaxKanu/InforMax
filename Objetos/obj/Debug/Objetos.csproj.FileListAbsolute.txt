@@ -21,3 +21,9 @@ C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Objetos\obj\Debug\Obje
 C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Objetos\obj\Debug\Objetos.csproj.CoreCompileInputs.cache
 C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Objetos\obj\Debug\Objetos.dll
 C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\Objetos\obj\Debug\Objetos.pdb
+C:\Users\marca\Desktop\InforMax1\Objetos\bin\Debug\Objetos.dll
+C:\Users\marca\Desktop\InforMax1\Objetos\bin\Debug\Objetos.pdb
+C:\Users\marca\Desktop\InforMax1\Objetos\obj\Debug\Objetos.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\InforMax1\Objetos\obj\Debug\Objetos.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\InforMax1\Objetos\obj\Debug\Objetos.dll
+C:\Users\marca\Desktop\InforMax1\Objetos\obj\Debug\Objetos.pdb

@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.PnBotoes = new System.Windows.Forms.Panel();
-            this.PnPrincipal = new System.Windows.Forms.Panel();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
+            this.PnPrincipal = new System.Windows.Forms.Panel();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
-            this.comboFabricante = new System.Windows.Forms.ComboBox();
-            this.LblFabricante = new System.Windows.Forms.Label();
             this.LblCadastro = new System.Windows.Forms.Label();
             this.DateNascimento = new System.Windows.Forms.DateTimePicker();
             this.TxtId = new System.Windows.Forms.TextBox();
@@ -62,24 +60,6 @@
             this.PnBotoes.Name = "PnBotoes";
             this.PnBotoes.Size = new System.Drawing.Size(438, 58);
             this.PnBotoes.TabIndex = 3;
-            // 
-            // PnPrincipal
-            // 
-            this.PnPrincipal.Controls.Add(this.dgwPrincipal);
-            this.PnPrincipal.Controls.Add(this.comboFabricante);
-            this.PnPrincipal.Controls.Add(this.LblFabricante);
-            this.PnPrincipal.Controls.Add(this.LblCadastro);
-            this.PnPrincipal.Controls.Add(this.DateNascimento);
-            this.PnPrincipal.Controls.Add(this.TxtId);
-            this.PnPrincipal.Controls.Add(this.TxtNome);
-            this.PnPrincipal.Controls.Add(this.LblId);
-            this.PnPrincipal.Controls.Add(this.LblNome);
-            this.PnPrincipal.Controls.Add(this.lblTitulo);
-            this.PnPrincipal.Location = new System.Drawing.Point(3, 4);
-            this.PnPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PnPrincipal.Name = "PnPrincipal";
-            this.PnPrincipal.Size = new System.Drawing.Size(521, 545);
-            this.PnPrincipal.TabIndex = 2;
             // 
             // BtnNovo
             // 
@@ -125,6 +105,22 @@
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
+            // PnPrincipal
+            // 
+            this.PnPrincipal.Controls.Add(this.dgwPrincipal);
+            this.PnPrincipal.Controls.Add(this.LblCadastro);
+            this.PnPrincipal.Controls.Add(this.DateNascimento);
+            this.PnPrincipal.Controls.Add(this.TxtId);
+            this.PnPrincipal.Controls.Add(this.TxtNome);
+            this.PnPrincipal.Controls.Add(this.LblId);
+            this.PnPrincipal.Controls.Add(this.LblNome);
+            this.PnPrincipal.Controls.Add(this.lblTitulo);
+            this.PnPrincipal.Location = new System.Drawing.Point(3, 4);
+            this.PnPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PnPrincipal.Name = "PnPrincipal";
+            this.PnPrincipal.Size = new System.Drawing.Size(521, 545);
+            this.PnPrincipal.TabIndex = 2;
+            // 
             // dgwPrincipal
             // 
             this.dgwPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -137,25 +133,6 @@
             this.dgwPrincipal.Size = new System.Drawing.Size(519, 337);
             this.dgwPrincipal.TabIndex = 18;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
-            // 
-            // comboFabricante
-            // 
-            this.comboFabricante.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.comboFabricante.FormattingEnabled = true;
-            this.comboFabricante.Location = new System.Drawing.Point(254, 126);
-            this.comboFabricante.Name = "comboFabricante";
-            this.comboFabricante.Size = new System.Drawing.Size(204, 29);
-            this.comboFabricante.TabIndex = 17;
-            // 
-            // LblFabricante
-            // 
-            this.LblFabricante.AutoSize = true;
-            this.LblFabricante.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblFabricante.Location = new System.Drawing.Point(180, 129);
-            this.LblFabricante.Name = "LblFabricante";
-            this.LblFabricante.Size = new System.Drawing.Size(68, 21);
-            this.LblFabricante.TabIndex = 12;
-            this.LblFabricante.Text = "Cadastro:";
             // 
             // LblCadastro
             // 
@@ -231,7 +208,7 @@
             // 
             // IdProduto
             // 
-            this.IdProduto.DataPropertyName = "IdServico";
+            this.IdProduto.DataPropertyName = "IdServicos";
             this.IdProduto.HeaderText = "Id_Produto";
             this.IdProduto.Name = "IdProduto";
             // 
@@ -272,8 +249,6 @@
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnSair;
         private System.Windows.Forms.DataGridView dgwPrincipal;
-        private System.Windows.Forms.ComboBox comboFabricante;
-        private System.Windows.Forms.Label LblFabricante;
         private System.Windows.Forms.Label LblCadastro;
         private System.Windows.Forms.DateTimePicker DateNascimento;
         private System.Windows.Forms.TextBox TxtId;

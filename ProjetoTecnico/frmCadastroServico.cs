@@ -174,13 +174,13 @@ namespace ProjetoTecnico
         {
             NgFa fabricante = new NgFa();
             FabricanteColecao colecao = new FabricanteColecao();
-
+            /*
             comboFabricante.DataSource = null;
             colecao = fabricante.Combo("");
             comboFabricante.DataSource = colecao;
             comboFabricante.DisplayMember = "Descricao";
             comboFabricante.Refresh();
-
+            */
             CarregarGrid();
         }
 

@@ -25,3 +25,10 @@ C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\
 C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
 C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.dll
 C:\Users\marca\Desktop\Arquivos Totais\Informax\Informax2\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\InforMax1\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\InforMax1\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\InforMax1\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.pdb
