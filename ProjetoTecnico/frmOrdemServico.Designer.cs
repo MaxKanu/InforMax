@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.PnPrincipal = new System.Windows.Forms.Panel();
+            this.TxtPercentual = new System.Windows.Forms.TextBox();
+            this.LblPercentual = new System.Windows.Forms.Label();
+            this.TxtQuantidade = new System.Windows.Forms.TextBox();
+            this.LblQuantidade = new System.Windows.Forms.Label();
+            this.TxtDesconto = new System.Windows.Forms.TextBox();
+            this.LblDesconto = new System.Windows.Forms.Label();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
+            this.LblTotal = new System.Windows.Forms.Label();
             this.LblIdTarefa = new System.Windows.Forms.Label();
             this.TxtIdTarefa = new System.Windows.Forms.TextBox();
             this.txtIdPedido = new System.Windows.Forms.TextBox();
@@ -54,19 +62,20 @@
             this.LblProdutos = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.PnBotoes = new System.Windows.Forms.Panel();
+            this.TxtValorTotal = new System.Windows.Forms.TextBox();
+            this.LblValor = new System.Windows.Forms.Label();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.TxtTotal = new System.Windows.Forms.TextBox();
-            this.LblTotal = new System.Windows.Forms.Label();
-            this.TxtDesconto = new System.Windows.Forms.TextBox();
-            this.LblDesconto = new System.Windows.Forms.Label();
-            this.TxtValor = new System.Windows.Forms.TextBox();
-            this.LblValor = new System.Windows.Forms.Label();
-            this.TxtQuantidade = new System.Windows.Forms.TextBox();
-            this.LblQuantidade = new System.Windows.Forms.Label();
+            this.lblteste = new System.Windows.Forms.Label();
+            this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -75,6 +84,8 @@
             // 
             // PnPrincipal
             // 
+            this.PnPrincipal.Controls.Add(this.TxtPercentual);
+            this.PnPrincipal.Controls.Add(this.LblPercentual);
             this.PnPrincipal.Controls.Add(this.TxtQuantidade);
             this.PnPrincipal.Controls.Add(this.LblQuantidade);
             this.PnPrincipal.Controls.Add(this.TxtDesconto);
@@ -110,6 +121,91 @@
             this.PnPrincipal.Name = "PnPrincipal";
             this.PnPrincipal.Size = new System.Drawing.Size(1032, 628);
             this.PnPrincipal.TabIndex = 0;
+            // 
+            // TxtPercentual
+            // 
+            this.TxtPercentual.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtPercentual.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.TxtPercentual.Location = new System.Drawing.Point(424, 281);
+            this.TxtPercentual.MaxLength = 50;
+            this.TxtPercentual.Name = "TxtPercentual";
+            this.TxtPercentual.Size = new System.Drawing.Size(66, 31);
+            this.TxtPercentual.TabIndex = 53;
+            this.TxtPercentual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtPercentual.TextChanged += new System.EventHandler(this.TxtPercentual_TextChanged);
+            // 
+            // LblPercentual
+            // 
+            this.LblPercentual.AutoSize = true;
+            this.LblPercentual.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.LblPercentual.Location = new System.Drawing.Point(373, 284);
+            this.LblPercentual.Name = "LblPercentual";
+            this.LblPercentual.Size = new System.Drawing.Size(45, 24);
+            this.LblPercentual.TabIndex = 52;
+            this.LblPercentual.Text = "Perc:";
+            // 
+            // TxtQuantidade
+            // 
+            this.TxtQuantidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtQuantidade.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.TxtQuantidade.Location = new System.Drawing.Point(110, 281);
+            this.TxtQuantidade.MaxLength = 50;
+            this.TxtQuantidade.Name = "TxtQuantidade";
+            this.TxtQuantidade.Size = new System.Drawing.Size(83, 31);
+            this.TxtQuantidade.TabIndex = 51;
+            this.TxtQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LblQuantidade
+            // 
+            this.LblQuantidade.AutoSize = true;
+            this.LblQuantidade.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.LblQuantidade.Location = new System.Drawing.Point(9, 284);
+            this.LblQuantidade.Name = "LblQuantidade";
+            this.LblQuantidade.Size = new System.Drawing.Size(95, 24);
+            this.LblQuantidade.TabIndex = 50;
+            this.LblQuantidade.Text = "Quantidade:";
+            // 
+            // TxtDesconto
+            // 
+            this.TxtDesconto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtDesconto.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.TxtDesconto.Location = new System.Drawing.Point(579, 281);
+            this.TxtDesconto.MaxLength = 50;
+            this.TxtDesconto.Name = "TxtDesconto";
+            this.TxtDesconto.Size = new System.Drawing.Size(127, 31);
+            this.TxtDesconto.TabIndex = 49;
+            this.TxtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LblDesconto
+            // 
+            this.LblDesconto.AutoSize = true;
+            this.LblDesconto.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.LblDesconto.Location = new System.Drawing.Point(496, 284);
+            this.LblDesconto.Name = "LblDesconto";
+            this.LblDesconto.Size = new System.Drawing.Size(77, 24);
+            this.LblDesconto.TabIndex = 48;
+            this.LblDesconto.Text = "Desconto:";
+            // 
+            // TxtTotal
+            // 
+            this.TxtTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.TxtTotal.Location = new System.Drawing.Point(811, 281);
+            this.TxtTotal.MaxLength = 50;
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.Size = new System.Drawing.Size(127, 31);
+            this.TxtTotal.TabIndex = 47;
+            this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LblTotal
+            // 
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.LblTotal.Location = new System.Drawing.Point(712, 284);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(93, 24);
+            this.LblTotal.TabIndex = 46;
+            this.LblTotal.Text = "Valor Total:";
             // 
             // LblIdTarefa
             // 
@@ -181,6 +277,7 @@
             this.BtnInserir.TabIndex = 15;
             this.BtnInserir.Text = "Inserir";
             this.BtnInserir.UseVisualStyleBackColor = true;
+            this.BtnInserir.Click += new System.EventHandler(this.BtnInserir_Click);
             // 
             // LblCadastro
             // 
@@ -220,6 +317,7 @@
             this.BtnServico.TabIndex = 12;
             this.BtnServico.Text = "...";
             this.BtnServico.UseVisualStyleBackColor = true;
+            this.BtnServico.Click += new System.EventHandler(this.BtnServico_Click);
             // 
             // BtnProdutos
             // 
@@ -230,6 +328,7 @@
             this.BtnProdutos.TabIndex = 9;
             this.BtnProdutos.Text = "...";
             this.BtnProdutos.UseVisualStyleBackColor = true;
+            this.BtnProdutos.Click += new System.EventHandler(this.BtnProdutos_Click);
             // 
             // TxtServico
             // 
@@ -256,10 +355,18 @@
             // dgwPrincipal
             // 
             this.dgwPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdPedido,
+            this.Quant,
+            this.Descricao,
+            this.Valor,
+            this.Desconto,
+            this.Valor_Total});
             this.dgwPrincipal.Location = new System.Drawing.Point(330, 333);
             this.dgwPrincipal.Name = "dgwPrincipal";
             this.dgwPrincipal.Size = new System.Drawing.Size(702, 292);
             this.dgwPrincipal.TabIndex = 16;
+            this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgwPrincipal_CellFormatting);
             // 
             // TxtCliente
             // 
@@ -307,18 +414,19 @@
             // 
             this.TxtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.TxtPreco.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtPreco.Location = new System.Drawing.Point(68, 281);
+            this.TxtPreco.Location = new System.Drawing.Point(267, 281);
             this.TxtPreco.MaxLength = 50;
             this.TxtPreco.Name = "TxtPreco";
-            this.TxtPreco.Size = new System.Drawing.Size(127, 31);
+            this.TxtPreco.Size = new System.Drawing.Size(100, 31);
             this.TxtPreco.TabIndex = 14;
             this.TxtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtPreco.TextChanged += new System.EventHandler(this.TxtPreco_TextChanged);
             // 
             // LblPreco
             // 
             this.LblPreco.AutoSize = true;
             this.LblPreco.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblPreco.Location = new System.Drawing.Point(9, 284);
+            this.LblPreco.Location = new System.Drawing.Point(208, 284);
             this.LblPreco.Name = "LblPreco";
             this.LblPreco.Size = new System.Drawing.Size(53, 24);
             this.LblPreco.TabIndex = 13;
@@ -356,7 +464,8 @@
             // 
             // PnBotoes
             // 
-            this.PnBotoes.Controls.Add(this.TxtValor);
+            this.PnBotoes.Controls.Add(this.lblteste);
+            this.PnBotoes.Controls.Add(this.TxtValorTotal);
             this.PnBotoes.Controls.Add(this.LblValor);
             this.PnBotoes.Controls.Add(this.BtnNovo);
             this.PnBotoes.Controls.Add(this.BtnSalvar);
@@ -368,6 +477,28 @@
             this.PnBotoes.Name = "PnBotoes";
             this.PnBotoes.Size = new System.Drawing.Size(926, 60);
             this.PnBotoes.TabIndex = 1;
+            // 
+            // TxtValorTotal
+            // 
+            this.TxtValorTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtValorTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.TxtValorTotal.Location = new System.Drawing.Point(792, 14);
+            this.TxtValorTotal.MaxLength = 50;
+            this.TxtValorTotal.Name = "TxtValorTotal";
+            this.TxtValorTotal.Size = new System.Drawing.Size(127, 31);
+            this.TxtValorTotal.TabIndex = 49;
+            this.TxtValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtValorTotal.TextChanged += new System.EventHandler(this.TxtValor_TextChanged);
+            // 
+            // LblValor
+            // 
+            this.LblValor.AutoSize = true;
+            this.LblValor.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.LblValor.Location = new System.Drawing.Point(686, 17);
+            this.LblValor.Name = "LblValor";
+            this.LblValor.Size = new System.Drawing.Size(93, 24);
+            this.LblValor.TabIndex = 48;
+            this.LblValor.Text = "Valor Total:";
             // 
             // BtnNovo
             // 
@@ -422,89 +553,61 @@
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // TxtTotal
+            // lblteste
             // 
-            this.TxtTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtTotal.Location = new System.Drawing.Point(811, 281);
-            this.TxtTotal.MaxLength = 50;
-            this.TxtTotal.Name = "TxtTotal";
-            this.TxtTotal.Size = new System.Drawing.Size(127, 31);
-            this.TxtTotal.TabIndex = 47;
-            this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblteste.AutoSize = true;
+            this.lblteste.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.lblteste.Location = new System.Drawing.Point(602, 17);
+            this.lblteste.Name = "lblteste";
+            this.lblteste.Size = new System.Drawing.Size(78, 24);
+            this.lblteste.TabIndex = 50;
+            this.lblteste.Text = "Produtos:";
             // 
-            // LblTotal
+            // IdPedido
             // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblTotal.Location = new System.Drawing.Point(712, 284);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(93, 24);
-            this.LblTotal.TabIndex = 46;
-            this.LblTotal.Text = "Valor Total:";
+            this.IdPedido.DataPropertyName = "Pedidos.IdPedidos";
+            this.IdPedido.HeaderText = "Id_Pedido";
+            this.IdPedido.Name = "IdPedido";
+            this.IdPedido.ReadOnly = true;
+            this.IdPedido.Width = 80;
             // 
-            // TxtDesconto
+            // Quant
             // 
-            this.TxtDesconto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtDesconto.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtDesconto.Location = new System.Drawing.Point(554, 281);
-            this.TxtDesconto.MaxLength = 50;
-            this.TxtDesconto.Name = "TxtDesconto";
-            this.TxtDesconto.Size = new System.Drawing.Size(127, 31);
-            this.TxtDesconto.TabIndex = 49;
-            this.TxtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Quant.DataPropertyName = "Quantidade";
+            this.Quant.HeaderText = "Quantidade";
+            this.Quant.Name = "Quant";
+            this.Quant.ReadOnly = true;
+            this.Quant.Width = 80;
             // 
-            // LblDesconto
+            // Descricao
             // 
-            this.LblDesconto.AutoSize = true;
-            this.LblDesconto.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblDesconto.Location = new System.Drawing.Point(461, 284);
-            this.LblDesconto.Name = "LblDesconto";
-            this.LblDesconto.Size = new System.Drawing.Size(77, 24);
-            this.LblDesconto.TabIndex = 48;
-            this.LblDesconto.Text = "Desconto:";
+            this.Descricao.DataPropertyName = "Precos.Descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Width = 250;
             // 
-            // TxtValor
+            // Valor
             // 
-            this.TxtValor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtValor.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtValor.Location = new System.Drawing.Point(792, 14);
-            this.TxtValor.MaxLength = 50;
-            this.TxtValor.Name = "TxtValor";
-            this.TxtValor.Size = new System.Drawing.Size(127, 31);
-            this.TxtValor.TabIndex = 49;
-            this.TxtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Valor.DataPropertyName = "Precos.ValorUnitario";
+            this.Valor.HeaderText = "Preço";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            this.Valor.Width = 90;
             // 
-            // LblValor
+            // Desconto
             // 
-            this.LblValor.AutoSize = true;
-            this.LblValor.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblValor.Location = new System.Drawing.Point(686, 17);
-            this.LblValor.Name = "LblValor";
-            this.LblValor.Size = new System.Drawing.Size(93, 24);
-            this.LblValor.TabIndex = 48;
-            this.LblValor.Text = "Valor Total:";
+            this.Desconto.DataPropertyName = "Precos.ValorDesconto";
+            this.Desconto.HeaderText = "Desconto";
+            this.Desconto.Name = "Desconto";
+            this.Desconto.Width = 80;
             // 
-            // TxtQuantidade
+            // Valor_Total
             // 
-            this.TxtQuantidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtQuantidade.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtQuantidade.Location = new System.Drawing.Point(316, 281);
-            this.TxtQuantidade.MaxLength = 50;
-            this.TxtQuantidade.Name = "TxtQuantidade";
-            this.TxtQuantidade.Size = new System.Drawing.Size(127, 31);
-            this.TxtQuantidade.TabIndex = 51;
-            this.TxtQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LblQuantidade
-            // 
-            this.LblQuantidade.AutoSize = true;
-            this.LblQuantidade.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblQuantidade.Location = new System.Drawing.Point(215, 284);
-            this.LblQuantidade.Name = "LblQuantidade";
-            this.LblQuantidade.Size = new System.Drawing.Size(95, 24);
-            this.LblQuantidade.TabIndex = 50;
-            this.LblQuantidade.Text = "Quantidade:";
+            this.Valor_Total.DataPropertyName = "Precos.ValorTotal";
+            this.Valor_Total.HeaderText = "Valor_Total";
+            this.Valor_Total.Name = "Valor_Total";
+            this.Valor_Total.ReadOnly = true;
             // 
             // FrmOrdemServico
             // 
@@ -567,9 +670,18 @@
         private System.Windows.Forms.Label LblDesconto;
         private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.Label LblTotal;
-        private System.Windows.Forms.TextBox TxtValor;
+        private System.Windows.Forms.TextBox TxtValorTotal;
         private System.Windows.Forms.Label LblValor;
         private System.Windows.Forms.TextBox TxtQuantidade;
         private System.Windows.Forms.Label LblQuantidade;
+        private System.Windows.Forms.TextBox TxtPercentual;
+        private System.Windows.Forms.Label LblPercentual;
+        private System.Windows.Forms.Label lblteste;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
     }
 }

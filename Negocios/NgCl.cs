@@ -48,7 +48,7 @@ namespace Negocios
             //acesso.AdicionarParametros("@TipoPessoa", cliente.Pessoa.PessoaTipo.IdTipo);
             acesso.AdicionarParametros("@Situacao", cliente.Pessoa.Situacao.IdSituacao);
             //acesso.AdicionarParametros("@Cadastro", cliente.Pessoa.Cadastro);
-            acesso.AdicionarParametros("@Alteracao", cliente.Pessoa.Cadastro);
+            acesso.AdicionarParametros("@Alteracao", cliente.Pessoa.Alteracao);
             //acesso.AdicionarParametros("@DataNascimento", cliente.DataNascimento);
             //acesso.AdicionarParametros("@RG", cliente.Documentos.RG);
             //acesso.AdicionarParametros("@CPF", cliente.Documentos.CPF);

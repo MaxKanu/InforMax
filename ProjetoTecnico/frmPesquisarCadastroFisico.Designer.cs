@@ -34,6 +34,12 @@
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnAlterarJuridico = new System.Windows.Forms.Button();
             this.BtnConsultarJuridico = new System.Windows.Forms.Button();
@@ -42,12 +48,6 @@
             this.BtnAlterFuncio = new System.Windows.Forms.Button();
             this.BtnConsulFuncio = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
             this.panel2.SuspendLayout();
@@ -123,95 +123,6 @@
             this.dgwPrincipal.TabIndex = 0;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataPesquisar_CellFormatting);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.BtnAlterarJuridico);
-            this.panel2.Controls.Add(this.BtnConsultarJuridico);
-            this.panel2.Controls.Add(this.BtnConsCliente);
-            this.panel2.Controls.Add(this.BtnAlterCliente);
-            this.panel2.Controls.Add(this.BtnAlterFuncio);
-            this.panel2.Controls.Add(this.BtnConsulFuncio);
-            this.panel2.Controls.Add(this.BtnSair);
-            this.panel2.Location = new System.Drawing.Point(3, 469);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(713, 57);
-            this.panel2.TabIndex = 1;
-            // 
-            // BtnAlterarJuridico
-            // 
-            this.BtnAlterarJuridico.Font = new System.Drawing.Font("Segoe Print", 7F);
-            this.BtnAlterarJuridico.Location = new System.Drawing.Point(412, 3);
-            this.BtnAlterarJuridico.Name = "BtnAlterarJuridico";
-            this.BtnAlterarJuridico.Size = new System.Drawing.Size(78, 47);
-            this.BtnAlterarJuridico.TabIndex = 10;
-            this.BtnAlterarJuridico.Text = "Alterar Juridico";
-            this.BtnAlterarJuridico.UseVisualStyleBackColor = true;
-            // 
-            // BtnConsultarJuridico
-            // 
-            this.BtnConsultarJuridico.Font = new System.Drawing.Font("Segoe Print", 8F);
-            this.BtnConsultarJuridico.Location = new System.Drawing.Point(509, 3);
-            this.BtnConsultarJuridico.Name = "BtnConsultarJuridico";
-            this.BtnConsultarJuridico.Size = new System.Drawing.Size(82, 47);
-            this.BtnConsultarJuridico.TabIndex = 11;
-            this.BtnConsultarJuridico.Text = "Consultar Juridico";
-            this.BtnConsultarJuridico.UseVisualStyleBackColor = true;
-            // 
-            // BtnConsCliente
-            // 
-            this.BtnConsCliente.Font = new System.Drawing.Font("Segoe Print", 8F);
-            this.BtnConsCliente.Location = new System.Drawing.Point(26, 3);
-            this.BtnConsCliente.Name = "BtnConsCliente";
-            this.BtnConsCliente.Size = new System.Drawing.Size(75, 47);
-            this.BtnConsCliente.TabIndex = 5;
-            this.BtnConsCliente.Text = "Consultar Cliente";
-            this.BtnConsCliente.UseVisualStyleBackColor = true;
-            this.BtnConsCliente.Click += new System.EventHandler(this.BtnConsCliente_Click);
-            // 
-            // BtnAlterCliente
-            // 
-            this.BtnAlterCliente.Font = new System.Drawing.Font("Segoe Print", 8F);
-            this.BtnAlterCliente.Location = new System.Drawing.Point(120, 3);
-            this.BtnAlterCliente.Name = "BtnAlterCliente";
-            this.BtnAlterCliente.Size = new System.Drawing.Size(75, 47);
-            this.BtnAlterCliente.TabIndex = 6;
-            this.BtnAlterCliente.Text = "Alterar Cliente";
-            this.BtnAlterCliente.UseVisualStyleBackColor = true;
-            this.BtnAlterCliente.Click += new System.EventHandler(this.BtnAlterCliente_Click);
-            // 
-            // BtnAlterFuncio
-            // 
-            this.BtnAlterFuncio.Font = new System.Drawing.Font("Segoe Print", 7F);
-            this.BtnAlterFuncio.Location = new System.Drawing.Point(214, 3);
-            this.BtnAlterFuncio.Name = "BtnAlterFuncio";
-            this.BtnAlterFuncio.Size = new System.Drawing.Size(78, 47);
-            this.BtnAlterFuncio.TabIndex = 7;
-            this.BtnAlterFuncio.Text = "Alterar Funcionario";
-            this.BtnAlterFuncio.UseVisualStyleBackColor = true;
-            this.BtnAlterFuncio.Click += new System.EventHandler(this.BtnAlterFuncio_Click);
-            // 
-            // BtnConsulFuncio
-            // 
-            this.BtnConsulFuncio.Font = new System.Drawing.Font("Segoe Print", 8F);
-            this.BtnConsulFuncio.Location = new System.Drawing.Point(311, 3);
-            this.BtnConsulFuncio.Name = "BtnConsulFuncio";
-            this.BtnConsulFuncio.Size = new System.Drawing.Size(82, 47);
-            this.BtnConsulFuncio.TabIndex = 8;
-            this.BtnConsulFuncio.Text = "Consultar Funcionario";
-            this.BtnConsulFuncio.UseVisualStyleBackColor = true;
-            this.BtnConsulFuncio.Click += new System.EventHandler(this.BtnConsulFuncio_Click);
-            // 
-            // BtnSair
-            // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSair.Location = new System.Drawing.Point(610, 3);
-            this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(75, 47);
-            this.BtnSair.TabIndex = 9;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
-            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Pessoa.Id";
@@ -257,6 +168,97 @@
             this.Situacao.HeaderText = "Situacao";
             this.Situacao.Name = "Situacao";
             this.Situacao.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.BtnAlterarJuridico);
+            this.panel2.Controls.Add(this.BtnConsultarJuridico);
+            this.panel2.Controls.Add(this.BtnConsCliente);
+            this.panel2.Controls.Add(this.BtnAlterCliente);
+            this.panel2.Controls.Add(this.BtnAlterFuncio);
+            this.panel2.Controls.Add(this.BtnConsulFuncio);
+            this.panel2.Controls.Add(this.BtnSair);
+            this.panel2.Location = new System.Drawing.Point(3, 469);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(713, 57);
+            this.panel2.TabIndex = 1;
+            // 
+            // BtnAlterarJuridico
+            // 
+            this.BtnAlterarJuridico.Font = new System.Drawing.Font("Segoe Print", 7F);
+            this.BtnAlterarJuridico.Location = new System.Drawing.Point(417, 3);
+            this.BtnAlterarJuridico.Name = "BtnAlterarJuridico";
+            this.BtnAlterarJuridico.Size = new System.Drawing.Size(78, 47);
+            this.BtnAlterarJuridico.TabIndex = 10;
+            this.BtnAlterarJuridico.Text = "Alterar Juridico";
+            this.BtnAlterarJuridico.UseVisualStyleBackColor = true;
+            this.BtnAlterarJuridico.Click += new System.EventHandler(this.BtnAlterarJuridico_Click);
+            // 
+            // BtnConsultarJuridico
+            // 
+            this.BtnConsultarJuridico.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnConsultarJuridico.Location = new System.Drawing.Point(517, 3);
+            this.BtnConsultarJuridico.Name = "BtnConsultarJuridico";
+            this.BtnConsultarJuridico.Size = new System.Drawing.Size(82, 47);
+            this.BtnConsultarJuridico.TabIndex = 11;
+            this.BtnConsultarJuridico.Text = "Consultar Juridico";
+            this.BtnConsultarJuridico.UseVisualStyleBackColor = true;
+            this.BtnConsultarJuridico.Click += new System.EventHandler(this.BtnConsultarJuridico_Click);
+            // 
+            // BtnConsCliente
+            // 
+            this.BtnConsCliente.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnConsCliente.Location = new System.Drawing.Point(116, 3);
+            this.BtnConsCliente.Name = "BtnConsCliente";
+            this.BtnConsCliente.Size = new System.Drawing.Size(75, 47);
+            this.BtnConsCliente.TabIndex = 5;
+            this.BtnConsCliente.Text = "Consultar Cliente";
+            this.BtnConsCliente.UseVisualStyleBackColor = true;
+            this.BtnConsCliente.Click += new System.EventHandler(this.BtnConsCliente_Click);
+            // 
+            // BtnAlterCliente
+            // 
+            this.BtnAlterCliente.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnAlterCliente.Location = new System.Drawing.Point(19, 3);
+            this.BtnAlterCliente.Name = "BtnAlterCliente";
+            this.BtnAlterCliente.Size = new System.Drawing.Size(75, 47);
+            this.BtnAlterCliente.TabIndex = 6;
+            this.BtnAlterCliente.Text = "Alterar Cliente";
+            this.BtnAlterCliente.UseVisualStyleBackColor = true;
+            this.BtnAlterCliente.Click += new System.EventHandler(this.BtnAlterCliente_Click);
+            // 
+            // BtnAlterFuncio
+            // 
+            this.BtnAlterFuncio.Font = new System.Drawing.Font("Segoe Print", 7F);
+            this.BtnAlterFuncio.Location = new System.Drawing.Point(213, 3);
+            this.BtnAlterFuncio.Name = "BtnAlterFuncio";
+            this.BtnAlterFuncio.Size = new System.Drawing.Size(78, 47);
+            this.BtnAlterFuncio.TabIndex = 7;
+            this.BtnAlterFuncio.Text = "Alterar Funcionario";
+            this.BtnAlterFuncio.UseVisualStyleBackColor = true;
+            this.BtnAlterFuncio.Click += new System.EventHandler(this.BtnAlterFuncio_Click);
+            // 
+            // BtnConsulFuncio
+            // 
+            this.BtnConsulFuncio.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnConsulFuncio.Location = new System.Drawing.Point(313, 3);
+            this.BtnConsulFuncio.Name = "BtnConsulFuncio";
+            this.BtnConsulFuncio.Size = new System.Drawing.Size(82, 47);
+            this.BtnConsulFuncio.TabIndex = 8;
+            this.BtnConsulFuncio.Text = "Consultar Funcionario";
+            this.BtnConsulFuncio.UseVisualStyleBackColor = true;
+            this.BtnConsulFuncio.Click += new System.EventHandler(this.BtnConsulFuncio_Click);
+            // 
+            // BtnSair
+            // 
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSair.Location = new System.Drawing.Point(621, 3);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(75, 47);
+            this.BtnSair.TabIndex = 9;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // frmPesquisarCadastroFisico
             // 

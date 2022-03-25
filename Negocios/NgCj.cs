@@ -12,70 +12,65 @@ namespace Negocios
     public class NgCj
     {
         Asqlbd acesso = new Asqlbd();
-        public string Inserir(PessoaJuridica cliente)
+        public string Inserir(PessoaJuridica juridica)
         {
             acesso.LimparParametros();
-            acesso.AdicionarParametros("@Nome", cliente.Pessoa.Nome);
-            acesso.AdicionarParametros("@PessoaTipo", cliente.Pessoa.PessoaTipo.IdTipo);
-            acesso.AdicionarParametros("@Situacao", cliente.Pessoa.Situacao.IdSituacao);//Ficou Faltando
-            acesso.AdicionarParametros("@Cadastro", cliente.Pessoa.Cadastro);
-            acesso.AdicionarParametros("@Data_Registro", cliente.DataRegistro);
-            acesso.AdicionarParametros("@Nome_Fantasia", cliente.NomeFantasia);
-            acesso.AdicionarParametros("@CNPJ", cliente.Documentos.CNPJ);
-            acesso.AdicionarParametros("@IE", cliente.Documentos.IE);
-            acesso.AdicionarParametros("@Rua", cliente.Endereco.Rua);
-            acesso.AdicionarParametros("@Numero", cliente.Endereco.Numero);
-            acesso.AdicionarParametros("@Complemento1", cliente.Endereco.Complemento1);
-            acesso.AdicionarParametros("@Complemento2", cliente.Endereco.Complemento2);
-            acesso.AdicionarParametros("@CEP", cliente.Endereco.CEP);
-            acesso.AdicionarParametros("@Bairro", cliente.Endereco.Bairro);
-            acesso.AdicionarParametros("@Cidade", cliente.Endereco.Cidade);
-            acesso.AdicionarParametros("@Estado", cliente.Endereco.UF);
-            acesso.AdicionarParametros("@Fixo1", cliente.Telefone.Fixo1);
-            acesso.AdicionarParametros("@Fixo2", cliente.Telefone.Fixo2);
-            acesso.AdicionarParametros("@Celular1", cliente.Telefone.Celular1);
-            acesso.AdicionarParametros("@Celular2", cliente.Telefone.Celular2);
-            acesso.AdicionarParametros("@Email1", cliente.Email.Email1);
-            acesso.AdicionarParametros("@Email2", cliente.Email.Email2);
+            acesso.AdicionarParametros("@Nome", juridica.Pessoa.Nome);
+            acesso.AdicionarParametros("@PessoaTipo", juridica.Pessoa.PessoaTipo.IdTipo);
+            acesso.AdicionarParametros("@Situacao", juridica.Pessoa.Situacao.IdSituacao);//Ficou Faltando
+            acesso.AdicionarParametros("@Cadastro", juridica.Pessoa.Cadastro);
+            acesso.AdicionarParametros("@Data_Registro", juridica.DataRegistro);
+            acesso.AdicionarParametros("@Nome_Fantasia", juridica.NomeFantasia);
+            acesso.AdicionarParametros("@CNPJ", juridica.Documentos.CNPJ);
+            acesso.AdicionarParametros("@IE", juridica.Documentos.IE);
+            acesso.AdicionarParametros("@Rua", juridica.Endereco.Rua);
+            acesso.AdicionarParametros("@Numero", juridica.Endereco.Numero);
+            acesso.AdicionarParametros("@Complemento1", juridica.Endereco.Complemento1);
+            acesso.AdicionarParametros("@Complemento2", juridica.Endereco.Complemento2);
+            acesso.AdicionarParametros("@CEP", juridica.Endereco.CEP);
+            acesso.AdicionarParametros("@Bairro", juridica.Endereco.Bairro);
+            acesso.AdicionarParametros("@Cidade", juridica.Endereco.Cidade);
+            acesso.AdicionarParametros("@Estado", juridica.Endereco.UF);
+            acesso.AdicionarParametros("@Fixo1", juridica.Telefone.Fixo1);
+            acesso.AdicionarParametros("@Fixo2", juridica.Telefone.Fixo2);
+            acesso.AdicionarParametros("@Celular1", juridica.Telefone.Celular1);
+            acesso.AdicionarParametros("@Celular2", juridica.Telefone.Celular2);
+            acesso.AdicionarParametros("@Email1", juridica.Email.Email1);
+            acesso.AdicionarParametros("@Email2", juridica.Email.Email2);
 
             string IdCliente = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspInserirCadastroJuridico").ToString();
             return IdCliente;
         }
-        public string Alterar(PessoaJuridica cliente)
+        public string Alterar(PessoaJuridica juridica)
         {
             acesso.LimparParametros();
-            acesso.AdicionarParametros("@IdCliente", cliente.Pessoa.Id);
-            //acesso.AdicionarParametros("@Nome", cliente.Pessoa.Nome);
-            //acesso.AdicionarParametros("@TipoPessoa", cliente.Pessoa.PessoaTipo.IdTipo);
-            acesso.AdicionarParametros("@Situacao", cliente.Pessoa.Situacao.IdSituacao);
-            //acesso.AdicionarParametros("@Cadastro", cliente.Pessoa.Cadastro);
-            acesso.AdicionarParametros("@Alteracao", cliente.Pessoa.Cadastro);
-            //acesso.AdicionarParametros("@DataNascimento", cliente.DataNascimento);
-            //acesso.AdicionarParametros("@RG", cliente.Documentos.RG);
-            //acesso.AdicionarParametros("@CPF", cliente.Documentos.CPF);
-            acesso.AdicionarParametros("@Rua", cliente.Endereco.Rua);
-            acesso.AdicionarParametros("@Numero", cliente.Endereco.Numero);
-            acesso.AdicionarParametros("@Complemento1", cliente.Endereco.Complemento1);
-            acesso.AdicionarParametros("@Complemento2", cliente.Endereco.Complemento2);
-            acesso.AdicionarParametros("@Cep", cliente.Endereco.CEP);
-            acesso.AdicionarParametros("@Bairro", cliente.Endereco.Bairro);
-            acesso.AdicionarParametros("@Cidade", cliente.Endereco.Cidade);
-            acesso.AdicionarParametros("@Estado", cliente.Endereco.UF);
-            acesso.AdicionarParametros("@Fixo1", cliente.Telefone.Fixo1);
-            acesso.AdicionarParametros("@Fixo2", cliente.Telefone.Fixo2);
-            acesso.AdicionarParametros("@Celular1", cliente.Telefone.Celular1);
-            acesso.AdicionarParametros("@Celular2", cliente.Telefone.Celular2);
-            acesso.AdicionarParametros("@Email1", cliente.Email.Email1);
-            acesso.AdicionarParametros("@Email2", cliente.Email.Email2);
+            acesso.AdicionarParametros("@IdJuridico", juridica.Pessoa.Id);
+            acesso.AdicionarParametros("@Situacao", juridica.Pessoa.Situacao.IdSituacao);
+            acesso.AdicionarParametros("@Alteracao", juridica.Pessoa.Alteracao);
+            acesso.AdicionarParametros("@Nome_Fantasia", juridica.NomeFantasia);
+            acesso.AdicionarParametros("@Rua", juridica.Endereco.Rua);
+            acesso.AdicionarParametros("@Numero", juridica.Endereco.Numero);
+            acesso.AdicionarParametros("@Complemento1", juridica.Endereco.Complemento1);
+            acesso.AdicionarParametros("@Complemento2", juridica.Endereco.Complemento2);
+            acesso.AdicionarParametros("@Cep", juridica.Endereco.CEP);
+            acesso.AdicionarParametros("@Bairro", juridica.Endereco.Bairro);
+            acesso.AdicionarParametros("@Cidade", juridica.Endereco.Cidade);
+            acesso.AdicionarParametros("@Estado", juridica.Endereco.UF);
+            acesso.AdicionarParametros("@Fixo1", juridica.Telefone.Fixo1);
+            acesso.AdicionarParametros("@Fixo2", juridica.Telefone.Fixo2);
+            acesso.AdicionarParametros("@Celular1", juridica.Telefone.Celular1);
+            acesso.AdicionarParametros("@Celular2", juridica.Telefone.Celular2);
+            acesso.AdicionarParametros("@Email1", juridica.Email.Email1);
+            acesso.AdicionarParametros("@Email2", juridica.Email.Email2);
 
-            string IdCliente = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspAlterarFisico").ToString();
+            string IdCliente = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspAlterarJuridico").ToString();
             return IdCliente;
         }
 
-        public string Deletar(PessoaJuridica cliente)
+        public string Deletar(PessoaJuridica juridica)
         {
             acesso.LimparParametros();
-            acesso.AdicionarParametros("@IdCliente", cliente.Pessoa.Id);
+            acesso.AdicionarParametros("@IdCliente", juridica.Pessoa.Id);
 
             string IdCliente = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "").ToString();
             return IdCliente;
@@ -93,44 +88,44 @@ namespace Negocios
                 foreach (DataRow linha in table.Rows)
                 {
 
-                    PessoaJuridica fisico = new PessoaJuridica
+                    PessoaJuridica juridica = new PessoaJuridica
                     {
                         Pessoa = new Pessoa()
                     };
-                    fisico.Pessoa.PessoaTipo = new PessoaTipo();
-                    fisico.Pessoa.Situacao = new Situacoes();
-                    fisico.Documentos = new DocumentosJuridicos();
-                    fisico.Telefone = new Telefone();
-                    fisico.Email = new Email();
-                    fisico.Endereco = new Endereco();
+                    juridica.Pessoa.PessoaTipo = new PessoaTipo();
+                    juridica.Pessoa.Situacao = new Situacoes();
+                    juridica.Documentos = new DocumentosJuridicos();
+                    juridica.Telefone = new Telefone();
+                    juridica.Email = new Email();
+                    juridica.Endereco = new Endereco();
                     
 
-                    fisico.Pessoa.Id = Convert.ToInt32(linha["IdJuridico"]);
-                    fisico.Pessoa.Nome = Convert.ToString(linha["Nome"]);
-                    fisico.NomeFantasia = Convert.ToString(linha["Nome_Fantasia"]);
-                    fisico.DataRegistro = Convert.ToDateTime(linha["Data_Registro"]);
-                    fisico.Pessoa.Cadastro = Convert.ToDateTime(linha["Cadastro"]);
-                    fisico.Documentos.IE = Convert.ToString(linha["IE"]);
-                    fisico.Documentos.CNPJ = Convert.ToString(linha["CNPJ"]);
-                    fisico.Pessoa.PessoaTipo.Descricao = Convert.ToString(linha["Tipo_Pessoa"]);
-                    fisico.Pessoa.Situacao.Situacao = Convert.ToString(linha["Situacao"]);
+                    juridica.Pessoa.Id = Convert.ToInt32(linha["IdJuridico"]);
+                    juridica.Pessoa.Nome = Convert.ToString(linha["Nome"]);
+                    juridica.NomeFantasia = Convert.ToString(linha["Nome_Fantasia"]);
+                    juridica.DataRegistro = Convert.ToDateTime(linha["Data_Registro"]);
+                    juridica.Pessoa.Cadastro = Convert.ToDateTime(linha["Cadastro"]);
+                    juridica.Documentos.IE = Convert.ToString(linha["IE"]);
+                    juridica.Documentos.CNPJ = Convert.ToString(linha["CNPJ"]);
+                    juridica.Pessoa.PessoaTipo.Descricao = Convert.ToString(linha["Tipo_Pessoa"]);
+                    juridica.Pessoa.Situacao.Situacao = Convert.ToString(linha["Situacao"]);
                     //fisico.Pessoa.Alteracao = Convert.ToDateTime(linha["Alteracao"]);
-                    fisico.Endereco.Rua = Convert.ToString(linha["Rua"]);
-                    fisico.Endereco.Numero = Convert.ToString(linha["Numero"]);
-                    fisico.Endereco.Complemento1 = Convert.ToString(linha["Complemento1"]);
-                    fisico.Endereco.Complemento2 = Convert.ToString(linha["Complemento2"]);
-                    fisico.Endereco.CEP = Convert.ToString(linha["CEP"]);
-                    fisico.Endereco.Bairro = Convert.ToString(linha["Bairro"]);
-                    fisico.Endereco.Cidade = Convert.ToString(linha["Cidade"]);
-                    fisico.Endereco.UF = Convert.ToString(linha["Estado"]);
-                    fisico.Telefone.Fixo1 = Convert.ToString(linha["Fixo1"]);
-                    fisico.Telefone.Fixo2 = Convert.ToString(linha["Fixo2"]);
-                    fisico.Telefone.Celular1 = Convert.ToString(linha["Celular1"]);
-                    fisico.Telefone.Celular2 = Convert.ToString(linha["Celular2"]);
-                    fisico.Email.Email1 = Convert.ToString(linha["Email1"]);
-                    fisico.Email.Email2 = Convert.ToString(linha["Email2"]);
+                    juridica.Endereco.Rua = Convert.ToString(linha["Rua"]);
+                    juridica.Endereco.Numero = Convert.ToString(linha["Numero"]);
+                    juridica.Endereco.Complemento1 = Convert.ToString(linha["Complemento1"]);
+                    juridica.Endereco.Complemento2 = Convert.ToString(linha["Complemento2"]);
+                    juridica.Endereco.CEP = Convert.ToString(linha["CEP"]);
+                    juridica.Endereco.Bairro = Convert.ToString(linha["Bairro"]);
+                    juridica.Endereco.Cidade = Convert.ToString(linha["Cidade"]);
+                    juridica.Endereco.UF = Convert.ToString(linha["Estado"]);
+                    juridica.Telefone.Fixo1 = Convert.ToString(linha["Fixo1"]);
+                    juridica.Telefone.Fixo2 = Convert.ToString(linha["Fixo2"]);
+                    juridica.Telefone.Celular1 = Convert.ToString(linha["Celular1"]);
+                    juridica.Telefone.Celular2 = Convert.ToString(linha["Celular2"]);
+                    juridica.Email.Email1 = Convert.ToString(linha["Email1"]);
+                    juridica.Email.Email2 = Convert.ToString(linha["Email2"]);
 
-                    colecao.Add(fisico);
+                    colecao.Add(juridica);
                 }
                 return colecao;
             }

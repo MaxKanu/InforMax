@@ -30,6 +30,8 @@ namespace ProjetoTecnico
             InitializeComponent();
             enumSelecionado = enumerador;
             PnCadastro.Enabled = false;
+            ComboTipo.ValueMember = "IdTipo";
+            ComboSituacao.ValueMember = "IdSituacao";
             if (enumerador.Equals(Enumeradores.Fisico))
             {
                 lblTitulo.Text = "Cadastro de Clientes";
@@ -104,6 +106,8 @@ namespace ProjetoTecnico
             if (enumerador.Equals(Enumeradores.AlterarFuncionario))
             {
                 lblTitulo.Text = "Alterar Dados de Funcionarios";
+                ComboTipo.ValueMember = "IdTipo";
+                ComboSituacao.ValueMember = "IdSituacao";
                 TxtId.Text = funcionarios.Pessoa.Id.ToString();
                 TxtNome.Text = funcionarios.Pessoa.Nome;
                 DateNascimento.Value = funcionarios.DataNascimento;
@@ -191,6 +195,10 @@ namespace ProjetoTecnico
                 BtnSalvar.Enabled = false;
                 BtnCancelar.Enabled = false;
                 BtnAtualizar.Enabled = true;
+                TxtNome.Enabled = false;
+                DateNascimento.Enabled = false;
+                ComboTipo.Enabled = false;
+                MaskRG.Enabled = false;;
                 BtnNovo.Enabled = false;
                 BtnSair.Enabled = true;
             }
@@ -341,7 +349,7 @@ namespace ProjetoTecnico
         private void BtnAtualizar_Click(object sender, EventArgs e)
         {
 
-            if (enumSelecionado.Equals(Enumeradores.Fisico))
+            if (enumSelecionado.Equals(Enumeradores.AlterarFisico))
             {
                 fisico.Pessoa = new Pessoa
                 {
@@ -384,13 +392,54 @@ namespace ProjetoTecnico
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
             }
-            if (enumSelecionado.Equals(Enumeradores.Funcionario))
+            if (enumSelecionado.Equals(Enumeradores.AlterarFuncionario))
             {
+                funcionarios.Pessoa = new Pessoa
+                {
+                    PessoaTipo = new PessoaTipo(),
+                    Situacao = new Situacoes()
+                };
+                funcionarios.Documentos = new Documentos();
+                funcionarios.Email = new Email();
+                funcionarios.Endereco = new Endereco();
+                funcionarios.Telefone = new Telefone();
 
+                funcionarios.Pessoa.Id = Convert.ToInt32(TxtId.Text);
+                //funcionarios.Pessoa.Nome = TxtNome.Text;
+                //funcionarios.DataNascimento = DateNascimento.Value;
+                //funcionarios.Pessoa.PessoaTipo.IdTipo = Convert.ToInt32(ComboTipo.SelectedValue);
+                //funcionarios.Documentos.RG = MaskRG.Text;
+                //funcionarios.Documentos.CPF = MaskCPF.Text;
+                funcionarios.Pessoa.Alteracao = DateCadastro.Value;
+                funcionarios.Pessoa.Situacao.IdSituacao = Convert.ToInt32(ComboSituacao.SelectedValue);
+                funcionarios.Telefone.Celular1 = MaskCel1.Text;
+                funcionarios.Telefone.Fixo1 = MaskFixo1.Text;
+                funcionarios.Telefone.Celular2 = MaskCel2.Text;
+                funcionarios.Telefone.Fixo2 = MaskFixo2.Text;
+                funcionarios.Email.Email1 = TxtEmail1.Text;
+                funcionarios.Email.Email2 = TxtEmail2.Text;
+                funcionarios.Endereco.Rua = TxtRua.Text;
+                funcionarios.Endereco.Numero = TxtNumero.Text;
+                funcionarios.Endereco.CEP = MaskCEP.Text;
+                funcionarios.Endereco.Bairro = TxtBairro.Text;
+                funcionarios.Endereco.Complemento1 = TxtComplemento1.Text;
+                funcionarios.Endereco.Complemento2 = TxtComplemento2.Text;
+                funcionarios.Endereco.Cidade = TxtCidade.Text;
+                funcionarios.Endereco.UF = MaskUF.Text;
+
+                string retorno = negocioFuncionario.Alterar(funcionarios);
+                try
+                {
+                    int IdFuncionario = Convert.ToInt32(retorno);
+                    MessageBox.Show("Cliente alterado com sucesso! \n\n O codigo alterado foi : " + retorno.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
 

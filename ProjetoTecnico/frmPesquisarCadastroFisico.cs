@@ -18,6 +18,7 @@ namespace ProjetoTecnico
         public Pedidos pedidoSelecionado;
         public ClienteFisico clienteSelecionado;
         public Funcionarios colaboradorSelecionado;
+        public PessoaJuridica juridicoSelecionado;
 
         //Objetos
         PessoaJuridica juridica = new PessoaJuridica();
@@ -269,7 +270,7 @@ namespace ProjetoTecnico
             }
             if (enumSelecionado.Equals(Acao_Tela.Consultar))
             {
-                if (dgwPrincipal.SelectedRows.Count < 0)
+                if (dgwPrincipal.SelectedRows.Count.Equals(0))
                 {
                     MessageBox.Show("Nenhuma linha selecionada");
                     return;
@@ -288,7 +289,7 @@ namespace ProjetoTecnico
         private void BtnAlterFuncio_Click(object sender, EventArgs e)
         {
 
-            if (dgwPrincipal.SelectedRows.Count == 0)
+            if (dgwPrincipal.SelectedRows.Count.Equals(0))
             {
                 MessageBox.Show("Escolha uma opção! ", "Atenção! ");
                 return;
@@ -303,18 +304,44 @@ namespace ProjetoTecnico
 
         private void BtnConsulFuncio_Click(object sender, EventArgs e)
         {
-            if (dgwPrincipal.SelectedRows.Count == 0)
+            if (dgwPrincipal.SelectedRows.Count.Equals(0))
+            {
+                MessageBox.Show("Escolha uma opção! ", "Atenção! ");
+                return;
+            }
+            Funcionarios funcionarioSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as Funcionarios);
+
+            FrmCadastros cadastroFuncionarios = new FrmCadastros(Enumeradores.ConsultarFuncionario, null, funcionarioSelecionado);
+            cadastroFuncionarios.ShowDialog();
+
+        }
+
+        private void BtnAlterarJuridico_Click(object sender, EventArgs e)
+        {
+            if (dgwPrincipal.SelectedRows.Count.Equals(0))
             {
                 MessageBox.Show("Escolha uma opção! ", "Atenção! ");
                 return;
             }
 
-            Funcionarios funcionarioSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as Funcionarios);
+            PessoaJuridica juridicoSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as PessoaJuridica);
 
-            FrmCadastros cadastroFuncionarios = new FrmCadastros(Enumeradores.ConsultarFuncionario, null, funcionarioSelecionado);
-            //cadastroPacientes.MdiParent = new FRMTelaInicial();
-            cadastroFuncionarios.ShowDialog();
+            frmCadastroJuridico cadastroJuridico = new frmCadastroJuridico(Enumeradores.AlterarJuridico, juridicoSelecionado);
+            cadastroJuridico.ShowDialog();
         }
 
+        private void BtnConsultarJuridico_Click(object sender, EventArgs e)
+        {
+            if (dgwPrincipal.SelectedRows.Count.Equals(0))
+            {
+                MessageBox.Show("Escolha uma opção! ", "Atenção! ");
+                return;
+            }
+
+            PessoaJuridica juridicoSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as PessoaJuridica);
+
+            frmCadastroJuridico cadastroJuridico = new frmCadastroJuridico(Enumeradores.ConsultarJuridico, juridicoSelecionado);
+            cadastroJuridico.ShowDialog();
+        }
     }
 }

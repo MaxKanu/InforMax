@@ -27,11 +27,11 @@ namespace ProjetoTecnico
             InitializeComponent();
             enumSelecionado = enumerador;
             PnCadastro.Enabled = false;
+            ComboTipo.ValueMember = "IdTipo";
+            ComboSituacao.ValueMember = "IdSituacao";
             if (enumerador.Equals(Enumeradores.Juridico))
             {
                 lblTitulo.Text = "Cadastro de Cliente Juridico";
-                ComboTipo.ValueMember = "IdTipo";
-                ComboSituacao.ValueMember = "IdSituacao";
                 Botoes(1);
             }
             if (enumerador.Equals(Enumeradores.AlterarJuridico))
@@ -39,6 +39,7 @@ namespace ProjetoTecnico
                 lblTitulo.Text = "Atualização de Cliente Juridico";
                 TxtId.Text = cliente.Pessoa.Id.ToString();
                 TxtNome.Text = cliente.Pessoa.Nome;
+                TxtNomeFantasia.Text = cliente.NomeFantasia;
                 DateNascimento.Value = cliente.DataRegistro;
                 DateCadastro.Value = cliente.Pessoa.Cadastro;
                 ComboSituacao.SelectedValue = cliente.Pessoa.Situacao.IdSituacao.ToString();
@@ -59,6 +60,11 @@ namespace ProjetoTecnico
                 TxtComplemento2.Text = cliente.Endereco.Complemento2;
                 TxtCidade.Text = cliente.Endereco.Cidade;
                 MaskUF.Text = cliente.Endereco.UF;
+                DateCadastro.Enabled = false;
+                DateNascimento.Enabled = false;
+                TxtNome.Enabled = false;
+                MaskCNPJ.Enabled = false;
+                MaskIE.Enabled = false;
                 Botoes(3);
             }
             if (enumerador.Equals(Enumeradores.ConsultarJuridico))
@@ -66,6 +72,7 @@ namespace ProjetoTecnico
                 lblTitulo.Text = "Consultar Cliente Juridico";
                 TxtId.Text = cliente.Pessoa.Id.ToString();
                 TxtNome.Text = cliente.Pessoa.Nome;
+                TxtNomeFantasia.Text = cliente.NomeFantasia;
                 DateNascimento.Value = cliente.DataRegistro;
                 DateCadastro.Value = cliente.Pessoa.Cadastro;
                 ComboSituacao.SelectedValue = cliente.Pessoa.Situacao.IdSituacao.ToString();
@@ -115,6 +122,11 @@ namespace ProjetoTecnico
                 BtnAtualizar.Enabled = false;
                 BtnNovo.Enabled = false;
                 BtnSair.Enabled = true;
+                ComboTipo.Enabled = false;
+                TxtNome.Enabled = false;
+                DateNascimento.Enabled = false;
+                MaskIE.Enabled = false;
+                MaskCNPJ.Enabled = false;
             }
             if (op.Equals(3))
             {
@@ -151,7 +163,7 @@ namespace ProjetoTecnico
             ComboSituacao.DataSource = null;
             situacaoColecao = negocioTipo.CarregarSituacao("");
             ComboSituacao.DataSource = situacaoColecao;
-            ComboSituacao.DisplayMember = "Descricao";
+            ComboSituacao.DisplayMember = "Situacao";
             ComboSituacao.Refresh();
         }
 
@@ -221,19 +233,20 @@ namespace ProjetoTecnico
             juridica.Endereco = new Endereco();
 
             juridica.Pessoa.Id = Convert.ToInt32(TxtId.Text);
-            //juridica.Pessoa.Nome = TxtNome.Text;
-            //juridica.DataNascimento = DateNascimento.Value;
             juridica.Pessoa.Alteracao = DateCadastro.Value;
             juridica.Pessoa.Situacao.IdSituacao = Convert.ToInt32(ComboSituacao.SelectedValue);
             //juridica.Pessoa.PessoaTipo.IdTipo = Convert.ToInt32(ComboTipo.SelectedValue);
+            //juridica.Pessoa.Nome = TxtNome.Text;
+            //juridica.DataNascimento = DateNascimento.Value;
+            //juridica.Documentos.RG = MaskRG.Text;
+            //juridica.Documentos.CPF = MaskCPF.Text;
+            juridica.NomeFantasia = TxtNomeFantasia.Text;
             juridica.Telefone.Celular1 = MaskCel1.Text;
             juridica.Telefone.Fixo1 = MaskFixo1.Text;
             juridica.Telefone.Celular2 = MaskCel2.Text;
             juridica.Telefone.Fixo2 = MaskFixo2.Text;
             juridica.Email.Email1 = TxtEmail1.Text;
             juridica.Email.Email2 = TxtEmail2.Text;
-            //juridica.Documentos.RG = MaskRG.Text;
-            //juridica.Documentos.CPF = MaskCPF.Text;
             juridica.Endereco.Rua = TxtRua.Text;
             juridica.Endereco.Numero = TxtNumero.Text;
             juridica.Endereco.CEP = MaskCEP.Text;

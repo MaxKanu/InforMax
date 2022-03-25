@@ -24,10 +24,10 @@ namespace Negocios
         public string Alterar(Precos precos)
         {
             acesso.LimparParametros();
-            acesso.AdicionarParametros("@Id", precos.Id);
+            acesso.AdicionarParametros("@IdTarefa", precos.Id);
             acesso.AdicionarParametros("@Preco", precos.Preco);
 
-            string IdPreco = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "").ToString();
+            string IdPreco = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspAlterarPreco").ToString();
             return IdPreco;
         }
         public PrecoColecao ConsultarProduto(int? id, string desc)
@@ -36,7 +36,7 @@ namespace Negocios
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@IdTarefas", id);
+                acesso.AdicionarParametros("@IdProdutos", id);
                 acesso.AdicionarParametros("@Descricao", desc);
                 DataTable table = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarPrecosProdutos");
 
@@ -64,7 +64,7 @@ namespace Negocios
             try
             {
                 acesso.LimparParametros();
-                acesso.AdicionarParametros("@IdTarefas", id);
+                acesso.AdicionarParametros("@IdServicos", id);
                 acesso.AdicionarParametros("@Descricao", desc);
                 DataTable table = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarPrecosServicos");
 

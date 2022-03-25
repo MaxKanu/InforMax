@@ -15,7 +15,8 @@ namespace Negocios
         public string InserirItensPedido(ItensDePedido itens)
         {
             acesso.LimparParametros();
-            acesso.AdicionarParametros("@IdProduto", itens.Pedidos.IdPedidos);
+            acesso.AdicionarParametros("@IdPedido", itens.Pedidos.IdPedidos);
+            acesso.AdicionarParametros("@IdProduto", itens.Pedidos.Tarefas.Produtos.IdProdutos);
             acesso.AdicionarParametros("@Quantidade", itens.Quantidade);
             acesso.AdicionarParametros("@ValorUnitario", itens.Precos.ValorUnitario);
             acesso.AdicionarParametros("@Percentual", itens.Precos.Percentual);
@@ -24,6 +25,44 @@ namespace Negocios
 
             string IdItens = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspInserirItensPedidos").ToString();
             return IdItens;
+        }
+        public ItensDePedidoColecao ConsultarPedidos(int? id)
+        {
+            ItensDePedidoColecao colecao = new ItensDePedidoColecao();
+            try
+            {
+                acesso.LimparParametros();
+                acesso.AdicionarParametros("@IdPedido", id);
+                //acesso.AdicionarParametros("@IdCliente", ids);
+                DataTable table = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarItensPedidos");
+
+                foreach (DataRow linha in table.Rows)
+                {
+                    ItensDePedido itens = new ItensDePedido();
+                    itens.Pedidos = new Pedidos();
+                    itens.Precos = new Precos();
+                    itens.Pedidos.Cliente = new ClienteFisico();
+                    itens.Pedidos.Cliente.Pessoa = new Pessoa();
+
+                    itens.Pedidos.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
+                    itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
+                    itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
+                    itens.Precos.Descricao = Convert.ToString(linha["Descricao"]);
+                    itens.Quantidade = Convert.ToInt32(linha["Quantidade"]);
+                    itens.Precos.ValorUnitario = Convert.ToDecimal(linha["ValorUnitario"]);
+                    itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
+                    itens.Precos.ValorDesconto = Convert.ToDecimal(linha["ValorDesconto"]);
+                    itens.Precos.ValorTotal = Convert.ToDecimal(linha["ValorTotal"]);
+
+                    colecao.Add(itens);
+                }
+                return colecao;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

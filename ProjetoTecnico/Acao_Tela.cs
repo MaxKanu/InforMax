@@ -10,9 +10,13 @@ namespace ProjetoTecnico
     {
         Alterar,
         AlterarCliente,
+        AlterarProduto,
+        AlterarServico,
         AlterarFuncionario,
         AlterarJuridico,
         Consultar,
+        ConsultarProdutos,
+        ConsultarServicos,
         ConsultarCliente,
         ConsultarJuridico,
         ConsultarFuncionario,
@@ -26,6 +30,7 @@ namespace ProjetoTecnico
         InserirServico,
         InserirCliente,
         InserirFuncionario,
-        InserirJuridico
+        InserirJuridico,
+        PesquisarPedidos
     }
 }

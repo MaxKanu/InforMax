@@ -45,15 +45,9 @@ namespace Negocios
         public string Alterar(Funcionarios funcionarios)
         {
             acesso.LimparParametros();
-            acesso.AdicionarParametros("@IdCliente", funcionarios.Pessoa.Id);
-            //acesso.AdicionarParametros("@Nome", cliente.Pessoa.Nome);
-            //acesso.AdicionarParametros("@TipoPessoa", cliente.Pessoa.PessoaTipo.IdTipo);
+            acesso.AdicionarParametros("@IdFuncionario", funcionarios.Pessoa.Id);
             acesso.AdicionarParametros("@Situacao", funcionarios.Pessoa.Situacao.IdSituacao);
-            //acesso.AdicionarParametros("@Cadastro", cliente.Pessoa.Cadastro);
-            acesso.AdicionarParametros("@Alteracao", funcionarios.Pessoa.Cadastro);
-            //acesso.AdicionarParametros("@DataNascimento", cliente.DataNascimento);
-            //acesso.AdicionarParametros("@RG", cliente.Documentos.RG);
-            //acesso.AdicionarParametros("@CPF", cliente.Documentos.CPF);
+            acesso.AdicionarParametros("@Alteracao", funcionarios.Pessoa.Alteracao);
             acesso.AdicionarParametros("@Rua", funcionarios.Endereco.Rua);
             acesso.AdicionarParametros("@Numero", funcionarios.Endereco.Numero);
             acesso.AdicionarParametros("@Complemento1", funcionarios.Endereco.Complemento1);
@@ -108,7 +102,6 @@ namespace Negocios
                     funcionarios.Pessoa.PessoaTipo.Descricao = Convert.ToString(linha["Tipo_Pessoa"]);
                     funcionarios.Pessoa.Situacao.Situacao = Convert.ToString(linha["Situacao"]);
                     funcionarios.Pessoa.Cadastro = Convert.ToDateTime(linha["Cadastro"]);
-                    //fisico.Pessoa.Alteracao = Convert.ToDateTime(linha["Alteracao"]);
                     funcionarios.DataNascimento = Convert.ToDateTime(linha["Data_Nascimento"]);
                     funcionarios.Documentos.RG = Convert.ToString(linha["RG"]);
                     funcionarios.Documentos.CPF = Convert.ToString(linha["CPF"]);

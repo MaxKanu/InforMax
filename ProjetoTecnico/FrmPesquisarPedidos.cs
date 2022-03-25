@@ -15,13 +15,20 @@ namespace ProjetoTecnico
 {
     public partial class FrmPesquisarPedidos : Form
     {
+        public Pedidos pedidoSelecionado;
         Pedidos pedido = new Pedidos();
         PedidoColecao colecao = new PedidoColecao();
         NgPe negocioPedido = new NgPe();
-        public FrmPesquisarPedidos()
+        Acao_Tela enumSelecionado;
+        public FrmPesquisarPedidos(Acao_Tela enumeradores)
         {
             InitializeComponent();
+            enumSelecionado = enumeradores;
             dgwPrincipal.AutoGenerateColumns = false;
+            if (enumeradores.Equals(Acao_Tela.PesquisarPedidos))
+            {
+                BtnSelecionar.Enabled = false;
+            }
         }
         public void Pesquisa()
         {
@@ -111,6 +118,32 @@ namespace ProjetoTecnico
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             Pesquisa();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            TxtPesquisa.Clear();
+            dgwPrincipal.DataSource = null;
+        }
+
+        private void BtnSelecionar_Click(object sender, EventArgs e)
+        {
+
+            if (enumSelecionado.Equals(Acao_Tela.Consultar))
+            {
+                if (dgwPrincipal.SelectedRows.Count.Equals(0))
+                {
+                    MessageBox.Show("Nenhuma linha selecionada");
+                    return;
+                }
+
+                pedidoSelecionado = dgwPrincipal.SelectedRows[0].DataBoundItem as Pedidos;
+
+                DialogResult = DialogResult.OK;
+                FrmPedido cadastro = new FrmPedido(Acao_Tela.Consultar, pedidoSelecionado);
+                Close();
+                //cadastro.Show();
+            }
         }
     }
 }

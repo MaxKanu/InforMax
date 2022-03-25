@@ -572,8 +572,10 @@
             this.TxtId.Location = new System.Drawing.Point(41, 66);
             this.TxtId.MaxLength = 160;
             this.TxtId.Name = "TxtId";
+            this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(69, 29);
             this.TxtId.TabIndex = 2;
+            this.TxtId.TabStop = false;
             this.TxtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtNome

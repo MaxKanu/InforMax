@@ -30,9 +30,14 @@
         {
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
+            this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marcador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnBotoes = new System.Windows.Forms.Panel();
             this.BtnNovo = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnSelecionar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
@@ -40,11 +45,6 @@
             this.TxtPesquisa = new System.Windows.Forms.TextBox();
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marcador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
             this.PnBotoes.SuspendLayout();
@@ -76,10 +76,49 @@
             this.dgwPrincipal.TabIndex = 4;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
             // 
+            // IdPedido
+            // 
+            this.IdPedido.DataPropertyName = "IdPedidos";
+            this.IdPedido.HeaderText = "Nº_Pedido";
+            this.IdPedido.Name = "IdPedido";
+            this.IdPedido.ReadOnly = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente.Pessoa.Nome";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 250;
+            // 
+            // Situacao
+            // 
+            this.Situacao.DataPropertyName = "Situacao.Situacao";
+            this.Situacao.HeaderText = "Situacao";
+            this.Situacao.Name = "Situacao";
+            this.Situacao.ReadOnly = true;
+            this.Situacao.Width = 170;
+            // 
+            // Cadastro
+            // 
+            this.Cadastro.DataPropertyName = "Cadastro";
+            this.Cadastro.HeaderText = "Data_Pedido";
+            this.Cadastro.Name = "Cadastro";
+            this.Cadastro.ReadOnly = true;
+            this.Cadastro.Width = 150;
+            // 
+            // Marcador
+            // 
+            this.Marcador.DataPropertyName = "Marcador";
+            this.Marcador.HeaderText = "Marcador";
+            this.Marcador.Name = "Marcador";
+            this.Marcador.ReadOnly = true;
+            this.Marcador.Width = 200;
+            // 
             // PnBotoes
             // 
             this.PnBotoes.Controls.Add(this.BtnNovo);
-            this.PnBotoes.Controls.Add(this.BtnSalvar);
+            this.PnBotoes.Controls.Add(this.BtnSelecionar);
             this.PnBotoes.Controls.Add(this.BtnExcluir);
             this.PnBotoes.Controls.Add(this.BtnCancelar);
             this.PnBotoes.Controls.Add(this.BtnSair);
@@ -99,15 +138,16 @@
             this.BtnNovo.Text = "Novo\r\n";
             this.BtnNovo.UseVisualStyleBackColor = true;
             // 
-            // BtnSalvar
+            // BtnSelecionar
             // 
-            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.Location = new System.Drawing.Point(229, 7);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
-            this.BtnSalvar.TabIndex = 1;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSelecionar.Location = new System.Drawing.Point(229, 7);
+            this.BtnSelecionar.Name = "BtnSelecionar";
+            this.BtnSelecionar.Size = new System.Drawing.Size(80, 47);
+            this.BtnSelecionar.TabIndex = 1;
+            this.BtnSelecionar.Text = "Selecionar";
+            this.BtnSelecionar.UseVisualStyleBackColor = true;
+            this.BtnSelecionar.Click += new System.EventHandler(this.BtnSelecionar_Click);
             // 
             // BtnExcluir
             // 
@@ -128,6 +168,7 @@
             this.BtnCancelar.TabIndex = 3;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSair
             // 
@@ -181,44 +222,6 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Pesquisar Pedidos";
             // 
-            // IdPedido
-            // 
-            this.IdPedido.DataPropertyName = "IdPedidos";
-            this.IdPedido.HeaderText = "Nº_Pedido";
-            this.IdPedido.Name = "IdPedido";
-            this.IdPedido.ReadOnly = true;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente.Pessoa.Nome";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 250;
-            // 
-            // Situacao
-            // 
-            this.Situacao.DataPropertyName = "Situacao.Situacao";
-            this.Situacao.HeaderText = "Situacao";
-            this.Situacao.Name = "Situacao";
-            this.Situacao.ReadOnly = true;
-            this.Situacao.Width = 170;
-            // 
-            // Cadastro
-            // 
-            this.Cadastro.DataPropertyName = "Cadastro";
-            this.Cadastro.HeaderText = "Data_Pedido";
-            this.Cadastro.Name = "Cadastro";
-            this.Cadastro.ReadOnly = true;
-            // 
-            // Marcador
-            // 
-            this.Marcador.DataPropertyName = "Marcador";
-            this.Marcador.HeaderText = "Marcador";
-            this.Marcador.Name = "Marcador";
-            this.Marcador.ReadOnly = true;
-            this.Marcador.Width = 250;
-            // 
             // FrmPesquisarPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -251,7 +254,7 @@
         private System.Windows.Forms.DataGridView dgwPrincipal;
         private System.Windows.Forms.Panel PnBotoes;
         private System.Windows.Forms.Button BtnNovo;
-        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnSelecionar;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnSair;

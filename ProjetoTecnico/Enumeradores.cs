@@ -23,6 +23,7 @@ namespace ProjetoTecnico
         Consultar = 13,
         PesquisarFuncionario = 14,
         PesquisarFisico = 15,
-        PesquisarJuridico = 16
+        PesquisarJuridico = 16,
+        PesquisarPedidos = 17
     }
 }

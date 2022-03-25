@@ -11,6 +11,7 @@ namespace Objetos
         public int IdPedidos { get; set; }
         public int Id { get; set; }
         public string Marcador { get; set; }
+        public Tarefas Tarefas { get; set; }
         public DateTime Cadastro { get; set; }
         public Operacao Operacao { get; set; }
         public PedidoSituacao Situacao { get; set; }

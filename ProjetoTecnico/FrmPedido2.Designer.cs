@@ -45,12 +45,12 @@
             this.lblIdPedido = new System.Windows.Forms.Label();
             this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.lblIDCliente = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblOperacao = new System.Windows.Forms.Label();
             this.ComboSituacao = new System.Windows.Forms.ComboBox();
             this.lblSituacao = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.dateCadastro = new System.Windows.Forms.DateTimePicker();
+            this.LblID = new System.Windows.Forms.Label();
             this.PnBotoes.SuspendLayout();
             this.PnPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.btnConsultarPedidos.TabIndex = 15;
             this.btnConsultarPedidos.Text = "Pesquisar Pedidos";
             this.btnConsultarPedidos.UseVisualStyleBackColor = true;
+            this.btnConsultarPedidos.Click += new System.EventHandler(this.btnConsultarPedidos_Click);
             // 
             // btnNovoCadastro
             // 
@@ -146,6 +147,7 @@
             // 
             // PnPrincipal
             // 
+            this.PnPrincipal.Controls.Add(this.LblID);
             this.PnPrincipal.Controls.Add(this.txtMarcador);
             this.PnPrincipal.Controls.Add(this.LblNome);
             this.PnPrincipal.Controls.Add(this.ComboOperacao);
@@ -154,7 +156,6 @@
             this.PnPrincipal.Controls.Add(this.lblIdPedido);
             this.PnPrincipal.Controls.Add(this.txtIdPedido);
             this.PnPrincipal.Controls.Add(this.lblIDCliente);
-            this.PnPrincipal.Controls.Add(this.txtID);
             this.PnPrincipal.Controls.Add(this.lblOperacao);
             this.PnPrincipal.Controls.Add(this.ComboSituacao);
             this.PnPrincipal.Controls.Add(this.lblSituacao);
@@ -245,17 +246,6 @@
             this.lblIDCliente.TabIndex = 49;
             this.lblIDCliente.Text = "ID Cliente:";
             // 
-            // txtID
-            // 
-            this.txtID.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txtID.Enabled = false;
-            this.txtID.Font = new System.Drawing.Font("Segoe Print", 9.25F);
-            this.txtID.Location = new System.Drawing.Point(138, 244);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 29);
-            this.txtID.TabIndex = 50;
-            this.txtID.UseWaitCursor = true;
-            // 
             // lblOperacao
             // 
             this.lblOperacao.AutoSize = true;
@@ -305,6 +295,16 @@
             this.dateCadastro.Size = new System.Drawing.Size(112, 29);
             this.dateCadastro.TabIndex = 45;
             // 
+            // LblID
+            // 
+            this.LblID.AutoSize = true;
+            this.LblID.Font = new System.Drawing.Font("Segoe Print", 9.25F);
+            this.LblID.Location = new System.Drawing.Point(138, 248);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(28, 23);
+            this.LblID.TabIndex = 59;
+            this.LblID.Text = "ID:";
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -343,7 +343,6 @@
         private System.Windows.Forms.Label lblIdPedido;
         private System.Windows.Forms.TextBox txtIdPedido;
         private System.Windows.Forms.Label lblIDCliente;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblOperacao;
         private System.Windows.Forms.ComboBox ComboSituacao;
         private System.Windows.Forms.Label lblSituacao;
@@ -351,5 +350,6 @@
         private System.Windows.Forms.DateTimePicker dateCadastro;
         private System.Windows.Forms.Label LblNome;
         private System.Windows.Forms.TextBox txtMarcador;
+        private System.Windows.Forms.Label LblID;
     }
 }

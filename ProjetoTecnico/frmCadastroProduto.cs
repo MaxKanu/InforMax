@@ -23,7 +23,8 @@ namespace ProjetoTecnico
             comboFabricante.ValueMember = "IdFabricante";
             TxtId.Enabled = false;
             LimparCaixas();
-            Botoes(1);CarregarGrid();
+            Botoes(1);
+            CarregarGrid();
 
         }
         void Botoes(int op)

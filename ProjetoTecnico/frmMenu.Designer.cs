@@ -54,8 +54,18 @@
             this.TsSeparador4 = new System.Windows.Forms.ToolStripSeparator();
             this.TsPesquisaServicos = new System.Windows.Forms.ToolStripDropDownButton();
             this.TsOS = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsSair = new System.Windows.Forms.ToolStripButton();
             this.TsPedidos = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecos = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoProdutos = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoServicos = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsSair = new System.Windows.Forms.ToolStripButton();
+            this.LblRelogio = new System.Windows.Forms.Label();
+            this.TsPrecoProdutoInserir = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoProdutoConsultar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoProdutoAlterar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoServicoInserir = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoServicoConsultar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoServicoAlterar = new System.Windows.Forms.ToolStripMenuItem();
             this.TsTrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +215,7 @@
             this.TsProdutos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsPreço});
             this.TsProdutos.Name = "TsProdutos";
-            this.TsProdutos.Size = new System.Drawing.Size(180, 22);
+            this.TsProdutos.Size = new System.Drawing.Size(129, 22);
             this.TsProdutos.Text = "Produtos";
             this.TsProdutos.Click += new System.EventHandler(this.TsProdutos_Click);
             // 
@@ -221,7 +231,7 @@
             this.TsServiços.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsPreçoServico});
             this.TsServiços.Name = "TsServiços";
-            this.TsServiços.Size = new System.Drawing.Size(180, 22);
+            this.TsServiços.Size = new System.Drawing.Size(129, 22);
             this.TsServiços.Text = "Serviços";
             this.TsServiços.Click += new System.EventHandler(this.TsServiços_Click);
             // 
@@ -235,14 +245,14 @@
             // TsFabricante
             // 
             this.TsFabricante.Name = "TsFabricante";
-            this.TsFabricante.Size = new System.Drawing.Size(180, 22);
+            this.TsFabricante.Size = new System.Drawing.Size(129, 22);
             this.TsFabricante.Text = "Fabricante";
             this.TsFabricante.Click += new System.EventHandler(this.TsFabricante_Click);
             // 
             // TsPedido
             // 
             this.TsPedido.Name = "TsPedido";
-            this.TsPedido.Size = new System.Drawing.Size(180, 22);
+            this.TsPedido.Size = new System.Drawing.Size(129, 22);
             this.TsPedido.Text = "Pedido";
             this.TsPedido.Click += new System.EventHandler(this.TsPedido_Click);
             // 
@@ -256,7 +266,8 @@
             this.TsPesquisaServicos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TsPesquisaServicos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TsOS,
-            this.TsPedidos});
+            this.TsPedidos,
+            this.TsPrecos});
             this.TsPesquisaServicos.Image = ((System.Drawing.Image)(resources.GetObject("TsPesquisaServicos.Image")));
             this.TsPesquisaServicos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsPesquisaServicos.Name = "TsPesquisaServicos";
@@ -270,6 +281,42 @@
             this.TsOS.Text = "O.S";
             this.TsOS.Click += new System.EventHandler(this.TsOS_Click);
             // 
+            // TsPedidos
+            // 
+            this.TsPedidos.Name = "TsPedidos";
+            this.TsPedidos.Size = new System.Drawing.Size(180, 22);
+            this.TsPedidos.Text = "Pedidos";
+            this.TsPedidos.Click += new System.EventHandler(this.TsPedidos_Click);
+            // 
+            // TsPrecos
+            // 
+            this.TsPrecos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsPrecoProdutos,
+            this.TsPrecoServicos});
+            this.TsPrecos.Name = "TsPrecos";
+            this.TsPrecos.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecos.Text = "Preços";
+            // 
+            // TsPrecoProdutos
+            // 
+            this.TsPrecoProdutos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsPrecoProdutoInserir,
+            this.TsPrecoProdutoConsultar,
+            this.TsPrecoProdutoAlterar});
+            this.TsPrecoProdutos.Name = "TsPrecoProdutos";
+            this.TsPrecoProdutos.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoProdutos.Text = "Produtos";
+            // 
+            // TsPrecoServicos
+            // 
+            this.TsPrecoServicos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsPrecoServicoInserir,
+            this.TsPrecoServicoConsultar,
+            this.TsPrecoServicoAlterar});
+            this.TsPrecoServicos.Name = "TsPrecoServicos";
+            this.TsPrecoServicos.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoServicos.Text = "Serviços";
+            // 
             // TsSair
             // 
             this.TsSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -280,12 +327,58 @@
             this.TsSair.Text = "Sair";
             this.TsSair.Click += new System.EventHandler(this.TsSair_Click);
             // 
-            // TsPedidos
+            // LblRelogio
             // 
-            this.TsPedidos.Name = "TsPedidos";
-            this.TsPedidos.Size = new System.Drawing.Size(180, 22);
-            this.TsPedidos.Text = "Pedidos";
-            this.TsPedidos.Click += new System.EventHandler(this.TsPedidos_Click);
+            this.LblRelogio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblRelogio.AutoSize = true;
+            this.LblRelogio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LblRelogio.Location = new System.Drawing.Point(693, 9);
+            this.LblRelogio.Name = "LblRelogio";
+            this.LblRelogio.Size = new System.Drawing.Size(95, 13);
+            this.LblRelogio.TabIndex = 2;
+            this.LblRelogio.Text = "18/03/2022 12:00";
+            // 
+            // TsPrecoProdutoInserir
+            // 
+            this.TsPrecoProdutoInserir.Name = "TsPrecoProdutoInserir";
+            this.TsPrecoProdutoInserir.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoProdutoInserir.Text = "Inserir";
+            this.TsPrecoProdutoInserir.Click += new System.EventHandler(this.TsPrecoProdutoInserir_Click);
+            // 
+            // TsPrecoProdutoConsultar
+            // 
+            this.TsPrecoProdutoConsultar.Name = "TsPrecoProdutoConsultar";
+            this.TsPrecoProdutoConsultar.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoProdutoConsultar.Text = "Consultar";
+            this.TsPrecoProdutoConsultar.Click += new System.EventHandler(this.TsPrecoProdutoConsultar_Click);
+            // 
+            // TsPrecoProdutoAlterar
+            // 
+            this.TsPrecoProdutoAlterar.Name = "TsPrecoProdutoAlterar";
+            this.TsPrecoProdutoAlterar.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoProdutoAlterar.Text = "Alterar";
+            this.TsPrecoProdutoAlterar.Click += new System.EventHandler(this.TsPrecoProdutoAlterar_Click);
+            // 
+            // TsPrecoServicoInserir
+            // 
+            this.TsPrecoServicoInserir.Name = "TsPrecoServicoInserir";
+            this.TsPrecoServicoInserir.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoServicoInserir.Text = "Inserir";
+            this.TsPrecoServicoInserir.Click += new System.EventHandler(this.TsPrecoServicoInserir_Click);
+            // 
+            // TsPrecoServicoConsultar
+            // 
+            this.TsPrecoServicoConsultar.Name = "TsPrecoServicoConsultar";
+            this.TsPrecoServicoConsultar.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoServicoConsultar.Text = "Consultar";
+            this.TsPrecoServicoConsultar.Click += new System.EventHandler(this.TsPrecoServicoConsultar_Click);
+            // 
+            // TsPrecoServicoAlterar
+            // 
+            this.TsPrecoServicoAlterar.Name = "TsPrecoServicoAlterar";
+            this.TsPrecoServicoAlterar.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoServicoAlterar.Text = "Alterar";
+            this.TsPrecoServicoAlterar.Click += new System.EventHandler(this.TsPrecoServicoAlterar_Click);
             // 
             // FrmMenu
             // 
@@ -294,6 +387,7 @@
             this.BackgroundImage = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblRelogio);
             this.Controls.Add(this.TsTrip);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -339,5 +433,15 @@
         private System.Windows.Forms.ToolStripMenuItem TsOS;
         private System.Windows.Forms.ToolStripMenuItem TsPedido;
         private System.Windows.Forms.ToolStripMenuItem TsPedidos;
+        private System.Windows.Forms.Label LblRelogio;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecos;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoProdutos;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoServicos;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoProdutoInserir;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoProdutoConsultar;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoProdutoAlterar;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoInserir;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoConsultar;
+        private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoAlterar;
     }
 }

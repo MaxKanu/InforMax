@@ -35,6 +35,8 @@
             this.BtnSair = new System.Windows.Forms.Button();
             this.PnPrincipal = new System.Windows.Forms.Panel();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
+            this.IdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblCadastro = new System.Windows.Forms.Label();
             this.DateNascimento = new System.Windows.Forms.DateTimePicker();
             this.TxtId = new System.Windows.Forms.TextBox();
@@ -42,8 +44,6 @@
             this.LblId = new System.Windows.Forms.Label();
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.IdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnBotoes.SuspendLayout();
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -134,6 +134,19 @@
             this.dgwPrincipal.TabIndex = 18;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
             // 
+            // IdProduto
+            // 
+            this.IdProduto.DataPropertyName = "IdServicos";
+            this.IdProduto.HeaderText = "Id_Produto";
+            this.IdProduto.Name = "IdProduto";
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "Descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.Width = 370;
+            // 
             // LblCadastro
             // 
             this.LblCadastro.AutoSize = true;
@@ -157,7 +170,7 @@
             // 
             this.TxtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.TxtId.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtId.Location = new System.Drawing.Point(31, 126);
+            this.TxtId.Location = new System.Drawing.Point(42, 129);
             this.TxtId.MaxLength = 160;
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
@@ -169,10 +182,10 @@
             // 
             this.TxtNome.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtNome.Location = new System.Drawing.Point(54, 197);
+            this.TxtNome.Location = new System.Drawing.Point(65, 197);
             this.TxtNome.MaxLength = 50;
             this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(451, 29);
+            this.TxtNome.Size = new System.Drawing.Size(428, 29);
             this.TxtNome.TabIndex = 16;
             this.TxtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -180,7 +193,7 @@
             // 
             this.LblId.AutoSize = true;
             this.LblId.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblId.Location = new System.Drawing.Point(-1, 130);
+            this.LblId.Location = new System.Drawing.Point(10, 133);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(26, 21);
             this.LblId.TabIndex = 10;
@@ -190,7 +203,7 @@
             // 
             this.LblNome.AutoSize = true;
             this.LblNome.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNome.Location = new System.Drawing.Point(-1, 201);
+            this.LblNome.Location = new System.Drawing.Point(10, 201);
             this.LblNome.Name = "LblNome";
             this.LblNome.Size = new System.Drawing.Size(49, 21);
             this.LblNome.TabIndex = 15;
@@ -205,19 +218,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(259, 38);
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = "Cadastro De Produtos";
-            // 
-            // IdProduto
-            // 
-            this.IdProduto.DataPropertyName = "IdServicos";
-            this.IdProduto.HeaderText = "Id_Produto";
-            this.IdProduto.Name = "IdProduto";
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "Descricao";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Width = 370;
             // 
             // frmCadastroServico
             // 

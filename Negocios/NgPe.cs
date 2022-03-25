@@ -31,25 +31,24 @@ namespace Negocios
             {
                 acesso.LimparParametros();
                 acesso.AdicionarParametros("@IdPedido", id);
-                acesso.AdicionarParametros("@IdCliente", pedido);
+                acesso.AdicionarParametros("@Cliente", pedido);
 
-                DataTable table = acesso.ExecutarConsulta(CommandType.StoredProcedure, "[uspConsultarPedidos]");
+                DataTable table = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarPedidos");
 
                 foreach (DataRow linha in table.Rows) 
                 {
-                    Pedidos pedidos = new Pedidos
-                    {
-                        Operacao = new Operacao(),
-                        Situacao = new PedidoSituacao(),
-                        Cliente = new ClienteFisico()
-                    };
+                    Pedidos pedidos = new Pedidos();
+                    pedidos.Operacao = new Operacao();
+                    pedidos.Situacao = new PedidoSituacao();
+                    pedidos.Cliente = new ClienteFisico();
                     pedidos.Cliente.Pessoa = new Pessoa();
 
                     pedidos.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
-                    pedidos.Cadastro = Convert.ToDateTime(linha["Cadastro"]);
+                    pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdCliente"]);
+                    pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
                     pedidos.Operacao.Descricao = Convert.ToString(linha["Descricao"]);
                     pedidos.Situacao.Situacao = Convert.ToString(linha["Situacao"]);
-                    pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
+                    pedidos.Cadastro = Convert.ToDateTime(linha["Cadastro"]);
                     pedidos.Marcador = Convert.ToString(linha["Marcador"]);
 
                     colecao.Add(pedidos);

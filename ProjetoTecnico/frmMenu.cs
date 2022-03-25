@@ -134,7 +134,7 @@ namespace ProjetoTecnico
 
         private void TsOS_Click(object sender, EventArgs e)
         {
-            FrmOrdemServico OS = new FrmOrdemServico
+            FrmOrdemServico OS = new FrmOrdemServico(Acao_Tela.InserirServico, null)
             {
                 MdiParent = this
             };
@@ -152,11 +152,63 @@ namespace ProjetoTecnico
 
         private void TsPedidos_Click(object sender, EventArgs e)
         {
-            FrmPesquisarPedidos pedidos = new FrmPesquisarPedidos
+            FrmPesquisarPedidos pedidos = new FrmPesquisarPedidos(Acao_Tela.PesquisarPedidos)
             {
                  MdiParent = this
             };
             pedidos.Show();
+        }
+
+        private void TsPrecoProdutoInserir_Click(object sender, EventArgs e)
+        {
+            FrmPreco preco = new FrmPreco(Acao_Tela.InserirProduto)
+            {
+                MdiParent = this
+            };
+            preco.Show();
+        }
+        private void TsPrecoProdutoAlterar_Click(object sender, EventArgs e)
+        {
+            FrmPreco preco = new FrmPreco(Acao_Tela.AlterarProduto)
+            {
+                MdiParent = this
+            };
+            preco.Show();
+        }
+        private void TsPrecoProdutoConsultar_Click(object sender, EventArgs e)
+        {
+            FrmPreco preco = new FrmPreco(Acao_Tela.ConsultarProdutos)
+            {
+                MdiParent = this
+            };
+            preco.Show();
+        }
+
+        private void TsPrecoServicoInserir_Click(object sender, EventArgs e)
+        {
+            FrmPreco preco = new FrmPreco(Acao_Tela.InserirServico)
+            {
+                MdiParent = this
+            };
+            preco.Show();
+        }
+
+        private void TsPrecoServicoConsultar_Click(object sender, EventArgs e)
+        {
+            FrmPreco preco = new FrmPreco(Acao_Tela.ConsultarServicos)
+            {
+                MdiParent = this
+            };
+            preco.Show();
+        }
+
+        private void TsPrecoServicoAlterar_Click(object sender, EventArgs e)
+        {
+            FrmPreco preco = new FrmPreco(Acao_Tela.AlterarServico)
+            {
+                MdiParent = this
+            };
+            preco.Show();
         }
     }
 }
