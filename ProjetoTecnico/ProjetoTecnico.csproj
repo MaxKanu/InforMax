@@ -90,6 +90,12 @@
     <Compile Include="frmOrdemServico.Designer.cs">
       <DependentUpon>frmOrdemServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPesquisaItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesquisaItens.Designer.cs">
+      <DependentUpon>FrmPesquisaItens.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPesquisarCadastroFisico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrdemServico.resx">
       <DependentUpon>frmOrdemServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPesquisaItens.resx">
+      <DependentUpon>FrmPesquisaItens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisarCadastroFisico.resx">
       <DependentUpon>frmPesquisarCadastroFisico.cs</DependentUpon>

@@ -6,44 +6,48 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace ProjetoTecnico
 {
-    public partial class FrmPesquisarPedidos : Form
+    public partial class FrmPesquisaItens : Form
     {
-        public Pedidos pedidoSelecionado; //vai pegar os dados selecionado e armazenar no objeto criado
+        public Pedidos Propriedade = new Pedidos();
+        public ItensDePedido pedidoSelecionado; //vai pegar os dados selecionado e armazenar no objeto criado
+        public Precos precoSelecionado;
+        ItensDePedidoColecao colecaoItens = new ItensDePedidoColecao();
+        ItensDePedido itens = new ItensDePedido();
+        NgIp negocioItens = new NgIp();
         Pedidos pedido = new Pedidos(); //objeto da classe pedido
-        PedidoColecao colecao = new PedidoColecao();//objeto da classe pedido coleção
-        NgPe negocioPedido = new NgPe();//objeto da classe negocio pedido
-        Acao_Tela enumSelecionado;//Selecionar o enumerador da tela
-        public FrmPesquisarPedidos(Acao_Tela enumeradores)
+        public FrmPesquisaItens()
         {
             InitializeComponent();
-            enumSelecionado = enumeradores;
             dgwPrincipal.AutoGenerateColumns = false;
-            if (enumeradores.Equals(Acao_Tela.PesquisarPedidos))
-            {
-                BtnSelecionar.Enabled = false;
-            }
+            
         }
-        public void Pesquisa()
+
+        private void BtnSair_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(TxtPesquisa.Text, out int codigoDigitado).Equals(true))
+            Close();
+        }
+        private void dgwPrincipal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
             {
-                colecao = negocioPedido.Pedidos(codigoDigitado, null);
+                if ((dgwPrincipal.Rows[e.RowIndex].DataBoundItem != null) && (dgwPrincipal.Columns[e.ColumnIndex].DataPropertyName.Contains(".")))
+                {
+                    e.Value = CarregarPropriedade(dgwPrincipal.Rows[e.RowIndex].DataBoundItem, dgwPrincipal.Columns[e.ColumnIndex].DataPropertyName);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                colecao = negocioPedido.Pedidos(null, TxtPesquisa.Text);
+
+                MessageBox.Show(ex.Message);
             }
-            dgwPrincipal.DataSource = null;
-            dgwPrincipal.DataSource = colecao;
-            dgwPrincipal.Update();
-            dgwPrincipal.Refresh();
+
         }
         private object CarregarPropriedade(object propriedade, string nomeDaPropriedade)
         {
@@ -94,56 +98,47 @@ namespace ProjetoTecnico
                 return null;
             }
         }
-        
-        private void DgwPrincipal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
+        void PesquisarNotas()
+        { int i;
+            if (int.TryParse(TxtPesquisa.Text, out int codigoDigitado) == true)
             {
-                if ((dgwPrincipal.Rows[e.RowIndex].DataBoundItem != null) && (dgwPrincipal.Columns[e.ColumnIndex].DataPropertyName.Contains(".")))
-                {
-                    e.Value = CarregarPropriedade(dgwPrincipal.Rows[e.RowIndex].DataBoundItem, dgwPrincipal.Columns[e.ColumnIndex].DataPropertyName);
-                }
+                colecaoItens = negocioItens.ConsultarValorTotalPedidos(codigoDigitado);
             }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            for (i = 0; i <= dgwPrincipal.Rows.Count; i++)
+                ltvPrincipal.Items.Add(dgwPrincipal.Rows[i].ItemArray[0].Tostring());
         }
-        private void BtnSair_Click(object sender, EventArgs e)
+        void PesquisarLista()
         {
-            Close();
+            if (int.TryParse(TxtPesquisa.Text, out int codigoDigitado) == true)
+            {
+                colecaoItens = negocioItens.ConsultarValorTotalPedidos(codigoDigitado);
+            }
+
+            dgwPrincipal.DataSource = null;
+            dgwPrincipal.DataSource = colecaoItens;
+            dgwPrincipal.Update();
+            dgwPrincipal.Refresh();
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            Pesquisa();
-        }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            TxtPesquisa.Clear();
-            dgwPrincipal.DataSource = null;
+            PesquisarLista();
         }
 
         private void BtnSelecionar_Click(object sender, EventArgs e)
         {
-
-            if (enumSelecionado.Equals(Acao_Tela.Consultar))
-            {
                 if (dgwPrincipal.SelectedRows.Count.Equals(0))
                 {
                     MessageBox.Show("Nenhuma linha selecionada");
                     return;
                 }
 
-                pedidoSelecionado = dgwPrincipal.SelectedRows[0].DataBoundItem as Pedidos;
-
-                DialogResult = DialogResult.OK;
-                FrmPedido cadastro = new FrmPedido(Acao_Tela.Consultar, pedidoSelecionado);
+                pedidoSelecionado = dgwPrincipal.SelectedRows[0].DataBoundItem as ItensDePedido;
+                
+                FrmOrdemServico cadastro = new FrmOrdemServico(Acao_Tela.ConsultarCliente, pedidoSelecionado);
+                cadastro.Show();
                 Close();
                 //cadastro.Show();
-            }
         }
     }
 }

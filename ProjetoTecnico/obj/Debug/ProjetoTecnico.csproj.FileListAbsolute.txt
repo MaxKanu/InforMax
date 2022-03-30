@@ -166,3 +166,4 @@ C:\Users\marca\Desktop\InforMax1\ProjetoTecnico\obj\Debug\ProjetoTecnico.csproj.
 C:\Users\marca\Desktop\InforMax1\ProjetoTecnico\obj\Debug\ProjetoTecnico.csproj.CopyComplete
 C:\Users\marca\Desktop\InforMax1\ProjetoTecnico\obj\Debug\ProjetoTecnico.exe
 C:\Users\marca\Desktop\InforMax1\ProjetoTecnico\obj\Debug\ProjetoTecnico.pdb
+C:\Users\marca\Desktop\InforMax1\ProjetoTecnico\obj\Debug\ProjetoTecnico.FrmPesquisaItens.resources

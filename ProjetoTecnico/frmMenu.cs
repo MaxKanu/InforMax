@@ -210,5 +210,23 @@ namespace ProjetoTecnico
             };
             preco.Show();
         }
+
+        private void TsConsultarOS_Click(object sender, EventArgs e)
+        {
+            FrmOrdemServico OS = new FrmOrdemServico(Acao_Tela.Consultar, null)
+            {
+                MdiParent = this
+            };
+            OS.Show();
+        }
+
+        private void TsPesquisarNotasFechadas_Click(object sender, EventArgs e)
+        {
+            FrmPesquisaItens pesquisa = new FrmPesquisaItens
+            {
+                MdiParent = this
+            };
+            pesquisa.Show();
+        }
     }
 }

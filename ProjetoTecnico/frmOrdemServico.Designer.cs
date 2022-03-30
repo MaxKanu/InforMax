@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PnPrincipal = new System.Windows.Forms.Panel();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtPercentual = new System.Windows.Forms.TextBox();
             this.LblPercentual = new System.Windows.Forms.Label();
             this.TxtQuantidade = new System.Windows.Forms.TextBox();
@@ -52,6 +53,12 @@
             this.TxtServico = new System.Windows.Forms.TextBox();
             this.TxtProdutos = new System.Windows.Forms.TextBox();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
+            this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TxtCliente = new System.Windows.Forms.TextBox();
             this.LblCliente = new System.Windows.Forms.Label();
             this.LblId = new System.Windows.Forms.Label();
@@ -69,13 +76,8 @@
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.lblteste = new System.Windows.Forms.Label();
-            this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdImprimirOrdem = new System.Drawing.Printing.PrintDocument();
+            this.BtnImprimir = new System.Windows.Forms.Button();
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -84,6 +86,7 @@
             // 
             // PnPrincipal
             // 
+            this.PnPrincipal.Controls.Add(this.BtnPesquisar);
             this.PnPrincipal.Controls.Add(this.TxtPercentual);
             this.PnPrincipal.Controls.Add(this.LblPercentual);
             this.PnPrincipal.Controls.Add(this.TxtQuantidade);
@@ -121,6 +124,17 @@
             this.PnPrincipal.Name = "PnPrincipal";
             this.PnPrincipal.Size = new System.Drawing.Size(1032, 628);
             this.PnPrincipal.TabIndex = 0;
+            // 
+            // BtnPesquisar
+            // 
+            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.BtnPesquisar.Location = new System.Drawing.Point(186, 38);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(36, 29);
+            this.BtnPesquisar.TabIndex = 54;
+            this.BtnPesquisar.Text = "...";
+            this.BtnPesquisar.UseVisualStyleBackColor = true;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // TxtPercentual
             // 
@@ -236,6 +250,7 @@
             this.txtIdPedido.Name = "txtIdPedido";
             this.txtIdPedido.Size = new System.Drawing.Size(81, 31);
             this.txtIdPedido.TabIndex = 43;
+            this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIdPedido.UseWaitCursor = true;
             // 
             // lblIdPedido
@@ -368,6 +383,52 @@
             this.dgwPrincipal.TabIndex = 16;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgwPrincipal_CellFormatting);
             // 
+            // IdPedido
+            // 
+            this.IdPedido.DataPropertyName = "Pedidos.IdPedidos";
+            this.IdPedido.HeaderText = "Id_Pedido";
+            this.IdPedido.Name = "IdPedido";
+            this.IdPedido.ReadOnly = true;
+            this.IdPedido.Width = 80;
+            // 
+            // Quant
+            // 
+            this.Quant.DataPropertyName = "Quantidade";
+            this.Quant.HeaderText = "Quantidade";
+            this.Quant.Name = "Quant";
+            this.Quant.ReadOnly = true;
+            this.Quant.Width = 80;
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "Precos.Descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Width = 250;
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Precos.ValorUnitario";
+            this.Valor.HeaderText = "Preço";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            this.Valor.Width = 90;
+            // 
+            // Desconto
+            // 
+            this.Desconto.DataPropertyName = "Precos.ValorDesconto";
+            this.Desconto.HeaderText = "Desconto";
+            this.Desconto.Name = "Desconto";
+            this.Desconto.Width = 80;
+            // 
+            // Valor_Total
+            // 
+            this.Valor_Total.DataPropertyName = "Precos.ValorTotal";
+            this.Valor_Total.HeaderText = "Valor_Total";
+            this.Valor_Total.Name = "Valor_Total";
+            this.Valor_Total.ReadOnly = true;
+            // 
             // TxtCliente
             // 
             this.TxtCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
@@ -464,7 +525,7 @@
             // 
             // PnBotoes
             // 
-            this.PnBotoes.Controls.Add(this.lblteste);
+            this.PnBotoes.Controls.Add(this.BtnImprimir);
             this.PnBotoes.Controls.Add(this.TxtValorTotal);
             this.PnBotoes.Controls.Add(this.LblValor);
             this.PnBotoes.Controls.Add(this.BtnNovo);
@@ -519,6 +580,7 @@
             this.BtnSalvar.TabIndex = 1;
             this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnExcluir
             // 
@@ -553,61 +615,19 @@
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // lblteste
+            // PdImprimirOrdem
             // 
-            this.lblteste.AutoSize = true;
-            this.lblteste.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.lblteste.Location = new System.Drawing.Point(602, 17);
-            this.lblteste.Name = "lblteste";
-            this.lblteste.Size = new System.Drawing.Size(78, 24);
-            this.lblteste.TabIndex = 50;
-            this.lblteste.Text = "Produtos:";
+            this.PdImprimirOrdem.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PdImprimirOrdem_PrintPage);
             // 
-            // IdPedido
+            // BtnImprimir
             // 
-            this.IdPedido.DataPropertyName = "Pedidos.IdPedidos";
-            this.IdPedido.HeaderText = "Id_Pedido";
-            this.IdPedido.Name = "IdPedido";
-            this.IdPedido.ReadOnly = true;
-            this.IdPedido.Width = 80;
-            // 
-            // Quant
-            // 
-            this.Quant.DataPropertyName = "Quantidade";
-            this.Quant.HeaderText = "Quantidade";
-            this.Quant.Name = "Quant";
-            this.Quant.ReadOnly = true;
-            this.Quant.Width = 80;
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "Precos.Descricao";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 250;
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "Precos.ValorUnitario";
-            this.Valor.HeaderText = "Preço";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            this.Valor.Width = 90;
-            // 
-            // Desconto
-            // 
-            this.Desconto.DataPropertyName = "Precos.ValorDesconto";
-            this.Desconto.HeaderText = "Desconto";
-            this.Desconto.Name = "Desconto";
-            this.Desconto.Width = 80;
-            // 
-            // Valor_Total
-            // 
-            this.Valor_Total.DataPropertyName = "Precos.ValorTotal";
-            this.Valor_Total.HeaderText = "Valor_Total";
-            this.Valor_Total.Name = "Valor_Total";
-            this.Valor_Total.ReadOnly = true;
+            this.BtnImprimir.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnImprimir.Location = new System.Drawing.Point(579, 6);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(40, 47);
+            this.BtnImprimir.TabIndex = 50;
+            this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // FrmOrdemServico
             // 
@@ -676,12 +696,14 @@
         private System.Windows.Forms.Label LblQuantidade;
         private System.Windows.Forms.TextBox TxtPercentual;
         private System.Windows.Forms.Label LblPercentual;
-        private System.Windows.Forms.Label lblteste;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
+        private System.Windows.Forms.Button BtnPesquisar;
+        private System.Drawing.Printing.PrintDocument PdImprimirOrdem;
+        private System.Windows.Forms.Button BtnImprimir;
     }
 }

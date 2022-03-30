@@ -54,18 +54,20 @@
             this.TsSeparador4 = new System.Windows.Forms.ToolStripSeparator();
             this.TsPesquisaServicos = new System.Windows.Forms.ToolStripDropDownButton();
             this.TsOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsConsultarOS = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPedidos = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecos = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoProdutos = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsPrecoServicos = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsSair = new System.Windows.Forms.ToolStripButton();
-            this.LblRelogio = new System.Windows.Forms.Label();
             this.TsPrecoProdutoInserir = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoProdutoConsultar = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoProdutoAlterar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPrecoServicos = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoServicoInserir = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoServicoConsultar = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoServicoAlterar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsSair = new System.Windows.Forms.ToolStripButton();
+            this.LblRelogio = new System.Windows.Forms.Label();
+            this.TsPesquisarNotasFechadas = new System.Windows.Forms.ToolStripMenuItem();
             this.TsTrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -276,10 +278,20 @@
             // 
             // TsOS
             // 
+            this.TsOS.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsConsultarOS,
+            this.TsPesquisarNotasFechadas});
             this.TsOS.Name = "TsOS";
             this.TsOS.Size = new System.Drawing.Size(180, 22);
             this.TsOS.Text = "O.S";
             this.TsOS.Click += new System.EventHandler(this.TsOS_Click);
+            // 
+            // TsConsultarOS
+            // 
+            this.TsConsultarOS.Name = "TsConsultarOS";
+            this.TsConsultarOS.Size = new System.Drawing.Size(210, 22);
+            this.TsConsultarOS.Text = "Consultar";
+            this.TsConsultarOS.Click += new System.EventHandler(this.TsConsultarOS_Click);
             // 
             // TsPedidos
             // 
@@ -304,8 +316,29 @@
             this.TsPrecoProdutoConsultar,
             this.TsPrecoProdutoAlterar});
             this.TsPrecoProdutos.Name = "TsPrecoProdutos";
-            this.TsPrecoProdutos.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoProdutos.Size = new System.Drawing.Size(122, 22);
             this.TsPrecoProdutos.Text = "Produtos";
+            // 
+            // TsPrecoProdutoInserir
+            // 
+            this.TsPrecoProdutoInserir.Name = "TsPrecoProdutoInserir";
+            this.TsPrecoProdutoInserir.Size = new System.Drawing.Size(125, 22);
+            this.TsPrecoProdutoInserir.Text = "Inserir";
+            this.TsPrecoProdutoInserir.Click += new System.EventHandler(this.TsPrecoProdutoInserir_Click);
+            // 
+            // TsPrecoProdutoConsultar
+            // 
+            this.TsPrecoProdutoConsultar.Name = "TsPrecoProdutoConsultar";
+            this.TsPrecoProdutoConsultar.Size = new System.Drawing.Size(125, 22);
+            this.TsPrecoProdutoConsultar.Text = "Consultar";
+            this.TsPrecoProdutoConsultar.Click += new System.EventHandler(this.TsPrecoProdutoConsultar_Click);
+            // 
+            // TsPrecoProdutoAlterar
+            // 
+            this.TsPrecoProdutoAlterar.Name = "TsPrecoProdutoAlterar";
+            this.TsPrecoProdutoAlterar.Size = new System.Drawing.Size(125, 22);
+            this.TsPrecoProdutoAlterar.Text = "Alterar";
+            this.TsPrecoProdutoAlterar.Click += new System.EventHandler(this.TsPrecoProdutoAlterar_Click);
             // 
             // TsPrecoServicos
             // 
@@ -314,8 +347,29 @@
             this.TsPrecoServicoConsultar,
             this.TsPrecoServicoAlterar});
             this.TsPrecoServicos.Name = "TsPrecoServicos";
-            this.TsPrecoServicos.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecoServicos.Size = new System.Drawing.Size(122, 22);
             this.TsPrecoServicos.Text = "Serviços";
+            // 
+            // TsPrecoServicoInserir
+            // 
+            this.TsPrecoServicoInserir.Name = "TsPrecoServicoInserir";
+            this.TsPrecoServicoInserir.Size = new System.Drawing.Size(125, 22);
+            this.TsPrecoServicoInserir.Text = "Inserir";
+            this.TsPrecoServicoInserir.Click += new System.EventHandler(this.TsPrecoServicoInserir_Click);
+            // 
+            // TsPrecoServicoConsultar
+            // 
+            this.TsPrecoServicoConsultar.Name = "TsPrecoServicoConsultar";
+            this.TsPrecoServicoConsultar.Size = new System.Drawing.Size(125, 22);
+            this.TsPrecoServicoConsultar.Text = "Consultar";
+            this.TsPrecoServicoConsultar.Click += new System.EventHandler(this.TsPrecoServicoConsultar_Click);
+            // 
+            // TsPrecoServicoAlterar
+            // 
+            this.TsPrecoServicoAlterar.Name = "TsPrecoServicoAlterar";
+            this.TsPrecoServicoAlterar.Size = new System.Drawing.Size(125, 22);
+            this.TsPrecoServicoAlterar.Text = "Alterar";
+            this.TsPrecoServicoAlterar.Click += new System.EventHandler(this.TsPrecoServicoAlterar_Click);
             // 
             // TsSair
             // 
@@ -338,47 +392,12 @@
             this.LblRelogio.TabIndex = 2;
             this.LblRelogio.Text = "18/03/2022 12:00";
             // 
-            // TsPrecoProdutoInserir
+            // TsPesquisarNotasFechadas
             // 
-            this.TsPrecoProdutoInserir.Name = "TsPrecoProdutoInserir";
-            this.TsPrecoProdutoInserir.Size = new System.Drawing.Size(180, 22);
-            this.TsPrecoProdutoInserir.Text = "Inserir";
-            this.TsPrecoProdutoInserir.Click += new System.EventHandler(this.TsPrecoProdutoInserir_Click);
-            // 
-            // TsPrecoProdutoConsultar
-            // 
-            this.TsPrecoProdutoConsultar.Name = "TsPrecoProdutoConsultar";
-            this.TsPrecoProdutoConsultar.Size = new System.Drawing.Size(180, 22);
-            this.TsPrecoProdutoConsultar.Text = "Consultar";
-            this.TsPrecoProdutoConsultar.Click += new System.EventHandler(this.TsPrecoProdutoConsultar_Click);
-            // 
-            // TsPrecoProdutoAlterar
-            // 
-            this.TsPrecoProdutoAlterar.Name = "TsPrecoProdutoAlterar";
-            this.TsPrecoProdutoAlterar.Size = new System.Drawing.Size(180, 22);
-            this.TsPrecoProdutoAlterar.Text = "Alterar";
-            this.TsPrecoProdutoAlterar.Click += new System.EventHandler(this.TsPrecoProdutoAlterar_Click);
-            // 
-            // TsPrecoServicoInserir
-            // 
-            this.TsPrecoServicoInserir.Name = "TsPrecoServicoInserir";
-            this.TsPrecoServicoInserir.Size = new System.Drawing.Size(180, 22);
-            this.TsPrecoServicoInserir.Text = "Inserir";
-            this.TsPrecoServicoInserir.Click += new System.EventHandler(this.TsPrecoServicoInserir_Click);
-            // 
-            // TsPrecoServicoConsultar
-            // 
-            this.TsPrecoServicoConsultar.Name = "TsPrecoServicoConsultar";
-            this.TsPrecoServicoConsultar.Size = new System.Drawing.Size(180, 22);
-            this.TsPrecoServicoConsultar.Text = "Consultar";
-            this.TsPrecoServicoConsultar.Click += new System.EventHandler(this.TsPrecoServicoConsultar_Click);
-            // 
-            // TsPrecoServicoAlterar
-            // 
-            this.TsPrecoServicoAlterar.Name = "TsPrecoServicoAlterar";
-            this.TsPrecoServicoAlterar.Size = new System.Drawing.Size(180, 22);
-            this.TsPrecoServicoAlterar.Text = "Alterar";
-            this.TsPrecoServicoAlterar.Click += new System.EventHandler(this.TsPrecoServicoAlterar_Click);
+            this.TsPesquisarNotasFechadas.Name = "TsPesquisarNotasFechadas";
+            this.TsPesquisarNotasFechadas.Size = new System.Drawing.Size(210, 22);
+            this.TsPesquisarNotasFechadas.Text = "Pesquisar Notas Fechadas";
+            this.TsPesquisarNotasFechadas.Click += new System.EventHandler(this.TsPesquisarNotasFechadas_Click);
             // 
             // FrmMenu
             // 
@@ -443,5 +462,7 @@
         private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoInserir;
         private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoConsultar;
         private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoAlterar;
+        private System.Windows.Forms.ToolStripMenuItem TsConsultarOS;
+        private System.Windows.Forms.ToolStripMenuItem TsPesquisarNotasFechadas;
     }
 }
