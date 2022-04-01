@@ -17,10 +17,21 @@ namespace ProjetoTecnico
         public FrmFabricantes()
         {
             InitializeComponent();
-            TxtNome.Enabled = false;
-            BtnSalvar.Enabled = false;
+            Cancelar();
         }
-
+        void Cancelar()
+        {
+            TxtNome.Enabled = false;
+            BtnNovo.Enabled = true;
+            BtnSalvar.Enabled = false;
+            BtnCancelar.Enabled = false;
+        }void Ativar()
+        {
+            TxtNome.Enabled = true;
+            BtnNovo.Enabled = false; ;
+            BtnSalvar.Enabled = true;
+            BtnCancelar.Enabled = true;
+        }
         private void BtnSair_Click(object sender, EventArgs e)
         {
             Close();
@@ -28,9 +39,7 @@ namespace ProjetoTecnico
 
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            TxtNome.Enabled = true;
-            BtnNovo.Enabled = false;
-            BtnSalvar.Enabled = true;
+            Ativar();
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -45,6 +54,7 @@ namespace ProjetoTecnico
             {
                 int IdFabricante = Convert.ToInt32(retorno);
                 MessageBox.Show("Produto inserido com sucesso! \n\n O codigo gerado foi : " + IdFabricante.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Cancelar();
             }
             catch (Exception)
             {
@@ -55,6 +65,11 @@ namespace ProjetoTecnico
         private void FrmFabricantes_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Cancelar();
         }
     }
 }

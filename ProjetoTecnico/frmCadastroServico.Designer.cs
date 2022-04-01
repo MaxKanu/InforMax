@@ -55,7 +55,7 @@
             this.PnBotoes.Controls.Add(this.BtnSalvar);
             this.PnBotoes.Controls.Add(this.BtnCancelar);
             this.PnBotoes.Controls.Add(this.BtnSair);
-            this.PnBotoes.Location = new System.Drawing.Point(86, 557);
+            this.PnBotoes.Location = new System.Drawing.Point(86, 456);
             this.PnBotoes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnBotoes.Name = "PnBotoes";
             this.PnBotoes.Size = new System.Drawing.Size(438, 58);
@@ -63,8 +63,8 @@
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNovo.Location = new System.Drawing.Point(115, 6);
+            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Location = new System.Drawing.Point(12, 6);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
             this.BtnNovo.TabIndex = 4;
@@ -74,8 +74,8 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.Location = new System.Drawing.Point(191, 6);
+            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSalvar.Location = new System.Drawing.Point(122, 6);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
             this.BtnSalvar.TabIndex = 5;
@@ -85,8 +85,8 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(273, 6);
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnCancelar.Location = new System.Drawing.Point(238, 6);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 6;
@@ -96,8 +96,8 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSair.Location = new System.Drawing.Point(355, 6);
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Location = new System.Drawing.Point(354, 6);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 7;
@@ -115,11 +115,13 @@
             this.PnPrincipal.Controls.Add(this.LblId);
             this.PnPrincipal.Controls.Add(this.LblNome);
             this.PnPrincipal.Controls.Add(this.lblTitulo);
+            this.PnPrincipal.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.PnPrincipal.Location = new System.Drawing.Point(3, 4);
             this.PnPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnPrincipal.Name = "PnPrincipal";
-            this.PnPrincipal.Size = new System.Drawing.Size(521, 545);
+            this.PnPrincipal.Size = new System.Drawing.Size(521, 444);
             this.PnPrincipal.TabIndex = 2;
+            this.PnPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PnPrincipal_Paint);
             // 
             // dgwPrincipal
             // 
@@ -127,10 +129,10 @@
             this.dgwPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProduto,
             this.Descricao});
-            this.dgwPrincipal.Location = new System.Drawing.Point(-1, 231);
+            this.dgwPrincipal.Location = new System.Drawing.Point(3, 183);
             this.dgwPrincipal.Name = "dgwPrincipal";
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwPrincipal.Size = new System.Drawing.Size(519, 337);
+            this.dgwPrincipal.Size = new System.Drawing.Size(519, 258);
             this.dgwPrincipal.TabIndex = 18;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
             // 
@@ -150,62 +152,62 @@
             // LblCadastro
             // 
             this.LblCadastro.AutoSize = true;
-            this.LblCadastro.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCadastro.Location = new System.Drawing.Point(139, 58);
+            this.LblCadastro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCadastro.Location = new System.Drawing.Point(154, 88);
             this.LblCadastro.Name = "LblCadastro";
-            this.LblCadastro.Size = new System.Drawing.Size(68, 21);
+            this.LblCadastro.Size = new System.Drawing.Size(57, 17);
             this.LblCadastro.TabIndex = 13;
             this.LblCadastro.Text = "Cadastro:";
             // 
             // DateNascimento
             // 
-            this.DateNascimento.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.DateNascimento.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.DateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateNascimento.Location = new System.Drawing.Point(237, 52);
+            this.DateNascimento.Location = new System.Drawing.Point(236, 82);
             this.DateNascimento.Name = "DateNascimento";
-            this.DateNascimento.Size = new System.Drawing.Size(127, 29);
+            this.DateNascimento.Size = new System.Drawing.Size(127, 25);
             this.DateNascimento.TabIndex = 14;
             // 
             // TxtId
             // 
             this.TxtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtId.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtId.Location = new System.Drawing.Point(42, 129);
+            this.TxtId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtId.Location = new System.Drawing.Point(48, 85);
             this.TxtId.MaxLength = 160;
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
-            this.TxtId.Size = new System.Drawing.Size(69, 29);
+            this.TxtId.Size = new System.Drawing.Size(69, 25);
             this.TxtId.TabIndex = 11;
             this.TxtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtNome
             // 
             this.TxtNome.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtNome.Location = new System.Drawing.Point(65, 197);
+            this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtNome.Location = new System.Drawing.Point(63, 135);
             this.TxtNome.MaxLength = 50;
             this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(428, 29);
+            this.TxtNome.Size = new System.Drawing.Size(428, 25);
             this.TxtNome.TabIndex = 16;
             this.TxtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblId
             // 
             this.LblId.AutoSize = true;
-            this.LblId.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblId.Location = new System.Drawing.Point(10, 133);
+            this.LblId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblId.Location = new System.Drawing.Point(16, 89);
             this.LblId.Name = "LblId";
-            this.LblId.Size = new System.Drawing.Size(26, 21);
+            this.LblId.Size = new System.Drawing.Size(21, 17);
             this.LblId.TabIndex = 10;
             this.LblId.Text = "Id:";
             // 
             // LblNome
             // 
             this.LblNome.AutoSize = true;
-            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNome.Location = new System.Drawing.Point(10, 201);
+            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNome.Location = new System.Drawing.Point(8, 139);
             this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(49, 21);
+            this.LblNome.Size = new System.Drawing.Size(40, 17);
             this.LblNome.TabIndex = 15;
             this.LblNome.Text = "Nome:";
             // 
@@ -215,15 +217,15 @@
             this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 16F);
             this.lblTitulo.Location = new System.Drawing.Point(121, 5);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(259, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(247, 38);
             this.lblTitulo.TabIndex = 9;
-            this.lblTitulo.Text = "Cadastro De Produtos";
+            this.lblTitulo.Text = "Cadastro De Serviços";
             // 
             // frmCadastroServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 624);
+            this.ClientSize = new System.Drawing.Size(531, 523);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnPrincipal);
             this.Font = new System.Drawing.Font("Segoe Print", 8.25F);

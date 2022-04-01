@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.PnPrincipal = new System.Windows.Forms.Panel();
+            this.LblDefeito = new System.Windows.Forms.Label();
+            this.TxtDefeito = new System.Windows.Forms.TextBox();
+            this.TxtAparelho = new System.Windows.Forms.TextBox();
+            this.LblAparelho = new System.Windows.Forms.Label();
+            this.LblModelo = new System.Windows.Forms.Label();
+            this.TxtModelo = new System.Windows.Forms.TextBox();
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtPercentual = new System.Windows.Forms.TextBox();
             this.LblPercentual = new System.Windows.Forms.Label();
@@ -69,6 +75,7 @@
             this.LblProdutos = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.PnBotoes = new System.Windows.Forms.Panel();
+            this.BtnImprimir = new System.Windows.Forms.Button();
             this.TxtValorTotal = new System.Windows.Forms.TextBox();
             this.LblValor = new System.Windows.Forms.Label();
             this.BtnNovo = new System.Windows.Forms.Button();
@@ -77,7 +84,6 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
             this.PdImprimirOrdem = new System.Drawing.Printing.PrintDocument();
-            this.BtnImprimir = new System.Windows.Forms.Button();
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -86,6 +92,12 @@
             // 
             // PnPrincipal
             // 
+            this.PnPrincipal.Controls.Add(this.LblDefeito);
+            this.PnPrincipal.Controls.Add(this.TxtDefeito);
+            this.PnPrincipal.Controls.Add(this.TxtAparelho);
+            this.PnPrincipal.Controls.Add(this.LblAparelho);
+            this.PnPrincipal.Controls.Add(this.LblModelo);
+            this.PnPrincipal.Controls.Add(this.TxtModelo);
             this.PnPrincipal.Controls.Add(this.BtnPesquisar);
             this.PnPrincipal.Controls.Add(this.TxtPercentual);
             this.PnPrincipal.Controls.Add(this.LblPercentual);
@@ -119,15 +131,80 @@
             this.PnPrincipal.Controls.Add(this.LblServicos);
             this.PnPrincipal.Controls.Add(this.LblProdutos);
             this.PnPrincipal.Controls.Add(this.lblTitulo);
+            this.PnPrincipal.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.PnPrincipal.Location = new System.Drawing.Point(6, 13);
             this.PnPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnPrincipal.Name = "PnPrincipal";
-            this.PnPrincipal.Size = new System.Drawing.Size(1032, 628);
+            this.PnPrincipal.Size = new System.Drawing.Size(1032, 596);
             this.PnPrincipal.TabIndex = 0;
+            // 
+            // LblDefeito
+            // 
+            this.LblDefeito.AutoSize = true;
+            this.LblDefeito.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblDefeito.Location = new System.Drawing.Point(737, 184);
+            this.LblDefeito.Name = "LblDefeito";
+            this.LblDefeito.Size = new System.Drawing.Size(47, 17);
+            this.LblDefeito.TabIndex = 60;
+            this.LblDefeito.Text = "Defeito:";
+            // 
+            // TxtDefeito
+            // 
+            this.TxtDefeito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtDefeito.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtDefeito.Location = new System.Drawing.Point(790, 84);
+            this.TxtDefeito.MaxLength = 50;
+            this.TxtDefeito.Multiline = true;
+            this.TxtDefeito.Name = "TxtDefeito";
+            this.TxtDefeito.Size = new System.Drawing.Size(235, 163);
+            this.TxtDefeito.TabIndex = 59;
+            this.TxtDefeito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtAparelho
+            // 
+            this.TxtAparelho.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtAparelho.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtAparelho.Location = new System.Drawing.Point(64, 180);
+            this.TxtAparelho.MaxLength = 50;
+            this.TxtAparelho.Name = "TxtAparelho";
+            this.TxtAparelho.Size = new System.Drawing.Size(303, 25);
+            this.TxtAparelho.TabIndex = 58;
+            this.TxtAparelho.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LblAparelho
+            // 
+            this.LblAparelho.AutoSize = true;
+            this.LblAparelho.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblAparelho.Location = new System.Drawing.Point(9, 184);
+            this.LblAparelho.Name = "LblAparelho";
+            this.LblAparelho.Size = new System.Drawing.Size(56, 17);
+            this.LblAparelho.TabIndex = 57;
+            this.LblAparelho.Text = "Aparelho:";
+            // 
+            // LblModelo
+            // 
+            this.LblModelo.AutoSize = true;
+            this.LblModelo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblModelo.Location = new System.Drawing.Point(388, 184);
+            this.LblModelo.Name = "LblModelo";
+            this.LblModelo.Size = new System.Drawing.Size(47, 17);
+            this.LblModelo.TabIndex = 55;
+            this.LblModelo.Text = "Modelo:";
+            // 
+            // TxtModelo
+            // 
+            this.TxtModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtModelo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtModelo.Location = new System.Drawing.Point(441, 180);
+            this.TxtModelo.MaxLength = 50;
+            this.TxtModelo.Name = "TxtModelo";
+            this.TxtModelo.Size = new System.Drawing.Size(127, 25);
+            this.TxtModelo.TabIndex = 56;
+            this.TxtModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnPesquisar
             // 
-            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnPesquisar.Location = new System.Drawing.Point(186, 38);
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(36, 29);
@@ -139,11 +216,11 @@
             // TxtPercentual
             // 
             this.TxtPercentual.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtPercentual.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtPercentual.Location = new System.Drawing.Point(424, 281);
+            this.TxtPercentual.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtPercentual.Location = new System.Drawing.Point(378, 262);
             this.TxtPercentual.MaxLength = 50;
             this.TxtPercentual.Name = "TxtPercentual";
-            this.TxtPercentual.Size = new System.Drawing.Size(66, 31);
+            this.TxtPercentual.Size = new System.Drawing.Size(66, 25);
             this.TxtPercentual.TabIndex = 53;
             this.TxtPercentual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPercentual.TextChanged += new System.EventHandler(this.TxtPercentual_TextChanged);
@@ -151,104 +228,104 @@
             // LblPercentual
             // 
             this.LblPercentual.AutoSize = true;
-            this.LblPercentual.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblPercentual.Location = new System.Drawing.Point(373, 284);
+            this.LblPercentual.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblPercentual.Location = new System.Drawing.Point(339, 266);
             this.LblPercentual.Name = "LblPercentual";
-            this.LblPercentual.Size = new System.Drawing.Size(45, 24);
+            this.LblPercentual.Size = new System.Drawing.Size(33, 17);
             this.LblPercentual.TabIndex = 52;
             this.LblPercentual.Text = "Perc:";
             // 
             // TxtQuantidade
             // 
             this.TxtQuantidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtQuantidade.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtQuantidade.Location = new System.Drawing.Point(110, 281);
+            this.TxtQuantidade.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtQuantidade.Location = new System.Drawing.Point(86, 262);
             this.TxtQuantidade.MaxLength = 50;
             this.TxtQuantidade.Name = "TxtQuantidade";
-            this.TxtQuantidade.Size = new System.Drawing.Size(83, 31);
+            this.TxtQuantidade.Size = new System.Drawing.Size(83, 25);
             this.TxtQuantidade.TabIndex = 51;
             this.TxtQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblQuantidade
             // 
             this.LblQuantidade.AutoSize = true;
-            this.LblQuantidade.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblQuantidade.Location = new System.Drawing.Point(9, 284);
+            this.LblQuantidade.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblQuantidade.Location = new System.Drawing.Point(9, 266);
             this.LblQuantidade.Name = "LblQuantidade";
-            this.LblQuantidade.Size = new System.Drawing.Size(95, 24);
+            this.LblQuantidade.Size = new System.Drawing.Size(71, 17);
             this.LblQuantidade.TabIndex = 50;
             this.LblQuantidade.Text = "Quantidade:";
             // 
             // TxtDesconto
             // 
             this.TxtDesconto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtDesconto.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtDesconto.Location = new System.Drawing.Point(579, 281);
+            this.TxtDesconto.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtDesconto.Location = new System.Drawing.Point(520, 262);
             this.TxtDesconto.MaxLength = 50;
             this.TxtDesconto.Name = "TxtDesconto";
-            this.TxtDesconto.Size = new System.Drawing.Size(127, 31);
+            this.TxtDesconto.Size = new System.Drawing.Size(127, 25);
             this.TxtDesconto.TabIndex = 49;
             this.TxtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblDesconto
             // 
             this.LblDesconto.AutoSize = true;
-            this.LblDesconto.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblDesconto.Location = new System.Drawing.Point(496, 284);
+            this.LblDesconto.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblDesconto.Location = new System.Drawing.Point(457, 266);
             this.LblDesconto.Name = "LblDesconto";
-            this.LblDesconto.Size = new System.Drawing.Size(77, 24);
+            this.LblDesconto.Size = new System.Drawing.Size(57, 17);
             this.LblDesconto.TabIndex = 48;
             this.LblDesconto.Text = "Desconto:";
             // 
             // TxtTotal
             // 
             this.TxtTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtTotal.Location = new System.Drawing.Point(811, 281);
+            this.TxtTotal.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtTotal.Location = new System.Drawing.Point(744, 262);
             this.TxtTotal.MaxLength = 50;
             this.TxtTotal.Name = "TxtTotal";
-            this.TxtTotal.Size = new System.Drawing.Size(127, 31);
+            this.TxtTotal.Size = new System.Drawing.Size(127, 25);
             this.TxtTotal.TabIndex = 47;
             this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblTotal.Location = new System.Drawing.Point(712, 284);
+            this.LblTotal.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblTotal.Location = new System.Drawing.Point(669, 266);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(93, 24);
+            this.LblTotal.Size = new System.Drawing.Size(69, 17);
             this.LblTotal.TabIndex = 46;
             this.LblTotal.Text = "Valor Total:";
             // 
             // LblIdTarefa
             // 
             this.LblIdTarefa.AutoSize = true;
-            this.LblIdTarefa.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblIdTarefa.Location = new System.Drawing.Point(9, 218);
+            this.LblIdTarefa.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblIdTarefa.Location = new System.Drawing.Point(9, 224);
             this.LblIdTarefa.Name = "LblIdTarefa";
-            this.LblIdTarefa.Size = new System.Drawing.Size(71, 24);
+            this.LblIdTarefa.Size = new System.Drawing.Size(54, 17);
             this.LblIdTarefa.TabIndex = 44;
             this.LblIdTarefa.Text = "IdTarefa:";
             // 
             // TxtIdTarefa
             // 
             this.TxtIdTarefa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtIdTarefa.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtIdTarefa.Location = new System.Drawing.Point(86, 215);
+            this.TxtIdTarefa.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtIdTarefa.Location = new System.Drawing.Point(69, 220);
             this.TxtIdTarefa.MaxLength = 50;
             this.TxtIdTarefa.Name = "TxtIdTarefa";
-            this.TxtIdTarefa.Size = new System.Drawing.Size(82, 31);
+            this.TxtIdTarefa.Size = new System.Drawing.Size(78, 25);
             this.TxtIdTarefa.TabIndex = 45;
             this.TxtIdTarefa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtIdPedido
             // 
             this.txtIdPedido.Enabled = false;
-            this.txtIdPedido.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.txtIdPedido.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.txtIdPedido.Location = new System.Drawing.Point(99, 38);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(81, 31);
+            this.txtIdPedido.Size = new System.Drawing.Size(81, 25);
             this.txtIdPedido.TabIndex = 43;
             this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIdPedido.UseWaitCursor = true;
@@ -256,37 +333,37 @@
             // lblIdPedido
             // 
             this.lblIdPedido.AutoSize = true;
-            this.lblIdPedido.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.lblIdPedido.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.lblIdPedido.Location = new System.Drawing.Point(9, 41);
             this.lblIdPedido.Name = "lblIdPedido";
-            this.lblIdPedido.Size = new System.Drawing.Size(84, 24);
+            this.lblIdPedido.Size = new System.Drawing.Size(62, 17);
             this.lblIdPedido.TabIndex = 42;
             this.lblIdPedido.Text = "Nº Pedido:";
             // 
             // LblNomeOperado
             // 
             this.LblNomeOperado.AutoSize = true;
-            this.LblNomeOperado.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblNomeOperado.Location = new System.Drawing.Point(840, 57);
+            this.LblNomeOperado.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNomeOperado.Location = new System.Drawing.Point(821, 50);
             this.LblNomeOperado.Name = "LblNomeOperado";
-            this.LblNomeOperado.Size = new System.Drawing.Size(122, 24);
+            this.LblNomeOperado.Size = new System.Drawing.Size(89, 17);
             this.LblNomeOperado.TabIndex = 41;
             this.LblNomeOperado.Text = "Nome Operador";
             // 
             // LblOperador
             // 
             this.LblOperador.AutoSize = true;
-            this.LblOperador.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblOperador.Location = new System.Drawing.Point(863, 10);
+            this.LblOperador.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblOperador.Location = new System.Drawing.Point(834, 10);
             this.LblOperador.Name = "LblOperador";
-            this.LblOperador.Size = new System.Drawing.Size(80, 24);
+            this.LblOperador.Size = new System.Drawing.Size(59, 17);
             this.LblOperador.TabIndex = 40;
             this.LblOperador.Text = "Operador:";
             // 
             // BtnInserir
             // 
-            this.BtnInserir.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.BtnInserir.Location = new System.Drawing.Point(944, 282);
+            this.BtnInserir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnInserir.Location = new System.Drawing.Point(877, 260);
             this.BtnInserir.Name = "BtnInserir";
             this.BtnInserir.Size = new System.Drawing.Size(63, 29);
             this.BtnInserir.TabIndex = 15;
@@ -297,26 +374,26 @@
             // LblCadastro
             // 
             this.LblCadastro.AutoSize = true;
-            this.LblCadastro.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblCadastro.Location = new System.Drawing.Point(681, 143);
+            this.LblCadastro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCadastro.Location = new System.Drawing.Point(576, 143);
             this.LblCadastro.Name = "LblCadastro";
-            this.LblCadastro.Size = new System.Drawing.Size(77, 24);
+            this.LblCadastro.Size = new System.Drawing.Size(57, 17);
             this.LblCadastro.TabIndex = 5;
             this.LblCadastro.Text = "Cadastro:";
             // 
             // DateNascimento
             // 
-            this.DateNascimento.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.DateNascimento.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.DateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateNascimento.Location = new System.Drawing.Point(779, 137);
+            this.DateNascimento.Location = new System.Drawing.Point(639, 139);
             this.DateNascimento.Name = "DateNascimento";
-            this.DateNascimento.Size = new System.Drawing.Size(127, 31);
+            this.DateNascimento.Size = new System.Drawing.Size(127, 25);
             this.DateNascimento.TabIndex = 6;
             // 
             // PicLogo
             // 
             this.PicLogo.Image = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
-            this.PicLogo.Location = new System.Drawing.Point(6, 333);
+            this.PicLogo.Location = new System.Drawing.Point(6, 295);
             this.PicLogo.Name = "PicLogo";
             this.PicLogo.Size = new System.Drawing.Size(318, 292);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,10 +402,10 @@
             // 
             // BtnServico
             // 
-            this.BtnServico.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.BtnServico.Location = new System.Drawing.Point(971, 216);
+            this.BtnServico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnServico.Location = new System.Drawing.Point(757, 218);
             this.BtnServico.Name = "BtnServico";
-            this.BtnServico.Size = new System.Drawing.Size(36, 29);
+            this.BtnServico.Size = new System.Drawing.Size(28, 29);
             this.BtnServico.TabIndex = 12;
             this.BtnServico.Text = "...";
             this.BtnServico.UseVisualStyleBackColor = true;
@@ -336,10 +413,10 @@
             // 
             // BtnProdutos
             // 
-            this.BtnProdutos.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.BtnProdutos.Location = new System.Drawing.Point(544, 216);
+            this.BtnProdutos.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnProdutos.Location = new System.Drawing.Point(439, 218);
             this.BtnProdutos.Name = "BtnProdutos";
-            this.BtnProdutos.Size = new System.Drawing.Size(36, 29);
+            this.BtnProdutos.Size = new System.Drawing.Size(28, 29);
             this.BtnProdutos.TabIndex = 9;
             this.BtnProdutos.Text = "...";
             this.BtnProdutos.UseVisualStyleBackColor = true;
@@ -348,22 +425,22 @@
             // TxtServico
             // 
             this.TxtServico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtServico.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtServico.Location = new System.Drawing.Point(727, 215);
+            this.TxtServico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtServico.Location = new System.Drawing.Point(535, 220);
             this.TxtServico.MaxLength = 50;
             this.TxtServico.Name = "TxtServico";
-            this.TxtServico.Size = new System.Drawing.Size(235, 31);
+            this.TxtServico.Size = new System.Drawing.Size(216, 25);
             this.TxtServico.TabIndex = 11;
             this.TxtServico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtProdutos
             // 
             this.TxtProdutos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtProdutos.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtProdutos.Location = new System.Drawing.Point(303, 215);
+            this.TxtProdutos.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtProdutos.Location = new System.Drawing.Point(217, 220);
             this.TxtProdutos.MaxLength = 50;
             this.TxtProdutos.Name = "TxtProdutos";
-            this.TxtProdutos.Size = new System.Drawing.Size(235, 31);
+            this.TxtProdutos.Size = new System.Drawing.Size(216, 25);
             this.TxtProdutos.TabIndex = 8;
             this.TxtProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -377,7 +454,7 @@
             this.Valor,
             this.Desconto,
             this.Valor_Total});
-            this.dgwPrincipal.Location = new System.Drawing.Point(330, 333);
+            this.dgwPrincipal.Location = new System.Drawing.Point(330, 295);
             this.dgwPrincipal.Name = "dgwPrincipal";
             this.dgwPrincipal.Size = new System.Drawing.Size(702, 292);
             this.dgwPrincipal.TabIndex = 16;
@@ -432,53 +509,53 @@
             // TxtCliente
             // 
             this.TxtCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtCliente.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtCliente.Location = new System.Drawing.Point(299, 140);
+            this.TxtCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtCliente.Location = new System.Drawing.Point(247, 139);
             this.TxtCliente.MaxLength = 50;
             this.TxtCliente.Name = "TxtCliente";
-            this.TxtCliente.Size = new System.Drawing.Size(303, 31);
+            this.TxtCliente.Size = new System.Drawing.Size(303, 25);
             this.TxtCliente.TabIndex = 4;
             this.TxtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblCliente
             // 
             this.LblCliente.AutoSize = true;
-            this.LblCliente.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblCliente.Location = new System.Drawing.Point(231, 143);
+            this.LblCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCliente.Location = new System.Drawing.Point(195, 143);
             this.LblCliente.Name = "LblCliente";
-            this.LblCliente.Size = new System.Drawing.Size(62, 24);
+            this.LblCliente.Size = new System.Drawing.Size(46, 17);
             this.LblCliente.TabIndex = 3;
             this.LblCliente.Text = "Cliente:";
             // 
             // LblId
             // 
             this.LblId.AutoSize = true;
-            this.LblId.Font = new System.Drawing.Font("Segoe Print", 10F);
+            this.LblId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.LblId.Location = new System.Drawing.Point(9, 143);
             this.LblId.Name = "LblId";
-            this.LblId.Size = new System.Drawing.Size(27, 24);
+            this.LblId.Size = new System.Drawing.Size(21, 17);
             this.LblId.TabIndex = 1;
             this.LblId.Text = "Id:";
             // 
             // TxtId
             // 
             this.TxtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtId.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtId.Location = new System.Drawing.Point(41, 140);
+            this.TxtId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtId.Location = new System.Drawing.Point(41, 139);
             this.TxtId.MaxLength = 50;
             this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(127, 31);
+            this.TxtId.Size = new System.Drawing.Size(127, 25);
             this.TxtId.TabIndex = 2;
             this.TxtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPreco
             // 
             this.TxtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtPreco.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtPreco.Location = new System.Drawing.Point(267, 281);
+            this.TxtPreco.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtPreco.Location = new System.Drawing.Point(233, 262);
             this.TxtPreco.MaxLength = 50;
             this.TxtPreco.Name = "TxtPreco";
-            this.TxtPreco.Size = new System.Drawing.Size(100, 31);
+            this.TxtPreco.Size = new System.Drawing.Size(100, 25);
             this.TxtPreco.TabIndex = 14;
             this.TxtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPreco.TextChanged += new System.EventHandler(this.TxtPreco_TextChanged);
@@ -486,30 +563,30 @@
             // LblPreco
             // 
             this.LblPreco.AutoSize = true;
-            this.LblPreco.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblPreco.Location = new System.Drawing.Point(208, 284);
+            this.LblPreco.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblPreco.Location = new System.Drawing.Point(188, 266);
             this.LblPreco.Name = "LblPreco";
-            this.LblPreco.Size = new System.Drawing.Size(53, 24);
+            this.LblPreco.Size = new System.Drawing.Size(39, 17);
             this.LblPreco.TabIndex = 13;
             this.LblPreco.Text = "Preço:";
             // 
             // LblServicos
             // 
             this.LblServicos.AutoSize = true;
-            this.LblServicos.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblServicos.Location = new System.Drawing.Point(651, 218);
+            this.LblServicos.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblServicos.Location = new System.Drawing.Point(479, 224);
             this.LblServicos.Name = "LblServicos";
-            this.LblServicos.Size = new System.Drawing.Size(70, 24);
+            this.LblServicos.Size = new System.Drawing.Size(50, 17);
             this.LblServicos.TabIndex = 10;
             this.LblServicos.Text = "Serviços:";
             // 
             // LblProdutos
             // 
             this.LblProdutos.AutoSize = true;
-            this.LblProdutos.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblProdutos.Location = new System.Drawing.Point(219, 218);
+            this.LblProdutos.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblProdutos.Location = new System.Drawing.Point(154, 224);
             this.LblProdutos.Name = "LblProdutos";
-            this.LblProdutos.Size = new System.Drawing.Size(78, 24);
+            this.LblProdutos.Size = new System.Drawing.Size(57, 17);
             this.LblProdutos.TabIndex = 7;
             this.LblProdutos.Text = "Produtos:";
             // 
@@ -533,20 +610,30 @@
             this.PnBotoes.Controls.Add(this.BtnExcluir);
             this.PnBotoes.Controls.Add(this.BtnCancelar);
             this.PnBotoes.Controls.Add(this.BtnSair);
-            this.PnBotoes.Location = new System.Drawing.Point(112, 649);
+            this.PnBotoes.Location = new System.Drawing.Point(112, 617);
             this.PnBotoes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnBotoes.Name = "PnBotoes";
             this.PnBotoes.Size = new System.Drawing.Size(926, 60);
             this.PnBotoes.TabIndex = 1;
             // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnImprimir.Location = new System.Drawing.Point(579, 6);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(40, 47);
+            this.BtnImprimir.TabIndex = 50;
+            this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
+            // 
             // TxtValorTotal
             // 
             this.TxtValorTotal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtValorTotal.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.TxtValorTotal.Location = new System.Drawing.Point(792, 14);
+            this.TxtValorTotal.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtValorTotal.Location = new System.Drawing.Point(792, 17);
             this.TxtValorTotal.MaxLength = 50;
             this.TxtValorTotal.Name = "TxtValorTotal";
-            this.TxtValorTotal.Size = new System.Drawing.Size(127, 31);
+            this.TxtValorTotal.Size = new System.Drawing.Size(127, 25);
             this.TxtValorTotal.TabIndex = 49;
             this.TxtValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtValorTotal.TextChanged += new System.EventHandler(this.TxtValor_TextChanged);
@@ -554,16 +641,16 @@
             // LblValor
             // 
             this.LblValor.AutoSize = true;
-            this.LblValor.Font = new System.Drawing.Font("Segoe Print", 10F);
-            this.LblValor.Location = new System.Drawing.Point(686, 17);
+            this.LblValor.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblValor.Location = new System.Drawing.Point(696, 21);
             this.LblValor.Name = "LblValor";
-            this.LblValor.Size = new System.Drawing.Size(93, 24);
+            this.LblValor.Size = new System.Drawing.Size(69, 17);
             this.LblValor.TabIndex = 48;
             this.LblValor.Text = "Valor Total:";
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnNovo.Location = new System.Drawing.Point(20, 6);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
@@ -573,7 +660,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSalvar.Location = new System.Drawing.Point(133, 6);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
@@ -584,7 +671,7 @@
             // 
             // BtnExcluir
             // 
-            this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7F);
+            this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnExcluir.Location = new System.Drawing.Point(252, 6);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 47);
@@ -595,7 +682,7 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnCancelar.Location = new System.Drawing.Point(371, 6);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
@@ -606,7 +693,7 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSair.Location = new System.Drawing.Point(490, 6);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
@@ -618,16 +705,6 @@
             // PdImprimirOrdem
             // 
             this.PdImprimirOrdem.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PdImprimirOrdem_PrintPage);
-            // 
-            // BtnImprimir
-            // 
-            this.BtnImprimir.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnImprimir.Location = new System.Drawing.Point(579, 6);
-            this.BtnImprimir.Name = "BtnImprimir";
-            this.BtnImprimir.Size = new System.Drawing.Size(40, 47);
-            this.BtnImprimir.TabIndex = 50;
-            this.BtnImprimir.UseVisualStyleBackColor = true;
-            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // FrmOrdemServico
             // 
@@ -705,5 +782,11 @@
         private System.Windows.Forms.Button BtnPesquisar;
         private System.Drawing.Printing.PrintDocument PdImprimirOrdem;
         private System.Windows.Forms.Button BtnImprimir;
+        private System.Windows.Forms.TextBox TxtAparelho;
+        private System.Windows.Forms.Label LblAparelho;
+        private System.Windows.Forms.Label LblModelo;
+        private System.Windows.Forms.TextBox TxtModelo;
+        private System.Windows.Forms.TextBox TxtDefeito;
+        private System.Windows.Forms.Label LblDefeito;
     }
 }

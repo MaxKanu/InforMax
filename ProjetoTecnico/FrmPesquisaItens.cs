@@ -99,13 +99,13 @@ namespace ProjetoTecnico
             }
         }
         void PesquisarNotas()
-        { int i;
+        { /*int i;
             if (int.TryParse(TxtPesquisa.Text, out int codigoDigitado) == true)
             {
                 colecaoItens = negocioItens.ConsultarValorTotalPedidos(codigoDigitado);
             }
             for (i = 0; i <= dgwPrincipal.Rows.Count; i++)
-                ltvPrincipal.Items.Add(dgwPrincipal.Rows[i].ItemArray[0].Tostring());
+                ltvPrincipal.Items.Add(dgwPrincipal.Rows[i].ItemArray[0].Tostring());*/
         }
         void PesquisarLista()
         {

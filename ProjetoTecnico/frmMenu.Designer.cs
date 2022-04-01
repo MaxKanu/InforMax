@@ -55,6 +55,7 @@
             this.TsPesquisaServicos = new System.Windows.Forms.ToolStripDropDownButton();
             this.TsOS = new System.Windows.Forms.ToolStripMenuItem();
             this.TsConsultarOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsPesquisarNotasFechadas = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPedidos = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecos = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPrecoProdutos = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,6 @@
             this.TsPrecoServicoAlterar = new System.Windows.Forms.ToolStripMenuItem();
             this.TsSair = new System.Windows.Forms.ToolStripButton();
             this.LblRelogio = new System.Windows.Forms.Label();
-            this.TsPesquisarNotasFechadas = new System.Windows.Forms.ToolStripMenuItem();
             this.TsTrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,7 +282,7 @@
             this.TsConsultarOS,
             this.TsPesquisarNotasFechadas});
             this.TsOS.Name = "TsOS";
-            this.TsOS.Size = new System.Drawing.Size(180, 22);
+            this.TsOS.Size = new System.Drawing.Size(116, 22);
             this.TsOS.Text = "O.S";
             this.TsOS.Click += new System.EventHandler(this.TsOS_Click);
             // 
@@ -293,10 +293,17 @@
             this.TsConsultarOS.Text = "Consultar";
             this.TsConsultarOS.Click += new System.EventHandler(this.TsConsultarOS_Click);
             // 
+            // TsPesquisarNotasFechadas
+            // 
+            this.TsPesquisarNotasFechadas.Name = "TsPesquisarNotasFechadas";
+            this.TsPesquisarNotasFechadas.Size = new System.Drawing.Size(210, 22);
+            this.TsPesquisarNotasFechadas.Text = "Pesquisar Notas Fechadas";
+            this.TsPesquisarNotasFechadas.Click += new System.EventHandler(this.TsPesquisarNotasFechadas_Click);
+            // 
             // TsPedidos
             // 
             this.TsPedidos.Name = "TsPedidos";
-            this.TsPedidos.Size = new System.Drawing.Size(180, 22);
+            this.TsPedidos.Size = new System.Drawing.Size(116, 22);
             this.TsPedidos.Text = "Pedidos";
             this.TsPedidos.Click += new System.EventHandler(this.TsPedidos_Click);
             // 
@@ -306,7 +313,7 @@
             this.TsPrecoProdutos,
             this.TsPrecoServicos});
             this.TsPrecos.Name = "TsPrecos";
-            this.TsPrecos.Size = new System.Drawing.Size(180, 22);
+            this.TsPrecos.Size = new System.Drawing.Size(116, 22);
             this.TsPrecos.Text = "Preços";
             // 
             // TsPrecoProdutos
@@ -386,31 +393,26 @@
             this.LblRelogio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblRelogio.AutoSize = true;
             this.LblRelogio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblRelogio.Location = new System.Drawing.Point(693, 9);
+            this.LblRelogio.Location = new System.Drawing.Point(677, 8);
             this.LblRelogio.Name = "LblRelogio";
-            this.LblRelogio.Size = new System.Drawing.Size(95, 13);
+            this.LblRelogio.Size = new System.Drawing.Size(111, 17);
             this.LblRelogio.TabIndex = 2;
             this.LblRelogio.Text = "18/03/2022 12:00";
             // 
-            // TsPesquisarNotasFechadas
-            // 
-            this.TsPesquisarNotasFechadas.Name = "TsPesquisarNotasFechadas";
-            this.TsPesquisarNotasFechadas.Size = new System.Drawing.Size(210, 22);
-            this.TsPesquisarNotasFechadas.Text = "Pesquisar Notas Fechadas";
-            this.TsPesquisarNotasFechadas.Click += new System.EventHandler(this.TsPesquisarNotasFechadas_Click);
-            // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 588);
             this.Controls.Add(this.LblRelogio);
             this.Controls.Add(this.TsTrip);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

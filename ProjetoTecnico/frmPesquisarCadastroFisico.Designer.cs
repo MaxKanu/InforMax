@@ -60,6 +60,7 @@
             this.panel1.Controls.Add(this.LblNome);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.dgwPrincipal);
+            this.panel1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 459);
@@ -67,6 +68,7 @@
             // 
             // BtnPesquisar
             // 
+            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnPesquisar.Location = new System.Drawing.Point(438, 94);
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(75, 29);
@@ -78,31 +80,31 @@
             // TxtNome
             // 
             this.TxtNome.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.TxtNome.Location = new System.Drawing.Point(62, 94);
             this.TxtNome.MaxLength = 160;
             this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(370, 29);
+            this.TxtNome.Size = new System.Drawing.Size(370, 25);
             this.TxtNome.TabIndex = 10;
             this.TxtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblNome
             // 
             this.LblNome.AutoSize = true;
-            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.LblNome.Location = new System.Drawing.Point(7, 98);
             this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(49, 21);
+            this.LblNome.Size = new System.Drawing.Size(40, 17);
             this.LblNome.TabIndex = 9;
             this.LblNome.Text = "Nome:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 16F);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 19F);
             this.lblTitulo.Location = new System.Drawing.Point(244, 7);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(225, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(267, 45);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Pesquisar Cadastro";
             // 
@@ -178,14 +180,14 @@
             this.panel2.Controls.Add(this.BtnAlterFuncio);
             this.panel2.Controls.Add(this.BtnConsulFuncio);
             this.panel2.Controls.Add(this.BtnSair);
-            this.panel2.Location = new System.Drawing.Point(3, 469);
+            this.panel2.Location = new System.Drawing.Point(3, 463);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(713, 57);
             this.panel2.TabIndex = 1;
             // 
             // BtnAlterarJuridico
             // 
-            this.BtnAlterarJuridico.Font = new System.Drawing.Font("Segoe Print", 7F);
+            this.BtnAlterarJuridico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnAlterarJuridico.Location = new System.Drawing.Point(417, 3);
             this.BtnAlterarJuridico.Name = "BtnAlterarJuridico";
             this.BtnAlterarJuridico.Size = new System.Drawing.Size(78, 47);
@@ -196,7 +198,7 @@
             // 
             // BtnConsultarJuridico
             // 
-            this.BtnConsultarJuridico.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnConsultarJuridico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnConsultarJuridico.Location = new System.Drawing.Point(517, 3);
             this.BtnConsultarJuridico.Name = "BtnConsultarJuridico";
             this.BtnConsultarJuridico.Size = new System.Drawing.Size(82, 47);
@@ -207,7 +209,7 @@
             // 
             // BtnConsCliente
             // 
-            this.BtnConsCliente.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnConsCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnConsCliente.Location = new System.Drawing.Point(116, 3);
             this.BtnConsCliente.Name = "BtnConsCliente";
             this.BtnConsCliente.Size = new System.Drawing.Size(75, 47);
@@ -218,7 +220,7 @@
             // 
             // BtnAlterCliente
             // 
-            this.BtnAlterCliente.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnAlterCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnAlterCliente.Location = new System.Drawing.Point(19, 3);
             this.BtnAlterCliente.Name = "BtnAlterCliente";
             this.BtnAlterCliente.Size = new System.Drawing.Size(75, 47);
@@ -229,7 +231,7 @@
             // 
             // BtnAlterFuncio
             // 
-            this.BtnAlterFuncio.Font = new System.Drawing.Font("Segoe Print", 7F);
+            this.BtnAlterFuncio.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnAlterFuncio.Location = new System.Drawing.Point(213, 3);
             this.BtnAlterFuncio.Name = "BtnAlterFuncio";
             this.BtnAlterFuncio.Size = new System.Drawing.Size(78, 47);
@@ -240,7 +242,7 @@
             // 
             // BtnConsulFuncio
             // 
-            this.BtnConsulFuncio.Font = new System.Drawing.Font("Segoe Print", 8F);
+            this.BtnConsulFuncio.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnConsulFuncio.Location = new System.Drawing.Point(313, 3);
             this.BtnConsulFuncio.Name = "BtnConsulFuncio";
             this.BtnConsulFuncio.Size = new System.Drawing.Size(82, 47);
@@ -251,7 +253,7 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSair.Location = new System.Drawing.Point(621, 3);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
@@ -264,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 530);
+            this.ClientSize = new System.Drawing.Size(720, 522);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe Print", 8F);
@@ -273,6 +275,7 @@
             this.Name = "frmPesquisarCadastroFisico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Cadastro Fisico";
+            this.Load += new System.EventHandler(this.frmPesquisarCadastroFisico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();

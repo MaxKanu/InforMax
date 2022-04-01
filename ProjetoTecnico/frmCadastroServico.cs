@@ -189,5 +189,10 @@ namespace ProjetoTecnico
             PnPrincipal.Enabled = true;
             Botoes(2);
         }
+
+        private void PnPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

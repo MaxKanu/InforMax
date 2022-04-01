@@ -343,5 +343,10 @@ namespace ProjetoTecnico
             frmCadastroJuridico cadastroJuridico = new frmCadastroJuridico(Enumeradores.ConsultarJuridico, juridicoSelecionado);
             cadastroJuridico.ShowDialog();
         }
+
+        private void frmPesquisarCadastroFisico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

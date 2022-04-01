@@ -137,56 +137,56 @@
             this.PnCadastro.Controls.Add(this.lblTitulo);
             this.PnCadastro.Location = new System.Drawing.Point(4, 2);
             this.PnCadastro.Name = "PnCadastro";
-            this.PnCadastro.Size = new System.Drawing.Size(1195, 540);
+            this.PnCadastro.Size = new System.Drawing.Size(1027, 465);
             this.PnCadastro.TabIndex = 1;
             // 
             // TxtNomeFantasia
             // 
             this.TxtNomeFantasia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtNomeFantasia.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtNomeFantasia.Location = new System.Drawing.Point(124, 314);
+            this.TxtNomeFantasia.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtNomeFantasia.Location = new System.Drawing.Point(117, 278);
             this.TxtNomeFantasia.MaxLength = 160;
             this.TxtNomeFantasia.Name = "TxtNomeFantasia";
-            this.TxtNomeFantasia.Size = new System.Drawing.Size(370, 29);
+            this.TxtNomeFantasia.Size = new System.Drawing.Size(370, 25);
             this.TxtNomeFantasia.TabIndex = 48;
             this.TxtNomeFantasia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblNomeFantasia
             // 
             this.LblNomeFantasia.AutoSize = true;
-            this.LblNomeFantasia.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNomeFantasia.Location = new System.Drawing.Point(9, 318);
+            this.LblNomeFantasia.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNomeFantasia.Location = new System.Drawing.Point(4, 281);
             this.LblNomeFantasia.Name = "LblNomeFantasia";
-            this.LblNomeFantasia.Size = new System.Drawing.Size(109, 21);
+            this.LblNomeFantasia.Size = new System.Drawing.Size(91, 17);
             this.LblNomeFantasia.TabIndex = 47;
             this.LblNomeFantasia.Text = "Nome Fantasia :";
             // 
             // DateNascimento
             // 
-            this.DateNascimento.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.DateNascimento.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.DateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateNascimento.Location = new System.Drawing.Point(576, 66);
+            this.DateNascimento.Location = new System.Drawing.Point(576, 75);
             this.DateNascimento.Name = "DateNascimento";
-            this.DateNascimento.Size = new System.Drawing.Size(127, 29);
+            this.DateNascimento.Size = new System.Drawing.Size(127, 25);
             this.DateNascimento.TabIndex = 4;
             // 
             // LblNascimento
             // 
             this.LblNascimento.AutoSize = true;
-            this.LblNascimento.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNascimento.Location = new System.Drawing.Point(481, 70);
+            this.LblNascimento.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNascimento.Location = new System.Drawing.Point(481, 79);
             this.LblNascimento.Name = "LblNascimento";
-            this.LblNascimento.Size = new System.Drawing.Size(103, 21);
+            this.LblNascimento.Size = new System.Drawing.Size(85, 17);
             this.LblNascimento.TabIndex = 3;
             this.LblNascimento.Text = "Data Registro :";
             // 
             // lblSituacao
             // 
             this.lblSituacao.AutoSize = true;
-            this.lblSituacao.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.lblSituacao.Location = new System.Drawing.Point(929, 141);
+            this.lblSituacao.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.lblSituacao.Location = new System.Drawing.Point(755, 141);
             this.lblSituacao.Name = "lblSituacao";
-            this.lblSituacao.Size = new System.Drawing.Size(65, 21);
+            this.lblSituacao.Size = new System.Drawing.Size(54, 17);
             this.lblSituacao.TabIndex = 11;
             this.lblSituacao.Text = "Situacao:";
             // 
@@ -194,386 +194,386 @@
             // 
             this.ComboSituacao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ComboSituacao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.ComboSituacao.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.ComboSituacao.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.ComboSituacao.FormattingEnabled = true;
-            this.ComboSituacao.Location = new System.Drawing.Point(1000, 137);
+            this.ComboSituacao.Location = new System.Drawing.Point(823, 137);
             this.ComboSituacao.Name = "ComboSituacao";
-            this.ComboSituacao.Size = new System.Drawing.Size(141, 29);
+            this.ComboSituacao.Size = new System.Drawing.Size(141, 25);
             this.ComboSituacao.TabIndex = 12;
             // 
             // TxtEmail2
             // 
             this.TxtEmail2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtEmail2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtEmail2.Location = new System.Drawing.Point(560, 265);
+            this.TxtEmail2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtEmail2.Location = new System.Drawing.Point(540, 231);
             this.TxtEmail2.MaxLength = 160;
             this.TxtEmail2.Name = "TxtEmail2";
-            this.TxtEmail2.Size = new System.Drawing.Size(370, 29);
+            this.TxtEmail2.Size = new System.Drawing.Size(370, 25);
             this.TxtEmail2.TabIndex = 24;
             this.TxtEmail2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblEmail2
             // 
             this.LblEmail2.AutoSize = true;
-            this.LblEmail2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblEmail2.Location = new System.Drawing.Point(493, 269);
+            this.LblEmail2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblEmail2.Location = new System.Drawing.Point(481, 234);
             this.LblEmail2.Name = "LblEmail2";
-            this.LblEmail2.Size = new System.Drawing.Size(61, 21);
+            this.LblEmail2.Size = new System.Drawing.Size(51, 17);
             this.LblEmail2.TabIndex = 23;
             this.LblEmail2.Text = "Email 2:";
             // 
             // TxtEmail1
             // 
             this.TxtEmail1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtEmail1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtEmail1.Location = new System.Drawing.Point(76, 265);
+            this.TxtEmail1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtEmail1.Location = new System.Drawing.Point(72, 231);
             this.TxtEmail1.MaxLength = 160;
             this.TxtEmail1.Name = "TxtEmail1";
-            this.TxtEmail1.Size = new System.Drawing.Size(370, 29);
+            this.TxtEmail1.Size = new System.Drawing.Size(370, 25);
             this.TxtEmail1.TabIndex = 22;
             this.TxtEmail1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblEmail1
             // 
             this.LblEmail1.AutoSize = true;
-            this.LblEmail1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblEmail1.Location = new System.Drawing.Point(9, 269);
+            this.LblEmail1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblEmail1.Location = new System.Drawing.Point(9, 234);
             this.LblEmail1.Name = "LblEmail1";
-            this.LblEmail1.Size = new System.Drawing.Size(61, 21);
+            this.LblEmail1.Size = new System.Drawing.Size(51, 17);
             this.LblEmail1.TabIndex = 21;
             this.LblEmail1.Text = "Email 1:";
             // 
             // LblTipo
             // 
             this.LblTipo.AutoSize = true;
-            this.LblTipo.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblTipo.Location = new System.Drawing.Point(556, 141);
+            this.LblTipo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblTipo.Location = new System.Drawing.Point(472, 141);
             this.LblTipo.Name = "LblTipo";
-            this.LblTipo.Size = new System.Drawing.Size(104, 21);
+            this.LblTipo.Size = new System.Drawing.Size(87, 17);
             this.LblTipo.TabIndex = 9;
             this.LblTipo.Text = "Tipo Cadastro :";
             // 
             // ComboTipo
             // 
-            this.ComboTipo.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.ComboTipo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.ComboTipo.FormattingEnabled = true;
-            this.ComboTipo.Location = new System.Drawing.Point(666, 137);
+            this.ComboTipo.Location = new System.Drawing.Point(574, 137);
             this.ComboTipo.Name = "ComboTipo";
-            this.ComboTipo.Size = new System.Drawing.Size(141, 29);
+            this.ComboTipo.Size = new System.Drawing.Size(141, 25);
             this.ComboTipo.TabIndex = 10;
             // 
             // MaskCel2
             // 
             this.MaskCel2.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskCel2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskCel2.Location = new System.Drawing.Point(635, 208);
+            this.MaskCel2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskCel2.Location = new System.Drawing.Point(558, 184);
             this.MaskCel2.Mask = "(00)0-0000-0000";
             this.MaskCel2.Name = "MaskCel2";
-            this.MaskCel2.Size = new System.Drawing.Size(131, 29);
+            this.MaskCel2.Size = new System.Drawing.Size(131, 25);
             this.MaskCel2.TabIndex = 18;
             this.MaskCel2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblCelular2
             // 
             this.LblCelular2.AutoSize = true;
-            this.LblCelular2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCelular2.Location = new System.Drawing.Point(561, 212);
+            this.LblCelular2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCelular2.Location = new System.Drawing.Point(484, 187);
             this.LblCelular2.Name = "LblCelular2";
-            this.LblCelular2.Size = new System.Drawing.Size(68, 21);
+            this.LblCelular2.Size = new System.Drawing.Size(57, 17);
             this.LblCelular2.TabIndex = 17;
             this.LblCelular2.Text = "Celular 2:";
             // 
             // MaskFixo2
             // 
             this.MaskFixo2.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskFixo2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskFixo2.Location = new System.Drawing.Point(925, 208);
+            this.MaskFixo2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskFixo2.Location = new System.Drawing.Point(808, 184);
             this.MaskFixo2.Mask = "(00)0000-0000";
             this.MaskFixo2.Name = "MaskFixo2";
-            this.MaskFixo2.Size = new System.Drawing.Size(131, 29);
+            this.MaskFixo2.Size = new System.Drawing.Size(131, 25);
             this.MaskFixo2.TabIndex = 20;
             this.MaskFixo2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblFixo2
             // 
             this.LblFixo2.AutoSize = true;
-            this.LblFixo2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblFixo2.Location = new System.Drawing.Point(867, 212);
+            this.LblFixo2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblFixo2.Location = new System.Drawing.Point(758, 187);
             this.LblFixo2.Name = "LblFixo2";
-            this.LblFixo2.Size = new System.Drawing.Size(51, 21);
+            this.LblFixo2.Size = new System.Drawing.Size(42, 17);
             this.LblFixo2.TabIndex = 19;
             this.LblFixo2.Text = "Fixo 2:";
             // 
             // MaskIE
             // 
             this.MaskIE.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskIE.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskIE.Location = new System.Drawing.Point(672, 314);
+            this.MaskIE.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskIE.Location = new System.Drawing.Point(568, 277);
             this.MaskIE.Mask = "00,000,000-A";
             this.MaskIE.Name = "MaskIE";
-            this.MaskIE.Size = new System.Drawing.Size(131, 29);
+            this.MaskIE.Size = new System.Drawing.Size(131, 25);
             this.MaskIE.TabIndex = 26;
             this.MaskIE.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblIE
             // 
             this.LblIE.AutoSize = true;
-            this.LblIE.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblIE.Location = new System.Drawing.Point(623, 318);
+            this.LblIE.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblIE.Location = new System.Drawing.Point(519, 281);
             this.LblIE.Name = "LblIE";
-            this.LblIE.Size = new System.Drawing.Size(37, 21);
+            this.LblIE.Size = new System.Drawing.Size(31, 17);
             this.LblIE.TabIndex = 25;
             this.LblIE.Text = "I.E. :";
             // 
             // MaskCNPJ
             // 
             this.MaskCNPJ.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskCNPJ.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskCNPJ.Location = new System.Drawing.Point(985, 314);
+            this.MaskCNPJ.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskCNPJ.Location = new System.Drawing.Point(796, 277);
             this.MaskCNPJ.Mask = "00,000,000/0000-00";
             this.MaskCNPJ.Name = "MaskCNPJ";
-            this.MaskCNPJ.Size = new System.Drawing.Size(159, 29);
+            this.MaskCNPJ.Size = new System.Drawing.Size(159, 25);
             this.MaskCNPJ.TabIndex = 28;
             this.MaskCNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblCNPJ
             // 
             this.LblCNPJ.AutoSize = true;
-            this.LblCNPJ.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCNPJ.Location = new System.Drawing.Point(915, 318);
+            this.LblCNPJ.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCNPJ.Location = new System.Drawing.Point(726, 281);
             this.LblCNPJ.Name = "LblCNPJ";
-            this.LblCNPJ.Size = new System.Drawing.Size(64, 21);
+            this.LblCNPJ.Size = new System.Drawing.Size(55, 17);
             this.LblCNPJ.TabIndex = 27;
             this.LblCNPJ.Text = "C.N.P.J. :";
             // 
             // MaskCel1
             // 
             this.MaskCel1.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskCel1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskCel1.Location = new System.Drawing.Point(83, 208);
+            this.MaskCel1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskCel1.Location = new System.Drawing.Point(79, 184);
             this.MaskCel1.Mask = "(00)0-0000-0000";
             this.MaskCel1.Name = "MaskCel1";
-            this.MaskCel1.Size = new System.Drawing.Size(131, 29);
+            this.MaskCel1.Size = new System.Drawing.Size(131, 25);
             this.MaskCel1.TabIndex = 14;
             this.MaskCel1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblCelular1
             // 
             this.LblCelular1.AutoSize = true;
-            this.LblCelular1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCelular1.Location = new System.Drawing.Point(9, 212);
+            this.LblCelular1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCelular1.Location = new System.Drawing.Point(9, 187);
             this.LblCelular1.Name = "LblCelular1";
-            this.LblCelular1.Size = new System.Drawing.Size(68, 21);
+            this.LblCelular1.Size = new System.Drawing.Size(57, 17);
             this.LblCelular1.TabIndex = 13;
             this.LblCelular1.Text = "Celular 1:";
             // 
             // MaskFixo1
             // 
             this.MaskFixo1.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskFixo1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskFixo1.Location = new System.Drawing.Point(373, 208);
+            this.MaskFixo1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskFixo1.Location = new System.Drawing.Point(293, 184);
             this.MaskFixo1.Mask = "(00)0000-0000";
             this.MaskFixo1.Name = "MaskFixo1";
-            this.MaskFixo1.Size = new System.Drawing.Size(131, 29);
+            this.MaskFixo1.Size = new System.Drawing.Size(131, 25);
             this.MaskFixo1.TabIndex = 16;
             this.MaskFixo1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblFixo1
             // 
             this.LblFixo1.AutoSize = true;
-            this.LblFixo1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblFixo1.Location = new System.Drawing.Point(315, 212);
+            this.LblFixo1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblFixo1.Location = new System.Drawing.Point(240, 187);
             this.LblFixo1.Name = "LblFixo1";
-            this.LblFixo1.Size = new System.Drawing.Size(51, 21);
+            this.LblFixo1.Size = new System.Drawing.Size(42, 17);
             this.LblFixo1.TabIndex = 15;
             this.LblFixo1.Text = "Fixo 1:";
             // 
             // DateCadastro
             // 
-            this.DateCadastro.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.DateCadastro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.DateCadastro.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateCadastro.Location = new System.Drawing.Point(1032, 66);
+            this.DateCadastro.Location = new System.Drawing.Point(893, 75);
             this.DateCadastro.Name = "DateCadastro";
-            this.DateCadastro.Size = new System.Drawing.Size(127, 29);
+            this.DateCadastro.Size = new System.Drawing.Size(127, 25);
             this.DateCadastro.TabIndex = 6;
             // 
             // MaskUF
             // 
             this.MaskUF.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskUF.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskUF.Location = new System.Drawing.Point(676, 499);
+            this.MaskUF.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskUF.Location = new System.Drawing.Point(528, 419);
             this.MaskUF.Mask = "A,A";
             this.MaskUF.Name = "MaskUF";
-            this.MaskUF.Size = new System.Drawing.Size(42, 29);
+            this.MaskUF.Size = new System.Drawing.Size(42, 25);
             this.MaskUF.TabIndex = 46;
             this.MaskUF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblUF
             // 
             this.LblUF.AutoSize = true;
-            this.LblUF.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblUF.Location = new System.Drawing.Point(629, 502);
+            this.LblUF.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblUF.Location = new System.Drawing.Point(481, 422);
             this.LblUF.Name = "LblUF";
-            this.LblUF.Size = new System.Drawing.Size(41, 21);
+            this.LblUF.Size = new System.Drawing.Size(35, 17);
             this.LblUF.TabIndex = 45;
             this.LblUF.Text = "U.F. :";
             // 
             // MaskCEP
             // 
             this.MaskCEP.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.MaskCEP.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.MaskCEP.Location = new System.Drawing.Point(933, 368);
+            this.MaskCEP.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.MaskCEP.Location = new System.Drawing.Point(844, 324);
             this.MaskCEP.Mask = "00000-000";
             this.MaskCEP.Name = "MaskCEP";
-            this.MaskCEP.Size = new System.Drawing.Size(131, 29);
+            this.MaskCEP.Size = new System.Drawing.Size(131, 25);
             this.MaskCEP.TabIndex = 36;
             this.MaskCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // LblCEP
             // 
             this.LblCEP.AutoSize = true;
-            this.LblCEP.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCEP.Location = new System.Drawing.Point(875, 372);
+            this.LblCEP.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCEP.Location = new System.Drawing.Point(786, 328);
             this.LblCEP.Name = "LblCEP";
-            this.LblCEP.Size = new System.Drawing.Size(52, 21);
+            this.LblCEP.Size = new System.Drawing.Size(45, 17);
             this.LblCEP.TabIndex = 35;
             this.LblCEP.Text = "C.E.P. :";
             // 
             // TxtNumero
             // 
             this.TxtNumero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtNumero.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtNumero.Location = new System.Drawing.Point(593, 368);
+            this.TxtNumero.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtNumero.Location = new System.Drawing.Point(587, 324);
             this.TxtNumero.MaxLength = 160;
             this.TxtNumero.Name = "TxtNumero";
-            this.TxtNumero.Size = new System.Drawing.Size(156, 29);
+            this.TxtNumero.Size = new System.Drawing.Size(156, 25);
             this.TxtNumero.TabIndex = 34;
             this.TxtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblNumero
             // 
             this.LblNumero.AutoSize = true;
-            this.LblNumero.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNumero.Location = new System.Drawing.Point(525, 372);
+            this.LblNumero.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNumero.Location = new System.Drawing.Point(519, 328);
             this.LblNumero.Name = "LblNumero";
-            this.LblNumero.Size = new System.Drawing.Size(62, 21);
+            this.LblNumero.Size = new System.Drawing.Size(51, 17);
             this.LblNumero.TabIndex = 33;
             this.LblNumero.Text = "Numero:";
             // 
             // TxtComplemento2
             // 
             this.TxtComplemento2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtComplemento2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtComplemento2.Location = new System.Drawing.Point(985, 436);
+            this.TxtComplemento2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtComplemento2.Location = new System.Drawing.Point(864, 371);
             this.TxtComplemento2.MaxLength = 160;
             this.TxtComplemento2.Name = "TxtComplemento2";
-            this.TxtComplemento2.Size = new System.Drawing.Size(156, 29);
+            this.TxtComplemento2.Size = new System.Drawing.Size(156, 25);
             this.TxtComplemento2.TabIndex = 42;
             this.TxtComplemento2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblComplemento2
             // 
             this.LblComplemento2.AutoSize = true;
-            this.LblComplemento2.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblComplemento2.Location = new System.Drawing.Point(868, 440);
+            this.LblComplemento2.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblComplemento2.Location = new System.Drawing.Point(763, 375);
             this.LblComplemento2.Name = "LblComplemento2";
-            this.LblComplemento2.Size = new System.Drawing.Size(111, 21);
+            this.LblComplemento2.Size = new System.Drawing.Size(92, 17);
             this.LblComplemento2.TabIndex = 41;
             this.LblComplemento2.Text = "Complemento 2:";
             // 
             // TxtComplemento1
             // 
             this.TxtComplemento1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtComplemento1.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtComplemento1.Location = new System.Drawing.Point(635, 437);
+            this.TxtComplemento1.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtComplemento1.Location = new System.Drawing.Point(560, 372);
             this.TxtComplemento1.MaxLength = 160;
             this.TxtComplemento1.Name = "TxtComplemento1";
-            this.TxtComplemento1.Size = new System.Drawing.Size(156, 29);
+            this.TxtComplemento1.Size = new System.Drawing.Size(156, 25);
             this.TxtComplemento1.TabIndex = 40;
             this.TxtComplemento1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblComplemento
             // 
             this.LblComplemento.AutoSize = true;
-            this.LblComplemento.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblComplemento.Location = new System.Drawing.Point(518, 441);
+            this.LblComplemento.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblComplemento.Location = new System.Drawing.Point(461, 375);
             this.LblComplemento.Name = "LblComplemento";
-            this.LblComplemento.Size = new System.Drawing.Size(111, 21);
+            this.LblComplemento.Size = new System.Drawing.Size(92, 17);
             this.LblComplemento.TabIndex = 39;
             this.LblComplemento.Text = "Complemento 1:";
             // 
             // TxtCidade
             // 
             this.TxtCidade.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtCidade.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtCidade.Location = new System.Drawing.Point(64, 499);
+            this.TxtCidade.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtCidade.Location = new System.Drawing.Point(64, 419);
             this.TxtCidade.MaxLength = 160;
             this.TxtCidade.Name = "TxtCidade";
-            this.TxtCidade.Size = new System.Drawing.Size(370, 29);
+            this.TxtCidade.Size = new System.Drawing.Size(370, 25);
             this.TxtCidade.TabIndex = 44;
             this.TxtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblCidade
             // 
             this.LblCidade.AutoSize = true;
-            this.LblCidade.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCidade.Location = new System.Drawing.Point(4, 502);
+            this.LblCidade.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCidade.Location = new System.Drawing.Point(9, 422);
             this.LblCidade.Name = "LblCidade";
-            this.LblCidade.Size = new System.Drawing.Size(54, 21);
+            this.LblCidade.Size = new System.Drawing.Size(46, 17);
             this.LblCidade.TabIndex = 43;
             this.LblCidade.Text = "Cidade:";
             // 
             // TxtBairro
             // 
             this.TxtBairro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtBairro.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtBairro.Location = new System.Drawing.Point(64, 436);
+            this.TxtBairro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtBairro.Location = new System.Drawing.Point(60, 372);
             this.TxtBairro.MaxLength = 160;
             this.TxtBairro.Name = "TxtBairro";
-            this.TxtBairro.Size = new System.Drawing.Size(370, 29);
+            this.TxtBairro.Size = new System.Drawing.Size(370, 25);
             this.TxtBairro.TabIndex = 38;
             this.TxtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblBairro
             // 
             this.LblBairro.AutoSize = true;
-            this.LblBairro.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblBairro.Location = new System.Drawing.Point(6, 440);
+            this.LblBairro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblBairro.Location = new System.Drawing.Point(7, 375);
             this.LblBairro.Name = "LblBairro";
-            this.LblBairro.Size = new System.Drawing.Size(52, 21);
+            this.LblBairro.Size = new System.Drawing.Size(43, 17);
             this.LblBairro.TabIndex = 37;
             this.LblBairro.Text = "Bairro:";
             // 
             // TxtRua
             // 
             this.TxtRua.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtRua.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtRua.Location = new System.Drawing.Point(49, 367);
+            this.TxtRua.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtRua.Location = new System.Drawing.Point(117, 325);
             this.TxtRua.MaxLength = 160;
             this.TxtRua.Name = "TxtRua";
-            this.TxtRua.Size = new System.Drawing.Size(370, 29);
+            this.TxtRua.Size = new System.Drawing.Size(370, 25);
             this.TxtRua.TabIndex = 32;
             this.TxtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblRua
             // 
             this.LblRua.AutoSize = true;
-            this.LblRua.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblRua.Location = new System.Drawing.Point(6, 371);
+            this.LblRua.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblRua.Location = new System.Drawing.Point(9, 328);
             this.LblRua.Name = "LblRua";
-            this.LblRua.Size = new System.Drawing.Size(37, 21);
+            this.LblRua.Size = new System.Drawing.Size(30, 17);
             this.LblRua.TabIndex = 31;
             this.LblRua.Text = "Rua:";
             // 
             // TxtId
             // 
             this.TxtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtId.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.TxtId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.TxtId.Location = new System.Drawing.Point(41, 66);
             this.TxtId.MaxLength = 160;
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
-            this.TxtId.Size = new System.Drawing.Size(69, 29);
+            this.TxtId.Size = new System.Drawing.Size(69, 25);
             this.TxtId.TabIndex = 2;
             this.TxtId.TabStop = false;
             this.TxtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -581,51 +581,51 @@
             // TxtNome
             // 
             this.TxtNome.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.TxtNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.TxtNome.Location = new System.Drawing.Point(64, 137);
             this.TxtNome.MaxLength = 160;
             this.TxtNome.Name = "TxtNome";
-            this.TxtNome.Size = new System.Drawing.Size(370, 29);
+            this.TxtNome.Size = new System.Drawing.Size(370, 25);
             this.TxtNome.TabIndex = 8;
             this.TxtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblId
             // 
             this.LblId.AutoSize = true;
-            this.LblId.Font = new System.Drawing.Font("Segoe Print", 9F);
+            this.LblId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.LblId.Location = new System.Drawing.Point(9, 70);
             this.LblId.Name = "LblId";
-            this.LblId.Size = new System.Drawing.Size(26, 21);
+            this.LblId.Size = new System.Drawing.Size(21, 17);
             this.LblId.TabIndex = 1;
             this.LblId.Text = "Id:";
             // 
             // LblCadastro
             // 
             this.LblCadastro.AutoSize = true;
-            this.LblCadastro.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblCadastro.Location = new System.Drawing.Point(949, 70);
+            this.LblCadastro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblCadastro.Location = new System.Drawing.Point(830, 79);
             this.LblCadastro.Name = "LblCadastro";
-            this.LblCadastro.Size = new System.Drawing.Size(68, 21);
+            this.LblCadastro.Size = new System.Drawing.Size(57, 17);
             this.LblCadastro.TabIndex = 5;
             this.LblCadastro.Text = "Cadastro:";
             // 
             // LblNome
             // 
             this.LblNome.AutoSize = true;
-            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNome.Location = new System.Drawing.Point(9, 141);
+            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNome.Location = new System.Drawing.Point(7, 140);
             this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(49, 21);
+            this.LblNome.Size = new System.Drawing.Size(40, 17);
             this.LblNome.TabIndex = 7;
             this.LblNome.Text = "Nome:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 16F);
-            this.lblTitulo.Location = new System.Drawing.Point(413, 18);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 19F);
+            this.lblTitulo.Location = new System.Drawing.Point(288, 7);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(115, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(136, 45);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Cadastro";
             // 
@@ -636,15 +636,15 @@
             this.PnBotoes.Controls.Add(this.BtnAtualizar);
             this.PnBotoes.Controls.Add(this.BtnCancelar);
             this.PnBotoes.Controls.Add(this.BtnSair);
-            this.PnBotoes.Location = new System.Drawing.Point(495, 548);
+            this.PnBotoes.Location = new System.Drawing.Point(328, 473);
             this.PnBotoes.Name = "PnBotoes";
             this.PnBotoes.Size = new System.Drawing.Size(703, 61);
             this.PnBotoes.TabIndex = 2;
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNovo.Location = new System.Drawing.Point(307, 11);
+            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Location = new System.Drawing.Point(83, 7);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
             this.BtnNovo.TabIndex = 0;
@@ -654,8 +654,8 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.Location = new System.Drawing.Point(382, 11);
+            this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSalvar.Location = new System.Drawing.Point(214, 7);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
             this.BtnSalvar.TabIndex = 1;
@@ -665,8 +665,8 @@
             // 
             // BtnAtualizar
             // 
-            this.BtnAtualizar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAtualizar.Location = new System.Drawing.Point(463, 11);
+            this.BtnAtualizar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnAtualizar.Location = new System.Drawing.Point(351, 7);
             this.BtnAtualizar.Name = "BtnAtualizar";
             this.BtnAtualizar.Size = new System.Drawing.Size(75, 47);
             this.BtnAtualizar.TabIndex = 2;
@@ -676,8 +676,8 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(544, 11);
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnCancelar.Location = new System.Drawing.Point(488, 7);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 3;
@@ -687,8 +687,8 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSair.Location = new System.Drawing.Point(625, 11);
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Location = new System.Drawing.Point(625, 7);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 4;
@@ -700,7 +700,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 617);
+            this.ClientSize = new System.Drawing.Size(1034, 542);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnCadastro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

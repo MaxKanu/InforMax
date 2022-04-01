@@ -399,5 +399,10 @@ namespace ProjetoTecnico
                 Close();
             }
         }
+
+        private void PnPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

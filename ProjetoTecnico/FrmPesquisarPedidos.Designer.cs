@@ -53,9 +53,9 @@
             // PicLogo
             // 
             this.PicLogo.Image = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
-            this.PicLogo.Location = new System.Drawing.Point(5, 256);
+            this.PicLogo.Location = new System.Drawing.Point(4, 172);
             this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(313, 332);
+            this.PicLogo.Size = new System.Drawing.Size(268, 297);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicLogo.TabIndex = 41;
             this.PicLogo.TabStop = false;
@@ -69,10 +69,10 @@
             this.Situacao,
             this.Cadastro,
             this.Marcador});
-            this.dgwPrincipal.Location = new System.Drawing.Point(322, 256);
+            this.dgwPrincipal.Location = new System.Drawing.Point(276, 172);
             this.dgwPrincipal.Name = "dgwPrincipal";
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwPrincipal.Size = new System.Drawing.Size(606, 332);
+            this.dgwPrincipal.Size = new System.Drawing.Size(519, 297);
             this.dgwPrincipal.TabIndex = 4;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
             // 
@@ -122,28 +122,28 @@
             this.PnBotoes.Controls.Add(this.BtnExcluir);
             this.PnBotoes.Controls.Add(this.BtnCancelar);
             this.PnBotoes.Controls.Add(this.BtnSair);
-            this.PnBotoes.Location = new System.Drawing.Point(260, 595);
+            this.PnBotoes.Location = new System.Drawing.Point(223, 478);
             this.PnBotoes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnBotoes.Name = "PnBotoes";
-            this.PnBotoes.Size = new System.Drawing.Size(668, 60);
+            this.PnBotoes.Size = new System.Drawing.Size(573, 54);
             this.PnBotoes.TabIndex = 5;
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNovo.Location = new System.Drawing.Point(116, 7);
+            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Location = new System.Drawing.Point(17, 6);
             this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(69, 47);
+            this.BtnNovo.Size = new System.Drawing.Size(59, 42);
             this.BtnNovo.TabIndex = 0;
             this.BtnNovo.Text = "Novo\r\n";
             this.BtnNovo.UseVisualStyleBackColor = true;
             // 
             // BtnSelecionar
             // 
-            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSelecionar.Location = new System.Drawing.Point(229, 7);
+            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSelecionar.Location = new System.Drawing.Point(133, 6);
             this.BtnSelecionar.Name = "BtnSelecionar";
-            this.BtnSelecionar.Size = new System.Drawing.Size(80, 47);
+            this.BtnSelecionar.Size = new System.Drawing.Size(69, 42);
             this.BtnSelecionar.TabIndex = 1;
             this.BtnSelecionar.Text = "Selecionar";
             this.BtnSelecionar.UseVisualStyleBackColor = true;
@@ -151,20 +151,20 @@
             // 
             // BtnExcluir
             // 
-            this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7F);
-            this.BtnExcluir.Location = new System.Drawing.Point(347, 7);
+            this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnExcluir.Location = new System.Drawing.Point(259, 6);
             this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(75, 47);
+            this.BtnExcluir.Size = new System.Drawing.Size(64, 42);
             this.BtnExcluir.TabIndex = 2;
             this.BtnExcluir.Text = "Excluir Item";
             this.BtnExcluir.UseVisualStyleBackColor = true;
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(467, 7);
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnCancelar.Location = new System.Drawing.Point(380, 6);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
+            this.BtnCancelar.Size = new System.Drawing.Size(64, 42);
             this.BtnCancelar.TabIndex = 3;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
@@ -172,10 +172,10 @@
             // 
             // BtnSair
             // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSair.Location = new System.Drawing.Point(586, 7);
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Location = new System.Drawing.Point(501, 6);
             this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(75, 47);
+            this.BtnSair.Size = new System.Drawing.Size(64, 42);
             this.BtnSair.TabIndex = 4;
             this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = true;
@@ -183,9 +183,10 @@
             // 
             // BtnPesquisar
             // 
-            this.BtnPesquisar.Location = new System.Drawing.Point(443, 142);
+            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnPesquisar.Location = new System.Drawing.Point(587, 121);
             this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(75, 29);
+            this.BtnPesquisar.Size = new System.Drawing.Size(64, 26);
             this.BtnPesquisar.TabIndex = 3;
             this.BtnPesquisar.Text = "Pesquisar";
             this.BtnPesquisar.UseVisualStyleBackColor = true;
@@ -194,39 +195,39 @@
             // TxtPesquisa
             // 
             this.TxtPesquisa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtPesquisa.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.TxtPesquisa.Location = new System.Drawing.Point(67, 142);
+            this.TxtPesquisa.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtPesquisa.Location = new System.Drawing.Point(264, 121);
             this.TxtPesquisa.MaxLength = 160;
             this.TxtPesquisa.Name = "TxtPesquisa";
-            this.TxtPesquisa.Size = new System.Drawing.Size(370, 29);
+            this.TxtPesquisa.Size = new System.Drawing.Size(318, 25);
             this.TxtPesquisa.TabIndex = 2;
             this.TxtPesquisa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblNome
             // 
             this.LblNome.AutoSize = true;
-            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 9F);
-            this.LblNome.Location = new System.Drawing.Point(12, 146);
+            this.LblNome.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblNome.Location = new System.Drawing.Point(217, 125);
             this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(49, 21);
+            this.LblNome.Size = new System.Drawing.Size(40, 17);
             this.LblNome.TabIndex = 1;
             this.LblNome.Text = "Nome:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 18F);
-            this.lblTitulo.Location = new System.Drawing.Point(358, 23);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 19F);
+            this.lblTitulo.Location = new System.Drawing.Point(307, 21);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(231, 42);
+            this.lblTitulo.Size = new System.Drawing.Size(251, 45);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Pesquisar Pedidos";
             // 
             // FrmPesquisarPedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 658);
+            this.ClientSize = new System.Drawing.Size(800, 535);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.BtnPesquisar);
             this.Controls.Add(this.TxtPesquisa);
@@ -234,7 +235,7 @@
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PicLogo);
             this.Controls.Add(this.dgwPrincipal);
-            this.Font = new System.Drawing.Font("Segoe Print", 8.25F);
+            this.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmPesquisarPedidos";

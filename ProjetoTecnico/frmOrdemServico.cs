@@ -561,5 +561,6 @@ namespace ProjetoTecnico
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
         }
+        
     }
 }
