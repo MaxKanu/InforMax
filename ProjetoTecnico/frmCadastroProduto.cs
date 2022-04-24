@@ -188,7 +188,7 @@ namespace ProjetoTecnico
             FabricanteColecao colecao = new FabricanteColecao();
 
             comboFabricante.DataSource = null;
-            colecao = fabricante.Combo("");
+            colecao = fabricante.ComboFabri("");
             comboFabricante.DataSource = colecao;
             comboFabricante.DisplayMember = "Descricao";
             comboFabricante.Refresh();

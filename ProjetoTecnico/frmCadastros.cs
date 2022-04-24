@@ -162,6 +162,34 @@ namespace ProjetoTecnico
                 Botoes(4);
             }
         }
+        void Apagar()
+        {
+            TxtId.Clear();
+            TxtNome.Clear();
+            MaskCel1.Clear();
+            MaskFixo1.Clear();
+            MaskCel2.Clear();
+            MaskFixo2.Clear();
+            TxtEmail1.Clear();
+            TxtEmail2.Clear();
+            MaskRG.Clear();
+            MaskCPF.Clear();
+            MaskMatricula.Clear();
+            TxtRua.Clear();
+            TxtNumero.Clear();
+            MaskCEP.Clear();
+            TxtBairro.Clear();
+            TxtComplemento1.Clear();
+            TxtComplemento2.Clear();
+            TxtCidade.Clear();
+            MaskUF.Clear();
+        }
+
+        private void DateCadastro_Invalidated(object sender, InvalidateEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void Botoes(int op)
         {
             PnCadastro.Enabled = false;
@@ -184,7 +212,7 @@ namespace ProjetoTecnico
             {
                 PnCadastro.Enabled = true;
                 BtnSalvar.Enabled = true;
-                BtnCancelar.Enabled = false;
+                BtnCancelar.Enabled = true;
                 BtnAtualizar.Enabled = false;
                 BtnNovo.Enabled = false;
                 BtnSair.Enabled = true;
@@ -198,7 +226,9 @@ namespace ProjetoTecnico
                 TxtNome.Enabled = false;
                 DateNascimento.Enabled = false;
                 ComboTipo.Enabled = false;
-                MaskRG.Enabled = false;;
+                MaskRG.Enabled = false;
+                MaskCPF.Enabled = false;
+                MaskMatricula.Enabled = false;
                 BtnNovo.Enabled = false;
                 BtnSair.Enabled = true;
             }
@@ -241,6 +271,7 @@ namespace ProjetoTecnico
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             PnCadastro.Enabled = false;
+            Apagar();
             Botoes(1);
         }
 
@@ -285,6 +316,8 @@ namespace ProjetoTecnico
                 {
                     int IdCliente = Convert.ToInt32(retorno);
                     MessageBox.Show("Cliente inserido com sucesso! \n\n O codigo gerado foi : " + retorno.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Apagar();
+                    Botoes(1);
                 }
                 catch (Exception)
                 {
@@ -332,10 +365,11 @@ namespace ProjetoTecnico
                 {
                     int IdFuncionario = Convert.ToInt32(retorno);
                     MessageBox.Show("Funcionario inserido com sucesso! \n\n O codigo gerado foi :  " + retorno.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Apagar();
+                    Botoes(1);
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
             }
@@ -364,17 +398,17 @@ namespace ProjetoTecnico
                 fisico.Pessoa.Id = Convert.ToInt32(TxtId.Text);
                 //fisico.Pessoa.Nome = TxtNome.Text;
                 //fisico.DataNascimento = DateNascimento.Value;
+                //fisico.Documentos.RG = MaskRG.Text;
+                //fisico.Documentos.CPF = MaskCPF.Text;
+                //fisico.Pessoa.PessoaTipo.IdTipo = Convert.ToInt32(ComboTipo.SelectedValue);
                 fisico.Pessoa.Alteracao = DateCadastro.Value;
                 fisico.Pessoa.Situacao.IdSituacao = Convert.ToInt32(ComboSituacao.SelectedValue);
-                //fisico.Pessoa.PessoaTipo.IdTipo = Convert.ToInt32(ComboTipo.SelectedValue);
                 fisico.Telefone.Celular1 = MaskCel1.Text;
                 fisico.Telefone.Fixo1 = MaskFixo1.Text;
                 fisico.Telefone.Celular2 = MaskCel2.Text;
                 fisico.Telefone.Fixo2 = MaskFixo2.Text;
                 fisico.Email.Email1 = TxtEmail1.Text;
                 fisico.Email.Email2 = TxtEmail2.Text;
-                //fisico.Documentos.RG = MaskRG.Text;
-                //fisico.Documentos.CPF = MaskCPF.Text;
                 fisico.Endereco.Rua = TxtRua.Text;
                 fisico.Endereco.Numero = TxtNumero.Text;
                 fisico.Endereco.CEP = MaskCEP.Text;
@@ -389,6 +423,8 @@ namespace ProjetoTecnico
                 {
                     int IdCliente = Convert.ToInt32(retorno);
                     MessageBox.Show("Cliente alterado com sucesso! \n\n O codigo alterado foi : " + retorno.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Apagar();
+                    Botoes(1);
                 }
                 catch (Exception)
                 {
@@ -435,6 +471,8 @@ namespace ProjetoTecnico
                 {
                     int IdFuncionario = Convert.ToInt32(retorno);
                     MessageBox.Show("Cliente alterado com sucesso! \n\n O codigo alterado foi : " + retorno.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Apagar();
+                    Botoes(1);
                 }
                 catch (Exception)
                 {

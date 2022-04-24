@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PnPrincipal = new System.Windows.Forms.Panel();
             this.LblDefeito = new System.Windows.Forms.Label();
             this.TxtDefeito = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.LblTotal = new System.Windows.Forms.Label();
             this.LblIdTarefa = new System.Windows.Forms.Label();
             this.TxtIdTarefa = new System.Windows.Forms.TextBox();
-            this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.lblIdPedido = new System.Windows.Forms.Label();
             this.LblNomeOperado = new System.Windows.Forms.Label();
             this.LblOperador = new System.Windows.Forms.Label();
@@ -84,6 +84,8 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
             this.PdImprimirOrdem = new System.Drawing.Printing.PrintDocument();
+            this.PDialImpressoras = new System.Windows.Forms.PrintDialog();
+            this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -109,7 +111,6 @@
             this.PnPrincipal.Controls.Add(this.LblTotal);
             this.PnPrincipal.Controls.Add(this.LblIdTarefa);
             this.PnPrincipal.Controls.Add(this.TxtIdTarefa);
-            this.PnPrincipal.Controls.Add(this.txtIdPedido);
             this.PnPrincipal.Controls.Add(this.lblIdPedido);
             this.PnPrincipal.Controls.Add(this.LblNomeOperado);
             this.PnPrincipal.Controls.Add(this.LblOperador);
@@ -125,6 +126,7 @@
             this.PnPrincipal.Controls.Add(this.TxtCliente);
             this.PnPrincipal.Controls.Add(this.LblCliente);
             this.PnPrincipal.Controls.Add(this.LblId);
+            this.PnPrincipal.Controls.Add(this.txtIdPedido);
             this.PnPrincipal.Controls.Add(this.TxtId);
             this.PnPrincipal.Controls.Add(this.TxtPreco);
             this.PnPrincipal.Controls.Add(this.LblPreco);
@@ -153,7 +155,7 @@
             this.TxtDefeito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.TxtDefeito.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.TxtDefeito.Location = new System.Drawing.Point(790, 84);
-            this.TxtDefeito.MaxLength = 50;
+            this.TxtDefeito.MaxLength = 200;
             this.TxtDefeito.Multiline = true;
             this.TxtDefeito.Name = "TxtDefeito";
             this.TxtDefeito.Size = new System.Drawing.Size(235, 163);
@@ -205,7 +207,7 @@
             // BtnPesquisar
             // 
             this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnPesquisar.Location = new System.Drawing.Point(186, 38);
+            this.BtnPesquisar.Location = new System.Drawing.Point(186, 35);
             this.BtnPesquisar.Name = "BtnPesquisar";
             this.BtnPesquisar.Size = new System.Drawing.Size(36, 29);
             this.BtnPesquisar.TabIndex = 54;
@@ -318,17 +320,6 @@
             this.TxtIdTarefa.Size = new System.Drawing.Size(78, 25);
             this.TxtIdTarefa.TabIndex = 45;
             this.TxtIdTarefa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtIdPedido
-            // 
-            this.txtIdPedido.Enabled = false;
-            this.txtIdPedido.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.txtIdPedido.Location = new System.Drawing.Point(99, 38);
-            this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(81, 25);
-            this.txtIdPedido.TabIndex = 43;
-            this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIdPedido.UseWaitCursor = true;
             // 
             // lblIdPedido
             // 
@@ -455,14 +446,17 @@
             this.Desconto,
             this.Valor_Total});
             this.dgwPrincipal.Location = new System.Drawing.Point(330, 295);
+            this.dgwPrincipal.MultiSelect = false;
             this.dgwPrincipal.Name = "dgwPrincipal";
+            this.dgwPrincipal.ReadOnly = true;
+            this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(702, 292);
             this.dgwPrincipal.TabIndex = 16;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgwPrincipal_CellFormatting);
             // 
             // IdPedido
             // 
-            this.IdPedido.DataPropertyName = "Pedidos.IdPedidos";
+            this.IdPedido.DataPropertyName = "IdPedidos";
             this.IdPedido.HeaderText = "Id_Pedido";
             this.IdPedido.Name = "IdPedido";
             this.IdPedido.ReadOnly = true;
@@ -471,6 +465,8 @@
             // Quant
             // 
             this.Quant.DataPropertyName = "Quantidade";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Quant.DefaultCellStyle = dataGridViewCellStyle1;
             this.Quant.HeaderText = "Quantidade";
             this.Quant.Name = "Quant";
             this.Quant.ReadOnly = true;
@@ -478,7 +474,7 @@
             // 
             // Descricao
             // 
-            this.Descricao.DataPropertyName = "Precos.Descricao";
+            this.Descricao.DataPropertyName = "Descricao";
             this.Descricao.HeaderText = "Descrição";
             this.Descricao.Name = "Descricao";
             this.Descricao.ReadOnly = true;
@@ -486,7 +482,7 @@
             // 
             // Valor
             // 
-            this.Valor.DataPropertyName = "Precos.ValorUnitario";
+            this.Valor.DataPropertyName = "ValorUnitario";
             this.Valor.HeaderText = "Preço";
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
@@ -494,14 +490,15 @@
             // 
             // Desconto
             // 
-            this.Desconto.DataPropertyName = "Precos.ValorDesconto";
+            this.Desconto.DataPropertyName = "ValorDesconto";
             this.Desconto.HeaderText = "Desconto";
             this.Desconto.Name = "Desconto";
+            this.Desconto.ReadOnly = true;
             this.Desconto.Width = 80;
             // 
             // Valor_Total
             // 
-            this.Valor_Total.DataPropertyName = "Precos.ValorTotal";
+            this.Valor_Total.DataPropertyName = "ValorTotal";
             this.Valor_Total.HeaderText = "Valor_Total";
             this.Valor_Total.Name = "Valor_Total";
             this.Valor_Total.ReadOnly = true;
@@ -541,7 +538,7 @@
             // 
             this.TxtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.TxtId.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.TxtId.Location = new System.Drawing.Point(41, 139);
+            this.TxtId.Location = new System.Drawing.Point(36, 140);
             this.TxtId.MaxLength = 50;
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(127, 25);
@@ -706,6 +703,21 @@
             // 
             this.PdImprimirOrdem.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PdImprimirOrdem_PrintPage);
             // 
+            // PDialImpressoras
+            // 
+            this.PDialImpressoras.UseEXDialog = true;
+            // 
+            // txtIdPedido
+            // 
+            this.txtIdPedido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.txtIdPedido.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.txtIdPedido.Location = new System.Drawing.Point(77, 38);
+            this.txtIdPedido.MaxLength = 50;
+            this.txtIdPedido.Name = "txtIdPedido";
+            this.txtIdPedido.Size = new System.Drawing.Size(84, 25);
+            this.txtIdPedido.TabIndex = 2;
+            this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmOrdemServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -758,7 +770,6 @@
         private System.Windows.Forms.Button BtnInserir;
         private System.Windows.Forms.Label LblNomeOperado;
         private System.Windows.Forms.Label LblOperador;
-        private System.Windows.Forms.TextBox txtIdPedido;
         private System.Windows.Forms.Label lblIdPedido;
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Label LblIdTarefa;
@@ -773,12 +784,6 @@
         private System.Windows.Forms.Label LblQuantidade;
         private System.Windows.Forms.TextBox TxtPercentual;
         private System.Windows.Forms.Label LblPercentual;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
         private System.Windows.Forms.Button BtnPesquisar;
         private System.Drawing.Printing.PrintDocument PdImprimirOrdem;
         private System.Windows.Forms.Button BtnImprimir;
@@ -788,5 +793,13 @@
         private System.Windows.Forms.TextBox TxtModelo;
         private System.Windows.Forms.TextBox TxtDefeito;
         private System.Windows.Forms.Label LblDefeito;
+        private System.Windows.Forms.PrintDialog PDialImpressoras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
+        private System.Windows.Forms.TextBox txtIdPedido;
     }
 }

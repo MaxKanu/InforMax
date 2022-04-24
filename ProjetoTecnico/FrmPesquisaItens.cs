@@ -134,8 +134,8 @@ namespace ProjetoTecnico
                 }
 
                 pedidoSelecionado = dgwPrincipal.SelectedRows[0].DataBoundItem as ItensDePedido;
-                
-                FrmOrdemServico cadastro = new FrmOrdemServico(Acao_Tela.ConsultarCliente, pedidoSelecionado);
+
+            FrmOrdemServico cadastro = new FrmOrdemServico(Acao_Tela.ConsultarCliente, pedidoSelecionado);
                 cadastro.Show();
                 Close();
                 //cadastro.Show();

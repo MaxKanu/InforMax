@@ -19,6 +19,8 @@ namespace ProjetoTecnico
         Pedidos pedidos = new Pedidos();
         NgOpSi Operacao = new NgOpSi();
         NgPe NegocioPedido = new NgPe();
+        NgFa fabricante = new NgFa();
+        FabricanteColecao colecaoFabricante = new FabricanteColecao();
         OperacaoColecao colecaoOperacao = new OperacaoColecao();
         SituacaoColecao colecaoSituacao = new SituacaoColecao();
         Acao_Tela telaSelecionada;
@@ -29,6 +31,8 @@ namespace ProjetoTecnico
             telaSelecionada = acao;
             ComboOperacao.ValueMember = "IdOperacao";
             ComboSituacao.ValueMember = "IdSituacao";
+            ComboMarca.ValueMember = "IdFabricante";
+            ComboAparelho.ValueMember = "IdFabricante";
             if (acao.Equals(Acao_Tela.Inserir))
             {
 
@@ -69,6 +73,9 @@ namespace ProjetoTecnico
             itens.Propriedade.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
             itens.Propriedade.Cliente.Pessoa.Nome = LblNome.Text;
             itens.Propriedade.Marcador = txtMarcador.Text;
+            itens.Propriedade.TipoAparelho = ComboAparelho.Text;
+            itens.Propriedade.Observacoes = RctObservacoes.Text;
+            itens.Propriedade.Modelo = TxtModelo.Text;
             itens.ShowDialog();
         }
 
@@ -85,6 +92,18 @@ namespace ProjetoTecnico
             ComboSituacao.DataSource = colecaoSituacao;
             ComboSituacao.DisplayMember = "Situacao";
             ComboSituacao.Refresh();
+
+            ComboAparelho.DataSource = null;
+            colecaoFabricante = fabricante.ComboAparelho("");
+            ComboAparelho.DataSource = colecaoFabricante;
+            ComboAparelho.DisplayMember = "Descricao";
+            ComboAparelho.Refresh();
+
+            ComboMarca.DataSource = null;
+            colecaoFabricante = fabricante.ComboMarca("");
+            ComboMarca.DataSource = colecaoFabricante;
+            ComboMarca.DisplayMember = "Descricao";
+            ComboMarca.Refresh();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -96,13 +115,21 @@ namespace ProjetoTecnico
                 pedidos.Situacao = new PedidoSituacao();
                 pedidos.Cliente = new ClienteFisico();
                 pedidos.Cliente.Pessoa = new Pessoa();
-
+                if (lblIDCliente.Text.Equals("Id:") || LblNome.Text.Equals("Cliente:"))
+                {
+                    MessageBox.Show("Necessário inserir um cliente no pedido");
+                    return;
+                }
                 //pedidos.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
                 pedidos.Cadastro = dateCadastro.Value;
-                pedidos.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
-                pedidos.Marcador = txtMarcador.Text;
                 pedidos.Operacao.IdOperacao = Convert.ToInt32(ComboOperacao.SelectedValue);
                 pedidos.Situacao.IdSituacao = Convert.ToInt32(ComboSituacao.SelectedValue);
+                pedidos.IdTipoAparelho = Convert.ToInt32(ComboAparelho.SelectedValue);
+                pedidos.IdMarca = Convert.ToInt32(ComboMarca.SelectedValue);
+                pedidos.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
+                pedidos.Marcador = txtMarcador.Text;
+                pedidos.Modelo = TxtModelo.Text;
+                pedidos.Observacoes = RctObservacoes.Text;
 
                 string retorno = NegocioPedido.InserirPedido(pedidos);
                 try
@@ -134,14 +161,61 @@ namespace ProjetoTecnico
                 txtIdPedido.Text = pedidos.pedidoSelecionado.IdPedidos.ToString();
                 LblID.Text = pedidos.pedidoSelecionado.Cliente.Pessoa.Id.ToString();
                 LblNome.Text = pedidos.pedidoSelecionado.Cliente.Pessoa.Nome;
-                ComboOperacao.SelectedText = pedidos.pedidoSelecionado.Operacao.Descricao;
-                ComboSituacao.SelectedText = pedidos.pedidoSelecionado.Situacao.Situacao;
+                ComboOperacao.Text = pedidos.pedidoSelecionado.Operacao.Descricao;
+                ComboSituacao.Text = pedidos.pedidoSelecionado.Situacao.Situacao;
+                ComboAparelho.Text = pedidos.pedidoSelecionado.TipoAparelho;
+                ComboMarca.Text = pedidos.pedidoSelecionado.Marca;
                 dateCadastro.Value = pedidos.pedidoSelecionado.Cadastro;
                 txtMarcador.Text = pedidos.pedidoSelecionado.Marcador;
+                TxtModelo.Text = pedidos.pedidoSelecionado.Modelo;
+                RctObservacoes.Text = pedidos.pedidoSelecionado.Observacoes;
                 
                 pedidosSelecionado = pedidos.pedidoSelecionado;
             }
         }
 
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                //Instanciar os objetos que pedido tem como referencia
+                pedidos.Operacao = new Operacao();
+                pedidos.Situacao = new PedidoSituacao();
+                pedidos.Cliente = new ClienteFisico();
+                pedidos.Cliente.Pessoa = new Pessoa();
+                if (lblIDCliente.Text.Equals("Id:") || LblNome.Text.Equals("Cliente:"))
+                {
+                    MessageBox.Show("Necessário inserir um cliente no pedido");
+                    return;
+                }
+                pedidos.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
+                pedidos.Cadastro = dateCadastro.Value;
+                pedidos.Operacao.IdOperacao = Convert.ToInt32(ComboOperacao.SelectedValue);
+                pedidos.Situacao.IdSituacao = Convert.ToInt32(ComboSituacao.SelectedValue);
+                pedidos.IdTipoAparelho = Convert.ToInt32(ComboAparelho.SelectedValue);
+                pedidos.IdMarca = Convert.ToInt32(ComboMarca.SelectedValue);
+                pedidos.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
+                pedidos.Marcador = txtMarcador.Text;
+                pedidos.Modelo = TxtModelo.Text;
+                pedidos.Observacoes = RctObservacoes.Text;
+
+                string retorno = NegocioPedido.AtualizarPedido(pedidos);
+                try
+                {
+                    int IdPedido = Convert.ToInt32(retorno);
+                    MessageBox.Show("Pedido alterado", "Numero do pedido: " + IdPedido.ToString());
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -51,6 +51,7 @@
             this.TsPreçoServico = new System.Windows.Forms.ToolStripMenuItem();
             this.TsFabricante = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.TsSeparador4 = new System.Windows.Forms.ToolStripSeparator();
             this.TsPesquisaServicos = new System.Windows.Forms.ToolStripDropDownButton();
             this.TsOS = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +69,10 @@
             this.TsPrecoServicoAlterar = new System.Windows.Forms.ToolStripMenuItem();
             this.TsSair = new System.Windows.Forms.ToolStripButton();
             this.LblRelogio = new System.Windows.Forms.Label();
+            this.StStatus = new System.Windows.Forms.StatusStrip();
+            this.StVersao = new System.Windows.Forms.ToolStripStatusLabel();
             this.TsTrip.SuspendLayout();
+            this.StStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // TsTrip
@@ -205,7 +209,8 @@
             this.TsProdutos,
             this.TsServiços,
             this.TsFabricante,
-            this.TsPedido});
+            this.TsPedido,
+            this.TsMarca});
             this.TsCadastroServicos.Image = ((System.Drawing.Image)(resources.GetObject("TsCadastroServicos.Image")));
             this.TsCadastroServicos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TsCadastroServicos.Name = "TsCadastroServicos";
@@ -257,6 +262,13 @@
             this.TsPedido.Size = new System.Drawing.Size(129, 22);
             this.TsPedido.Text = "Pedido";
             this.TsPedido.Click += new System.EventHandler(this.TsPedido_Click);
+            // 
+            // TsMarca
+            // 
+            this.TsMarca.Name = "TsMarca";
+            this.TsMarca.Size = new System.Drawing.Size(129, 22);
+            this.TsMarca.Text = "Marca";
+            this.TsMarca.Click += new System.EventHandler(this.TsMarca_Click);
             // 
             // TsSeparador4
             // 
@@ -399,6 +411,23 @@
             this.LblRelogio.TabIndex = 2;
             this.LblRelogio.Text = "18/03/2022 12:00";
             // 
+            // StStatus
+            // 
+            this.StStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StVersao});
+            this.StStatus.Location = new System.Drawing.Point(0, 566);
+            this.StStatus.Name = "StStatus";
+            this.StStatus.Size = new System.Drawing.Size(800, 22);
+            this.StStatus.TabIndex = 4;
+            this.StStatus.Text = "statusStrip1";
+            // 
+            // StVersao
+            // 
+            this.StVersao.Name = "StVersao";
+            this.StVersao.Size = new System.Drawing.Size(59, 17);
+            this.StVersao.Text = "Versão 1.0";
+            this.StVersao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
@@ -406,6 +435,7 @@
             this.BackgroundImage = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 588);
+            this.Controls.Add(this.StStatus);
             this.Controls.Add(this.LblRelogio);
             this.Controls.Add(this.TsTrip);
             this.DoubleBuffered = true;
@@ -420,6 +450,8 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.TsTrip.ResumeLayout(false);
             this.TsTrip.PerformLayout();
+            this.StStatus.ResumeLayout(false);
+            this.StStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,5 +498,8 @@
         private System.Windows.Forms.ToolStripMenuItem TsPrecoServicoAlterar;
         private System.Windows.Forms.ToolStripMenuItem TsConsultarOS;
         private System.Windows.Forms.ToolStripMenuItem TsPesquisarNotasFechadas;
+        private System.Windows.Forms.ToolStripMenuItem TsMarca;
+        private System.Windows.Forms.StatusStrip StStatus;
+        private System.Windows.Forms.ToolStripStatusLabel StVersao;
     }
 }
