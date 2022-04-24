@@ -548,8 +548,23 @@ namespace ProjetoTecnico
 
         private void BtnImprimir_Click(object sender, EventArgs e)
         {
-            CaptureScreen();
-            imprimirOrdem.Print();
+            /*
+            DGVPrinter imprimir = new DGVPrinter();
+            imprimir.Title = "Ordem de Serviço";
+            imprimir.SubTitle = "Informax Informática e Componentes";
+            imprimir.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            imprimir.PageNumbers = true;
+            imprimir.PageNumberInHeader = false;
+            imprimir.PorportionalColumns = true;
+            imprimir.HeaderCellAlignment = StringAlignment.Near;
+            imprimir.Footer = "Informax Informática";
+            imprimir.FooterSpacing = 15;
+            
+            imprimir.PrintDataGridView(dgwPrincipal);
+            */
+            FrmRelatorio relatorio = new FrmRelatorio();
+            relatorio.ShowDialog();
+            relatorio.Dispose();
         }
         Bitmap memoryImage;
 

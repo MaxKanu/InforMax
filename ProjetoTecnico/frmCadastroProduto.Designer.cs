@@ -266,7 +266,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCadastroProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadastroProduto";
+            this.Text = "Cadastro Produto";
             this.Load += new System.EventHandler(this.FrmCadastroProduto_Load);
             this.PnBotoes.ResumeLayout(false);
             this.PnPrincipal.ResumeLayout(false);

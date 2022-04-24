@@ -32,3 +32,9 @@ C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.csprojAssembl
 C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
 C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.dll
 C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\Users\marca\Documents\GitHub\InforMax3\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Documents\GitHub\InforMax3\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\marca\Documents\GitHub\InforMax3\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Documents\GitHub\InforMax3\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\marca\Documents\GitHub\InforMax3\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\marca\Documents\GitHub\InforMax3\AcessoDados\obj\Debug\AcessoDados.pdb

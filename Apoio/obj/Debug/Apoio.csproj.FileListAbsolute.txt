@@ -26,3 +26,8 @@ C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.csprojAssemblyReference.c
 C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
 C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.dll
 C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.pdb
+C:\Users\marca\Documents\GitHub\InforMax3\Apoio\bin\Debug\Apoio.dll
+C:\Users\marca\Documents\GitHub\InforMax3\Apoio\bin\Debug\Apoio.pdb
+C:\Users\marca\Documents\GitHub\InforMax3\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
+C:\Users\marca\Documents\GitHub\InforMax3\Apoio\obj\Debug\Apoio.dll
+C:\Users\marca\Documents\GitHub\InforMax3\Apoio\obj\Debug\Apoio.pdb
