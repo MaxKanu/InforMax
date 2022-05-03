@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\bin\Debug\ProjetoTecnico.exe">
+   <Modules>
+    <Module Name="projetotecnico.exe">
+     <Namespaces>
+      <Namespace Name="ProjetoTecnico">
+       <Types>
+        <Type Name="DGVPrinter" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2022-04-25 23:19:11Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implemente IDisposable em 'DGVPrinter' porque cria membros dos seguintes tipos IDisposable: 'StringFormat', 'PrintDocument', 'Font'. Se 'DGVPrinter' tiver enviado anteriormente, adicionar novos membros que implementem IDisposable a esse tipo é considerado uma alteração interruptiva para os consumidores existentes.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="FrmOrdemServico" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BtnSalvar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Não descartar objetos várias vezes" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-25 23:19:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico" File="frmOrdemServico.cs" Line="540">O objeto 'this' pode ser descartado mais de uma vez no método 'FrmOrdemServico.BtnSalvar_Click(object, EventArgs)'. Para evitar a geração de System.ObjectDisposedException, não chame Dispose mais de uma vez em um objeto.: Lines: 540, 546</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FrmPreco" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BtnSelecionar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Não descartar objetos várias vezes" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-25 23:19:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico" File="FrmPreco.cs" Line="399">O objeto 'this' pode ser descartado mais de uma vez no método 'FrmPreco.BtnSelecionar_Click(object, EventArgs)'. Para evitar a geração de System.ObjectDisposedException, não chame Dispose mais de uma vez em um objeto.: Lines: 399</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="ProjetoTecnico.Properties">
+       <Types>
+        <Type Name="Resources" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="ExcludedInSource" Created="2022-04-25 23:19:11Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SqlServerTypes">
+       <Types>
+        <Type Name="Utilities" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#LoadLibrary(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2022-04-25 23:19:11Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Como esse é um método P/Invoke, 'Utilities.LoadLibrary(string)' deve ser definido em uma classe chamada NativeMethods, SafeNativeMethods ou UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2022-04-25 23:19:11Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">Para reduzir o risco de segurança, realize o marshaling do parâmetro 'libname' como Unicode, definindo DllImport.CharSet para CharSet.Unicode, ou realizando marshaling explicitamente do parâmetro como UnmanagedType.LPWStr. Se você precisar realizar marshaling dessa cadeia de caracteres como ANSI ou dependente do sistema, defina BestFitMapping=false; para maior segurança, também defina ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Evite código particular não chamado</Name>
+   <Description>Há um código não chamado que não é visível externamente e não é um ponto de entrada de tempo de execução conhecido. Se essa violação for disparada por engano, envie um relatório do problema para a equipe da Análise de Código do Visual Studio.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Mover P/Invokes para a classe NativeMethods</Name>
+   <Description>Esse tipo contém membros com o atributo DllImport. Os membros com o atributo DllImport devem estar contidos em classes chamadas NativeMethods, SafeNativeMethods ou UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Como esse é um método P/Invoke, {0} deve ser definido em uma classe chamada NativeMethods, SafeNativeMethods ou UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Não descartar objetos várias vezes" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Não descartar objetos várias vezes</Name>
+   <Description>Um método Dispose implementado corretamente pode ser chamado várias vezes sem lançar uma exceção. No entanto, isso não é garantido e, para evitar a geração de System.ObjectDisposedException, não chame Dispose mais de uma vez em um objeto.</Description>
+   <Resolution Name="Default">O objeto {0} pode ser descartado mais de uma vez no método {1}. Para evitar a geração de System.ObjectDisposedException, não chame Dispose mais de uma vez em um objeto.: Lines: 399</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+   <Name>Especificar marshaling para argumentos de cadeias de caracteres P/Invoke</Name>
+   <Description>No marshaling de cadeias de caracteres como ANSI (ou como Auto no Win9x), alguns caracteres podem ser alterados. Se o mapeamento de melhor ajuste estiver ativado, as cadeias de caracteres que aparecerem diferentes em Unicode passarão por marshaling para as cadeias de caracteres ANSI idênticas, o que pode levar a decisões de segurança incorretas. Desativar o mapeamento de melhor ajuste reduz esse risco, pois todos os caracteres sem equivalentes são mapeados para "?". Além disso, observe que CharSet.Ansi é a configuração padrão para o marshaling de todas as cadeias de caracteres; o marshaling Unicode deve ser especificado explicitamente, como configuração CharSet de DllImport ou StructLayout, ou como atributo MarshalAs com UnmanagedType Unicode (ou dependente do sistema).</Description>
+   <Resolution Name="Parameter">Para reduzir o risco de segurança, realize o marshaling do parâmetro {0} como Unicode, definindo DllImport.CharSet para CharSet.Unicode, ou realizando marshaling explicitamente do parâmetro como UnmanagedType.LPWStr. Se você precisar realizar marshaling dessa cadeia de caracteres como ANSI ou dependente do sistema, defina BestFitMapping=false; para maior segurança, também defina ThrowOnUnmappableChar=true.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182319.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Tipos que possuem campos descartáveis devem ser descartáveis</Name>
+   <Description>Os tipos que declaram membros descartáveis também devem implementar IDisposable. Se o tipo não tiver recursos próprios não gerenciados, não implemente um finalizador nele.</Description>
+   <Resolution Name="DependsOnFix">Implemente IDisposable em {0} porque cria membros dos seguintes tipos IDisposable: {1}. Se {0} tiver enviado anteriormente, adicionar novos membros que implementem IDisposable a esse tipo é considerado uma alteração interruptiva para os consumidores existentes.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoria</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Recolher Tudo</String>
+  <String Key="CheckId">Verificar ID</String>
+  <String Key="Error">Erro</String>
+  <String Key="Errors">erro(s)</String>
+  <String Key="ExpandAll">Expandir Tudo</String>
+  <String Key="Help">Ajuda</String>
+  <String Key="Line">Linha</String>
+  <String Key="Messages">mensagem(ns)</String>
+  <String Key="LocationNotStoredInPdb">[Local não armazenado em Pdb]</String>
+  <String Key="Project">Projeto</String>
+  <String Key="Resolution">Resolução</String>
+  <String Key="Rule">Regra</String>
+  <String Key="RuleFile">Arquivo de Regra</String>
+  <String Key="RuleDescription">Descrição da Regra</String>
+  <String Key="Source">Origem</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Destino</String>
+  <String Key="Warning">Aviso</String>
+  <String Key="Warnings">aviso(s)</String>
+  <String Key="ReportTitle">Relatório de Análise de Código</String>
+ </Localized>
+</FxCopReport>
