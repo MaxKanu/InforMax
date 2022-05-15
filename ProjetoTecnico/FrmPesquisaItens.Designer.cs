@@ -253,10 +253,7 @@
             this.Name = "FrmPesquisaItens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa Itens";
-<<<<<<< Updated upstream
-=======
             this.Load += new System.EventHandler(this.FrmPesquisaItens_Load);
->>>>>>> Stashed changes
             this.PnBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();

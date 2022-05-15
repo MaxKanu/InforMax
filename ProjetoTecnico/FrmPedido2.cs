@@ -83,18 +83,6 @@ namespace ProjetoTecnico
             }
             if (telaSelecionada.Equals(Acao_Tela.InserirProduto))
             {
-<<<<<<< Updated upstream
-                Pessoa = new Pessoa()
-            };
-            itens.Propriedade.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
-            itens.Propriedade.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
-            itens.Propriedade.Cliente.Pessoa.Nome = LblNome.Text;
-            itens.Propriedade.Marcador = txtMarcador.Text;
-            itens.Propriedade.TipoAparelho = ComboAparelho.Text;
-            itens.Propriedade.Observacoes = RctObservacoes.Text;
-            itens.Propriedade.Modelo = TxtModelo.Text;
-            itens.ShowDialog();
-=======
                 //txtIdPedido.Text = 1.ToString();
                 FrmVendas itens = new FrmVendas(Acao_Tela.Inserir, null)
                 {
@@ -110,7 +98,6 @@ namespace ProjetoTecnico
                 itens.Propriedade.Marcador = txtMarcador.Text;
                 itens.ShowDialog();
             }
->>>>>>> Stashed changes
         }
 
         private void FrmPedido_Load(object sender, EventArgs e)

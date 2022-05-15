@@ -125,12 +125,7 @@
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(70, 50);
             this.btnAtualizar.TabIndex = 11;
-<<<<<<< Updated upstream
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-=======
             this.btnAtualizar.UseVisualStyleBackColor = false;
->>>>>>> Stashed changes
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnPesquisa
@@ -419,10 +414,7 @@
             this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< Updated upstream
-=======
             this.CancelButton = this.BtnSair;
->>>>>>> Stashed changes
             this.ClientSize = new System.Drawing.Size(833, 546);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnPrincipal);

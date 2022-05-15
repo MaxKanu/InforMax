@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-<<<<<<< Updated upstream
-=======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOrdemServico));
->>>>>>> Stashed changes
             this.PnPrincipal = new System.Windows.Forms.Panel();
             this.LblMarca = new System.Windows.Forms.Label();
             this.TxtMarca = new System.Windows.Forms.TextBox();
@@ -92,10 +89,6 @@
             this.BtnSair = new System.Windows.Forms.Button();
             this.PdImprimirOrdem = new System.Drawing.Printing.PrintDocument();
             this.PDialImpressoras = new System.Windows.Forms.PrintDialog();
-<<<<<<< Updated upstream
-            this.txtIdPedido = new System.Windows.Forms.TextBox();
-=======
->>>>>>> Stashed changes
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -765,20 +758,6 @@
             // 
             this.PDialImpressoras.UseEXDialog = true;
             // 
-<<<<<<< Updated upstream
-            // txtIdPedido
-            // 
-            this.txtIdPedido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.txtIdPedido.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.txtIdPedido.Location = new System.Drawing.Point(77, 38);
-            this.txtIdPedido.MaxLength = 50;
-            this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(84, 25);
-            this.txtIdPedido.TabIndex = 2;
-            this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-=======
->>>>>>> Stashed changes
             // FrmOrdemServico
             // 
             this.AcceptButton = this.BtnSalvar;
@@ -864,10 +843,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
         private System.Windows.Forms.TextBox txtIdPedido;
-<<<<<<< Updated upstream
-=======
         private System.Windows.Forms.Label LblMarca;
         private System.Windows.Forms.TextBox TxtMarca;
->>>>>>> Stashed changes
     }
 }

@@ -50,11 +50,8 @@
             this.TsServiços = new System.Windows.Forms.ToolStripMenuItem();
             this.TsFabricante = new System.Windows.Forms.ToolStripMenuItem();
             this.TsPedido = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< Updated upstream
-=======
             this.TsOrdemDeServicos = new System.Windows.Forms.ToolStripMenuItem();
             this.TsVenda = new System.Windows.Forms.ToolStripMenuItem();
->>>>>>> Stashed changes
             this.TsMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.TsSeparador4 = new System.Windows.Forms.ToolStripSeparator();
             this.TsPesquisaServicos = new System.Windows.Forms.ToolStripDropDownButton();
@@ -78,16 +75,10 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TsSeparador6 = new System.Windows.Forms.ToolStripSeparator();
             this.TsSair = new System.Windows.Forms.ToolStripButton();
-<<<<<<< Updated upstream
-            this.LblRelogio = new System.Windows.Forms.Label();
-            this.StStatus = new System.Windows.Forms.StatusStrip();
-            this.StVersao = new System.Windows.Forms.ToolStripStatusLabel();
-=======
             this.LblRelogio = new System.Windows.Forms.ToolStripLabel();
             this.StStatus = new System.Windows.Forms.StatusStrip();
             this.StVersao = new System.Windows.Forms.ToolStripStatusLabel();
             this.TmData_Hora = new System.Windows.Forms.Timer(this.components);
->>>>>>> Stashed changes
             this.TsTrip.SuspendLayout();
             this.StStatus.SuspendLayout();
             this.SuspendLayout();
@@ -294,10 +285,6 @@
             this.TsPedido.Text = "Pedido";
             this.TsPedido.Click += new System.EventHandler(this.TsPedido_Click);
             // 
-<<<<<<< Updated upstream
-            // TsMarca
-            // 
-=======
             // TsOrdemDeServicos
             // 
             this.TsOrdemDeServicos.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -320,7 +307,6 @@
             // 
             this.TsMarca.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.TsMarca.Image = global::ProjetoTecnico.Properties.Resources.marca;
->>>>>>> Stashed changes
             this.TsMarca.Name = "TsMarca";
             this.TsMarca.Size = new System.Drawing.Size(129, 22);
             this.TsMarca.Text = "Marca";
@@ -557,23 +543,6 @@
             this.TmData_Hora.Interval = 10;
             this.TmData_Hora.Tick += new System.EventHandler(this.TmData_Hora_Tick);
             // 
-            // StStatus
-            // 
-            this.StStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StVersao});
-            this.StStatus.Location = new System.Drawing.Point(0, 566);
-            this.StStatus.Name = "StStatus";
-            this.StStatus.Size = new System.Drawing.Size(800, 22);
-            this.StStatus.TabIndex = 4;
-            this.StStatus.Text = "statusStrip1";
-            // 
-            // StVersao
-            // 
-            this.StVersao.Name = "StVersao";
-            this.StVersao.Size = new System.Drawing.Size(59, 17);
-            this.StVersao.Text = "Versão 1.0";
-            this.StVersao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
@@ -582,10 +551,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 588);
             this.Controls.Add(this.StStatus);
-<<<<<<< Updated upstream
-            this.Controls.Add(this.LblRelogio);
-=======
->>>>>>> Stashed changes
             this.Controls.Add(this.TsTrip);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe Print", 7.5F);
@@ -648,8 +613,6 @@
         private System.Windows.Forms.ToolStripMenuItem TsMarca;
         private System.Windows.Forms.StatusStrip StStatus;
         private System.Windows.Forms.ToolStripStatusLabel StVersao;
-<<<<<<< Updated upstream
-=======
         private System.Windows.Forms.ToolStripSeparator TsSeparador5;
         private System.Windows.Forms.ToolStripSeparator TsSeparador6;
         private System.Windows.Forms.ToolStripSplitButton TsAjuda_Sobre;
@@ -660,6 +623,5 @@
         private System.Windows.Forms.ToolStripMenuItem TsVenda;
         private System.Windows.Forms.Timer TmData_Hora;
         private System.Windows.Forms.ToolStripLabel LblRelogio;
->>>>>>> Stashed changes
     }
 }

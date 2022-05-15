@@ -255,8 +255,6 @@ namespace ProjetoTecnico
 
             fabri.Show();
         }
-<<<<<<< Updated upstream
-=======
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -285,6 +283,5 @@ namespace ProjetoTecnico
             vendas.Show();
         }
 
->>>>>>> Stashed changes
     }
 }

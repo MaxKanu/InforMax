@@ -250,11 +250,7 @@
             this.Name = "FrmPesquisarPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Pedidos";
-<<<<<<< Updated upstream
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
-=======
             this.Load += new System.EventHandler(this.FrmPesquisarPedidos_Load);
->>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();
             this.PnBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();

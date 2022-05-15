@@ -156,13 +156,8 @@
     <Compile Include="FrmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< Updated upstream
-    <Compile Include="frmSelecao.Designer.cs">
-      <DependentUpon>frmSelecao.cs</DependentUpon>
-=======
     <Compile Include="FrmVendas.Designer.cs">
       <DependentUpon>FrmVendas.cs</DependentUpon>
->>>>>>> Stashed changes
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

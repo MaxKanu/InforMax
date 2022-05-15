@@ -64,10 +64,7 @@ namespace ProjetoTecnico
                 TxtCliente.Text = itensPedidos.Pedidos.Cliente.Pessoa.Nome;
                 TxtValorTotal.Text = itensPedidos.Precos.Preco.ToString();
                 TxtAparelho.Text = itensPedidos.Pedidos.TipoAparelho;
-<<<<<<< Updated upstream
-=======
                 TxtMarca.Text = itensPedidos.Pedidos.Marca;
->>>>>>> Stashed changes
                 TxtModelo.Text = itensPedidos.Pedidos.Modelo;
                 TxtDefeito.Text = itensPedidos.Pedidos.Observacoes;
                 LblNomeOperado.Text = itensPedidos.Pedidos.Marcador;
@@ -267,14 +264,7 @@ namespace ProjetoTecnico
             {
                 colecaoItens = negocioItens.ConsultarPedidos(codigoDigitado);
             }
-<<<<<<< Updated upstream
-            /*if (int.TryParse(TxtId.Text, out int codigo) == true)
-            {
-                colecaoItens = negocioItens.ConsultarPedidos(null, codigo);
-            }*/
-=======
 
->>>>>>> Stashed changes
             BsPrincipal.DataSource = colecaoItens;
             dgwPrincipal.DataSource = null;
             dgwPrincipal.DataSource = colecaoItens;
@@ -292,10 +282,7 @@ namespace ProjetoTecnico
         }
         public static decimal valorTotal;
         private DataTable dt;
-<<<<<<< Updated upstream
-=======
         private Bitmap memoryImage;
->>>>>>> Stashed changes
 
         void SomaTotal()
         {
@@ -364,10 +351,7 @@ namespace ProjetoTecnico
                     TxtCliente.Text = Propriedade.Cliente.Pessoa.Nome;
                     TxtDefeito.Text = Propriedade.Observacoes;
                     TxtAparelho.Text = Propriedade.TipoAparelho;
-<<<<<<< Updated upstream
-=======
                     TxtMarca.Text = Propriedade.Marca;
->>>>>>> Stashed changes
                     TxtModelo.Text = Propriedade.Modelo;
                 }
                 else
@@ -582,94 +566,6 @@ namespace ProjetoTecnico
             imprimir.FooterSpacing = 15;
 
             imprimir.PrintDataGridView(dgwPrincipal);
-<<<<<<< Updated upstream
-        }
-        //recebe os controles para o objeto imprimir
-        private void PdImprimirOrdem_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawString(txtIdPedido.Text, txtIdPedido.Font, Brushes.Black, 100, 100);
-            e.Graphics.DrawString(TxtId.Text, TxtId.Font, Brushes.Black, 100, 150);
-            e.Graphics.DrawString(TxtCliente.Text, TxtCliente.Font, Brushes.Black, 150, 150);
-            e.Graphics.DrawString(TxtAparelho.Text, TxtAparelho.Font, Brushes.Black, 100, 180);
-            e.Graphics.DrawString(TxtModelo.Text, TxtModelo.Font, Brushes.Black, 100, 210);
-            e.Graphics.DrawString(TxtDefeito.Text, TxtDefeito.Font, Brushes.Black, 100, 250);
-        }
-        /*private DataTable GerarO_S()
-        {
-            var dt = new DataTable();
-            dt.Columns.Add("IdPedido", typeof(int));
-            dt.Columns.Add("Quantidade", typeof(int));
-            dt.Columns.Add("Descrição", typeof(string));
-            dt.Columns.Add("Preço", typeof(decimal));
-            dt.Columns.Add("Desconto", typeof(decimal));
-            dt.Columns.Add("Valor_Total", typeof(decimal));
-            foreach (DataGridViewRow item in dgwPrincipal.Rows)
-            {
-                dt.Rows.Add(item.Cells["IdPedidos"].Value);
-                dt.Rows.Add(item.Cells["Quant"].Value);
-                dt.Rows.Add(item.Cells["Descricao"].Value);
-                dt.Rows.Add(item.Cells["Valor"].Value);
-                dt.Rows.Add(item.Cells["Desconto"].Value);
-                dt.Rows.Add(item.Cells["Valor_Total"].Value);
-            }
-            return dt;
-        }*/
-        private void BtnImprimir_Click(object sender, EventArgs e)
-        {
-            pedidoSelecionado = dgwPrincipal.DataSource as ItensDePedidoColecao;
-            //var dt = GerarO_S();
-            using (var relatorio = new FrmRelatorio(pedidoSelecionado, TxtAparelho.Text, TxtModelo.Text, DateTime.Now.ToString("dd/MM/yyyy"), TxtCliente.Text, TxtDefeito.Text, string.Format("R$ {0:0.00}", TxtValorTotal.Text)))
-            {
-                relatorio.ShowDialog();
-            }
-            /*using (var relatorio = new FrmRelatorio(dt, TxtAparelho.Text, TxtModelo.Text, DateTime.Now.ToString("dd/MM/yyyy"), TxtCliente.Text, TxtDefeito.Text, string.Format("R$ {0:0.00}", TxtValorTotal.Text)))
-            {
-                relatorio.ShowDialog();
-            }
-            //CaptureScreen();
-            if(PDialImpressoras.ShowDialog() == DialogResult.OK)
-            {
-                
-                
-                PdImprimirOrdem.PrinterSettings = PDialImpressoras.PrinterSettings; //Escolhe a Impressora
-                PdImprimirOrdem.DefaultPageSettings.Landscape = true;//Define a orientação da pagina
-                PrintPreviewDialog ppd = new PrintPreviewDialog { Document = PdImprimirOrdem };//abre uma janela de dialogo com a vizualição do documento
-                ((Form)ppd).WindowState = FormWindowState.Maximized;//Abertura da tela maximizada
-                PdImprimirOrdem.PrintPage += delegate (object ev, PrintPageEventArgs ep)
-                {
-                    const int DGV_ALTO = 35;
-                    int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top;//define a area dentro da pagina(retangular)
-                    foreach(DataGridViewColumn col in dgwPrincipal.Columns)
-                    {
-                        ep.Graphics.DrawString(col.HeaderText, new Font("Segoe Print", 16, FontStyle.Bold), Brushes.Black, left ,top);//Define a cor e a fonte do cabeçalho
-                        left += col.Width;
-                    }
-                    left = ep.MarginBounds.Left;
-                    ep.Graphics.FillRectangle(Brushes.Black,left, top + 40, ep.MarginBounds.Right - left, 3);//preenche o tamanho interno do cabeçalho
-                    foreach(DataGridViewRow linha in dgwPrincipal.Rows)//percorre cada linha do datagrid
-                    {
-                        if (linha.Index.Equals(dgwPrincipal.RowCount - 1)) break;//para a leitura, se nao houver nenhuma linha
-                        left = ep.MarginBounds.Left;
-                        foreach(DataGridViewCell celula in linha.Cells)//faz a contagem de cada celula na linha
-                        {
-                            ep.Graphics.DrawString(Convert.ToString(celula.Value), new Font("Segoe Print", 13), Brushes.Black, left, top + 4);//ira fazer os textos, com as fontes e as cores das letras
-                            left += celula.OwningColumn.Width;//Pega a coluna que tem a celula
-                        }
-                        top += DGV_ALTO;
-                    }
-                };
-                //PdImprimirOrdem.Print();
-                //ImprimirGrade();
-                
-            }*/
-
-            /*
-            FrmRelatorio relatorio = new FrmRelatorio();
-            relatorio.ShowDialog();
-            relatorio.Dispose();
-            */
-        }
-=======
         }
         //recebe os controles para o objeto imprimir
         private void PdImprimirOrdem_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -689,16 +585,13 @@ namespace ProjetoTecnico
                 relatorio.ShowDialog();
             }
         }
->>>>>>> Stashed changes
         private void CaptureScreen()
         {
-            /*
             Graphics myGraphics = this.CreateGraphics();
             Size s = this.Size;
             memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
-            */
         }
 
         

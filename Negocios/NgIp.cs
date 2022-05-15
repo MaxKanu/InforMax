@@ -72,27 +72,16 @@ namespace Negocios
                     itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
                     itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
                     itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
-<<<<<<< Updated upstream
-=======
                     itens.Pedidos.Marca = Convert.ToString(linha["Marca"]);
->>>>>>> Stashed changes
                     itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
                     itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
                     itens.Descricao = Convert.ToString(linha["Descricao"]);
                     itens.Quantidade = Convert.ToInt32(linha["Quantidade"]);
-<<<<<<< Updated upstream
-                    itens.ValorUnitario = Convert.ToDouble(linha["ValorUnitario"]);
-                    itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
-                    itens.ValorDesconto = Convert.ToDouble(linha["ValorDesconto"]);
-                    itens.ValorTotal = Convert.ToDouble(linha["ValorTotal"]);
-                    itens.ValorPedido = Convert.ToDouble(linha["ValorPedido"]);
-=======
                     itens.ValorUnitario = Convert.ToDecimal(linha["ValorUnitario"]);
                     itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
                     itens.ValorDesconto = Convert.ToDecimal(linha["ValorDesconto"]);
                     itens.ValorTotal = Convert.ToDecimal(linha["ValorTotal"]);
                     itens.ValorPedido = Convert.ToDecimal(linha["ValorPedido"]);
->>>>>>> Stashed changes
 
                     colecao.Add(itens);
                 }
@@ -126,27 +115,16 @@ namespace Negocios
                     itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
                     itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
                     itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
-<<<<<<< Updated upstream
-=======
                     itens.Pedidos.Marca = Convert.ToString(linha["Marca"]);
->>>>>>> Stashed changes
                     itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
                     itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
                     itens.Descricao = Convert.ToString(linha["Descricao"]);
                     itens.Quantidade = Convert.ToInt32(linha["Quantidade"]);
-<<<<<<< Updated upstream
-                    itens.ValorUnitario = Convert.ToDouble(linha["ValorUnitario"]);
-                    itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
-                    itens.ValorDesconto = Convert.ToDouble(linha["ValorDesconto"]);
-                    itens.ValorTotal = Convert.ToDouble(linha["ValorTotal"]);
-                    itens.ValorPedido = Convert.ToDouble(linha["ValorPedido"]);
-=======
                     itens.ValorUnitario = Convert.ToDecimal(linha["ValorUnitario"]);
                     itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
                     itens.ValorDesconto = Convert.ToDecimal(linha["ValorDesconto"]);
                     itens.ValorTotal = Convert.ToDecimal(linha["ValorTotal"]);
                     itens.ValorPedido = Convert.ToDecimal(linha["ValorPedido"]);
->>>>>>> Stashed changes
 
                     colecao.Add(itens);
                 }
@@ -180,10 +158,7 @@ namespace Negocios
                     itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdCliente"]);
                     itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
                     itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
-<<<<<<< Updated upstream
-=======
                     itens.Pedidos.Marca = Convert.ToString(linha["Marca"]);
->>>>>>> Stashed changes
                     itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
                     itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
                     itens.Pedidos.Marcador = Convert.ToString(linha["Marcador"]);
