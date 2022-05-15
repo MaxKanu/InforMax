@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -41,13 +40,14 @@
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnConsulFuncio = new System.Windows.Forms.Button();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
+            this.BtnSair = new System.Windows.Forms.Button();
             this.BtnAlterarJuridico = new System.Windows.Forms.Button();
             this.BtnConsultarJuridico = new System.Windows.Forms.Button();
             this.BtnConsCliente = new System.Windows.Forms.Button();
             this.BtnAlterCliente = new System.Windows.Forms.Button();
             this.BtnAlterFuncio = new System.Windows.Forms.Button();
-            this.BtnConsulFuncio = new System.Windows.Forms.Button();
-            this.BtnSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,17 +65,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 459);
             this.panel1.TabIndex = 0;
-            // 
-            // BtnPesquisar
-            // 
-            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnPesquisar.Location = new System.Drawing.Point(438, 94);
-            this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(75, 29);
-            this.BtnPesquisar.TabIndex = 11;
-            this.BtnPesquisar.Text = "Pesquisar";
-            this.BtnPesquisar.UseVisualStyleBackColor = true;
-            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // TxtNome
             // 
@@ -110,6 +99,9 @@
             // 
             // dgwPrincipal
             // 
+            this.dgwPrincipal.AllowUserToDeleteRows = false;
+            this.dgwPrincipal.AllowUserToResizeRows = false;
+            this.dgwPrincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgwPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -119,10 +111,12 @@
             this.Celular,
             this.Situacao});
             this.dgwPrincipal.Location = new System.Drawing.Point(3, 141);
+            this.dgwPrincipal.MultiSelect = false;
             this.dgwPrincipal.Name = "dgwPrincipal";
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(709, 313);
             this.dgwPrincipal.TabIndex = 0;
+            this.dgwPrincipal.TabStop = false;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataPesquisar_CellFormatting);
             // 
             // Id
@@ -185,87 +179,110 @@
             this.panel2.Size = new System.Drawing.Size(713, 57);
             this.panel2.TabIndex = 1;
             // 
-            // BtnAlterarJuridico
-            // 
-            this.BtnAlterarJuridico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnAlterarJuridico.Location = new System.Drawing.Point(417, 3);
-            this.BtnAlterarJuridico.Name = "BtnAlterarJuridico";
-            this.BtnAlterarJuridico.Size = new System.Drawing.Size(78, 47);
-            this.BtnAlterarJuridico.TabIndex = 10;
-            this.BtnAlterarJuridico.Text = "Alterar Juridico";
-            this.BtnAlterarJuridico.UseVisualStyleBackColor = true;
-            this.BtnAlterarJuridico.Click += new System.EventHandler(this.BtnAlterarJuridico_Click);
-            // 
-            // BtnConsultarJuridico
-            // 
-            this.BtnConsultarJuridico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnConsultarJuridico.Location = new System.Drawing.Point(517, 3);
-            this.BtnConsultarJuridico.Name = "BtnConsultarJuridico";
-            this.BtnConsultarJuridico.Size = new System.Drawing.Size(82, 47);
-            this.BtnConsultarJuridico.TabIndex = 11;
-            this.BtnConsultarJuridico.Text = "Consultar Juridico";
-            this.BtnConsultarJuridico.UseVisualStyleBackColor = true;
-            this.BtnConsultarJuridico.Click += new System.EventHandler(this.BtnConsultarJuridico_Click);
-            // 
-            // BtnConsCliente
-            // 
-            this.BtnConsCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnConsCliente.Location = new System.Drawing.Point(116, 3);
-            this.BtnConsCliente.Name = "BtnConsCliente";
-            this.BtnConsCliente.Size = new System.Drawing.Size(75, 47);
-            this.BtnConsCliente.TabIndex = 5;
-            this.BtnConsCliente.Text = "Consultar Cliente";
-            this.BtnConsCliente.UseVisualStyleBackColor = true;
-            this.BtnConsCliente.Click += new System.EventHandler(this.BtnConsCliente_Click);
-            // 
-            // BtnAlterCliente
-            // 
-            this.BtnAlterCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnAlterCliente.Location = new System.Drawing.Point(19, 3);
-            this.BtnAlterCliente.Name = "BtnAlterCliente";
-            this.BtnAlterCliente.Size = new System.Drawing.Size(75, 47);
-            this.BtnAlterCliente.TabIndex = 6;
-            this.BtnAlterCliente.Text = "Alterar Cliente";
-            this.BtnAlterCliente.UseVisualStyleBackColor = true;
-            this.BtnAlterCliente.Click += new System.EventHandler(this.BtnAlterCliente_Click);
-            // 
-            // BtnAlterFuncio
-            // 
-            this.BtnAlterFuncio.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnAlterFuncio.Location = new System.Drawing.Point(213, 3);
-            this.BtnAlterFuncio.Name = "BtnAlterFuncio";
-            this.BtnAlterFuncio.Size = new System.Drawing.Size(78, 47);
-            this.BtnAlterFuncio.TabIndex = 7;
-            this.BtnAlterFuncio.Text = "Alterar Funcionario";
-            this.BtnAlterFuncio.UseVisualStyleBackColor = true;
-            this.BtnAlterFuncio.Click += new System.EventHandler(this.BtnAlterFuncio_Click);
-            // 
             // BtnConsulFuncio
             // 
+            this.BtnConsulFuncio.BackgroundImage = global::ProjetoTecnico.Properties.Resources.Pesquisar_Func;
+            this.BtnConsulFuncio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnConsulFuncio.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnConsulFuncio.Location = new System.Drawing.Point(313, 3);
             this.BtnConsulFuncio.Name = "BtnConsulFuncio";
             this.BtnConsulFuncio.Size = new System.Drawing.Size(82, 47);
             this.BtnConsulFuncio.TabIndex = 8;
-            this.BtnConsulFuncio.Text = "Consultar Funcionario";
             this.BtnConsulFuncio.UseVisualStyleBackColor = true;
             this.BtnConsulFuncio.Click += new System.EventHandler(this.BtnConsulFuncio_Click);
             // 
+            // BtnPesquisar
+            // 
+            this.BtnPesquisar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_procurar_usuário_masculino_301;
+            this.BtnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnPesquisar.Location = new System.Drawing.Point(438, 94);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(58, 25);
+            this.BtnPesquisar.TabIndex = 11;
+            this.BtnPesquisar.UseVisualStyleBackColor = true;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
             // BtnSair
             // 
+            this.BtnSair.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSair.Location = new System.Drawing.Point(621, 3);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 9;
-            this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
+            // BtnAlterarJuridico
+            // 
+            this.BtnAlterarJuridico.BackgroundImage = global::ProjetoTecnico.Properties.Resources.usuarios;
+            this.BtnAlterarJuridico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAlterarJuridico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnAlterarJuridico.Location = new System.Drawing.Point(417, 3);
+            this.BtnAlterarJuridico.Name = "BtnAlterarJuridico";
+            this.BtnAlterarJuridico.Size = new System.Drawing.Size(78, 47);
+            this.BtnAlterarJuridico.TabIndex = 10;
+            this.BtnAlterarJuridico.UseVisualStyleBackColor = true;
+            this.BtnAlterarJuridico.Click += new System.EventHandler(this.BtnAlterarJuridico_Click);
+            // 
+            // BtnConsultarJuridico
+            // 
+            this.BtnConsultarJuridico.BackgroundImage = global::ProjetoTecnico.Properties.Resources.usuario;
+            this.BtnConsultarJuridico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnConsultarJuridico.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnConsultarJuridico.Location = new System.Drawing.Point(517, 3);
+            this.BtnConsultarJuridico.Name = "BtnConsultarJuridico";
+            this.BtnConsultarJuridico.Size = new System.Drawing.Size(82, 47);
+            this.BtnConsultarJuridico.TabIndex = 11;
+            this.BtnConsultarJuridico.UseVisualStyleBackColor = true;
+            this.BtnConsultarJuridico.Click += new System.EventHandler(this.BtnConsultarJuridico_Click);
+            // 
+            // BtnConsCliente
+            // 
+            this.BtnConsCliente.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_procurar_usuário_masculino_30;
+            this.BtnConsCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnConsCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnConsCliente.Location = new System.Drawing.Point(116, 3);
+            this.BtnConsCliente.Name = "BtnConsCliente";
+            this.BtnConsCliente.Size = new System.Drawing.Size(75, 47);
+            this.BtnConsCliente.TabIndex = 5;
+            this.BtnConsCliente.UseVisualStyleBackColor = true;
+            this.BtnConsCliente.Click += new System.EventHandler(this.BtnConsCliente_Click);
+            // 
+            // BtnAlterCliente
+            // 
+            this.BtnAlterCliente.BackColor = System.Drawing.Color.Orange;
+            this.BtnAlterCliente.BackgroundImage = global::ProjetoTecnico.Properties.Resources.botao_atualizar;
+            this.BtnAlterCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnAlterCliente.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnAlterCliente.Location = new System.Drawing.Point(19, 3);
+            this.BtnAlterCliente.Name = "BtnAlterCliente";
+            this.BtnAlterCliente.Size = new System.Drawing.Size(75, 47);
+            this.BtnAlterCliente.TabIndex = 6;
+            this.BtnAlterCliente.UseVisualStyleBackColor = false;
+            this.BtnAlterCliente.Click += new System.EventHandler(this.BtnAlterCliente_Click);
+            // 
+            // BtnAlterFuncio
+            // 
+            this.BtnAlterFuncio.BackgroundImage = global::ProjetoTecnico.Properties.Resources.Atualizar_Func;
+            this.BtnAlterFuncio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAlterFuncio.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnAlterFuncio.Location = new System.Drawing.Point(213, 3);
+            this.BtnAlterFuncio.Name = "BtnAlterFuncio";
+            this.BtnAlterFuncio.Size = new System.Drawing.Size(78, 47);
+            this.BtnAlterFuncio.TabIndex = 7;
+            this.BtnAlterFuncio.UseVisualStyleBackColor = true;
+            this.BtnAlterFuncio.Click += new System.EventHandler(this.BtnAlterFuncio_Click);
+            // 
             // frmPesquisarCadastroFisico
             // 
+            this.AcceptButton = this.BtnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnSair;
             this.ClientSize = new System.Drawing.Size(720, 522);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

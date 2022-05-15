@@ -25,8 +25,16 @@ C:\Users\marca\Desktop\InforMax1\Apoio\bin\Debug\Apoio.pdb
 C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
 C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.dll
 C:\Users\marca\Desktop\InforMax1\Apoio\obj\Debug\Apoio.pdb
+<<<<<<< Updated upstream
 C:\Users\marca\Documents\GitHub\InforMax_\Apoio\bin\Debug\Apoio.dll
 C:\Users\marca\Documents\GitHub\InforMax_\Apoio\bin\Debug\Apoio.pdb
 C:\Users\marca\Documents\GitHub\InforMax_\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
 C:\Users\marca\Documents\GitHub\InforMax_\Apoio\obj\Debug\Apoio.dll
 C:\Users\marca\Documents\GitHub\InforMax_\Apoio\obj\Debug\Apoio.pdb
+=======
+C:\Users\marca\Desktop\informax2\Apoio\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\informax2\Apoio\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\informax2\Apoio\obj\Debug\Apoio.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\informax2\Apoio\obj\Debug\Apoio.dll
+C:\Users\marca\Desktop\informax2\Apoio\obj\Debug\Apoio.pdb
+>>>>>>> Stashed changes

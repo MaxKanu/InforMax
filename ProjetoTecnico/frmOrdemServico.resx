@@ -120,6 +120,16 @@
   <metadata name="Valor_Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnImprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKlJREFUWEftkEEKw0AIRWeVM5UeMIVeq+1Rmmukmo4wi0/U0UULPniQiP580orC
+        yD5pGijcYhrewCpQBUIFFvJOvkkJispZN5KzVXgRhWS4kiobycuX4y2HK8mZ/CdUpC3zIp/fxzBj7inj
+        4qObwVSBTP67gMy8jqAZ5OzY6wiaQULHnVBG6LgTypBFpBV0K6qgI9EKuhWn8B6HPob4mQJe00DhFotC
+        obUP/d3mY5uTJxgAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="PdImprimirOrdem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

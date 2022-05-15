@@ -44,6 +44,7 @@
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(265, 25);
             this.TxtNome.TabIndex = 2;
+            this.TxtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblNome
             // 
@@ -57,46 +58,52 @@
             // 
             // BtnNovo
             // 
+            this.BtnNovo.BackColor = System.Drawing.Color.White;
             this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Image = global::ProjetoTecnico.Properties.Resources.NovoCetro;
             this.BtnNovo.Location = new System.Drawing.Point(48, 154);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(59, 42);
             this.BtnNovo.TabIndex = 3;
-            this.BtnNovo.Text = "Novo\r\n";
-            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // BtnSalvar
             // 
+            this.BtnSalvar.BackColor = System.Drawing.Color.Lime;
             this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSalvar.Image = global::ProjetoTecnico.Properties.Resources.icons8_salvar_32;
             this.BtnSalvar.Location = new System.Drawing.Point(127, 154);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(64, 42);
             this.BtnSalvar.TabIndex = 4;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Red;
+            this.BtnCancelar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.kisspng_computer_icons_theme_clip_art_cancel_button_5abbe06e2cbec6_0343187815222621261833;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnCancelar.Location = new System.Drawing.Point(211, 154);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(64, 42);
             this.BtnCancelar.TabIndex = 5;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSair
             // 
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Image = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
             this.BtnSair.Location = new System.Drawing.Point(295, 154);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(64, 42);
             this.BtnSair.TabIndex = 6;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // lblTitulo
@@ -111,8 +118,10 @@
             // 
             // FrmFabricantes
             // 
+            this.AcceptButton = this.BtnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancelar;
             this.ClientSize = new System.Drawing.Size(426, 216);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.BtnNovo);
@@ -126,7 +135,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmFabricantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmFabricantes";
+            this.Text = "Fabricantes";
             this.Load += new System.EventHandler(this.FrmFabricantes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

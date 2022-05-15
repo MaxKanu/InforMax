@@ -140,5 +140,21 @@ namespace ProjetoTecnico
                 Close();
                 //cadastro.Show();
         }
+
+        private void FrmPesquisaItens_Load(object sender, EventArgs e)
+        {
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+            
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.BtnExcluir, "Excluir Item");
+            nomeObjeto.SetToolTip(this.BtnSelecionar, "Selecionar");
+        }
     }
 }

@@ -82,6 +82,7 @@ C:\Users\marca\Desktop\InforMax1\Negocios\obj\Debug\Negocios.csproj.CoreCompileI
 C:\Users\marca\Desktop\InforMax1\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 C:\Users\marca\Desktop\InforMax1\Negocios\obj\Debug\Negocios.dll
 C:\Users\marca\Desktop\InforMax1\Negocios\obj\Debug\Negocios.pdb
+<<<<<<< Updated upstream
 C:\Users\marca\Documents\GitHub\InforMax_\Negocios\bin\Debug\Negocios.dll
 C:\Users\marca\Documents\GitHub\InforMax_\Negocios\bin\Debug\Negocios.pdb
 C:\Users\marca\Documents\GitHub\InforMax_\Negocios\bin\Debug\AcessoDados.dll
@@ -96,3 +97,19 @@ C:\Users\marca\Documents\GitHub\InforMax_\Negocios\obj\Debug\Negocios.csproj.Cor
 C:\Users\marca\Documents\GitHub\InforMax_\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 C:\Users\marca\Documents\GitHub\InforMax_\Negocios\obj\Debug\Negocios.dll
 C:\Users\marca\Documents\GitHub\InforMax_\Negocios\obj\Debug\Negocios.pdb
+=======
+C:\Users\marca\Desktop\informax2\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\informax2\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\informax2\Negocios\obj\Debug\Negocios.dll
+C:\Users\marca\Desktop\informax2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\Negocios.dll
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\Apoio.dll
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\Objetos.dll
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\Apoio.pdb
+C:\Users\marca\Desktop\informax2\Negocios\bin\Debug\Objetos.pdb
+C:\Users\marca\Desktop\informax2\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+>>>>>>> Stashed changes

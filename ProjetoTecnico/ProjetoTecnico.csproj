@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Acao_Tela.cs" />
     <Compile Include="DGVPrinter.cs" />
     <Compile Include="frmCadastroJuridico.cs">
@@ -147,15 +153,23 @@
     <Compile Include="FrmRelatorio.Designer.cs">
       <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSelecao.cs">
+    <Compile Include="FrmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="frmSelecao.Designer.cs">
       <DependentUpon>frmSelecao.cs</DependentUpon>
+=======
+    <Compile Include="FrmVendas.Designer.cs">
+      <DependentUpon>FrmVendas.cs</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroJuridico.resx">
       <DependentUpon>frmCadastroJuridico.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,8 +209,8 @@
     <EmbeddedResource Include="FrmRelatorio.resx">
       <DependentUpon>FrmRelatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSelecao.resx">
-      <DependentUpon>frmSelecao.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVendas.resx">
+      <DependentUpon>FrmVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -261,6 +275,51 @@
     <None Include="Resources\SGN_10_05_2021_1633453034999[1].png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-sobre-32.png" />
+    <None Include="Resources\questao.png" />
+    <None Include="Resources\Pesquisar OS.png" />
+    <None Include="Resources\business-color_business-contact-87_icon-icons.com_53468.png" />
+    <None Include="Resources\business-color_business-contact-86_icon-icons.com_53469.png" />
+    <None Include="Resources\icons8-adicionar-usuário-masculino-24.png" />
+    <None Include="Resources\questao %281%29.png" />
+    <None Include="Resources\questao1.png" />
+    <None Include="Resources\marcas.png" />
+    <None Include="Resources\marca.jpg" />
+    <None Include="Resources\pedido.png" />
+    <None Include="Resources\fabricantes.png" />
+    <None Include="Resources\servicos.png" />
+    <None Include="Resources\produtos.png" />
+    <None Include="Resources\pedido1.png" />
+    <None Include="Resources\preco.png" />
+    <None Include="Resources\clientef.png" />
+    <None Include="Resources\clientefi.png" />
+    <None Include="Resources\funcionario.png" />
+    <None Include="Resources\usuarios.jpg" />
+    <None Include="Resources\usuario.png" />
+    <None Include="Resources\permissao.png" />
+    <None Include="Resources\icons8-moedas-241.png" />
+    <None Include="Resources\Imagem3.png" />
+    <None Include="Resources\NovoCetro.png" />
+    <None Include="Resources\icons8-salvar-32.png" />
+    <None Include="Resources\icons8-excluir-filled-50.png" />
+    <None Include="Resources\Atualizar.jpg" />
+    <None Include="Resources\Atualizar.ico" />
+    <None Include="Resources\Atualizar.png" />
+    <None Include="Resources\kisspng-computer-icons-undo-symbol-update-button-5ac5cc71e262e9.4919129415229123699273.png" />
+    <None Include="Resources\icons8-sair-26 %281%291.png" />
+    <None Include="Resources\botao-atualizar.png" />
+    <None Include="Resources\kisspng-computer-icons-theme-clip-art-cancel-button-5abbe06e2cbec6.0343187815222621261833.png" />
+    <None Include="Resources\icons8-remover-usuário-masculino-24.png" />
+    <None Include="Resources\icons8-vender-estoque-24.png" />
+    <None Include="Resources\icons8-procurar-usuário-masculino-30.png" />
+    <None Include="Resources\PesquisarOrcamento.png" />
+    <None Include="Resources\icons8-adicionar-propriedade-30.png" />
+    <None Include="Resources\icons8-remover-usuário-masculino-241.png" />
+    <None Include="Resources\icons8-procurar-usuário-masculino-301.png" />
+    <None Include="Resources\Pesquisar_Func.png" />
+    <None Include="Resources\Atualizar_Func.png" />
+    <None Include="Resources\icons8-pesquisar-16.png" />
+    <None Include="Resources\icons8-selecionado-24.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

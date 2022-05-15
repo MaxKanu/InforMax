@@ -174,16 +174,27 @@ namespace ProjetoTecnico
                 LimparCaixas();
                 Botoes(1);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show("Não foi possível inserir os dados", ex.ToString());
             }
             CarregarGrid();
         }
 
         private void FrmCadastroProduto_Load(object sender, EventArgs e)
         {
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+
             NgFa fabricante = new NgFa();
             FabricanteColecao colecao = new FabricanteColecao();
 

@@ -13,6 +13,40 @@ namespace ProjetoTecnico
 {
     public partial class FrmMenu : Form
     {
+        public string Hora
+        {
+            //ToShortTimeString()
+            get { return DateTime.Now.ToLongTimeString(); }
+        }
+
+        public string Segundos
+        {
+            get
+            {
+                return DateTime.Now.Second.ToString();
+            }
+        }
+        public string Dia
+        {
+            get
+            {
+                return DateTime.Now.Day.ToString();
+            }
+        }
+        public string Mes
+        {
+            get
+            {
+                return DateTime.Now.Month.ToString();
+            }
+        }
+        public string Ano
+        {
+            get
+            {
+                return DateTime.Now.Year.ToString();
+            }
+        }
         ClienteFisico fisico = new ClienteFisico();
         ClienteFisicoColecao colecaoFisico = new ClienteFisicoColecao();
         Funcionarios funcionario = new Funcionarios();
@@ -21,9 +55,13 @@ namespace ProjetoTecnico
         {
             InitializeComponent();
         }
+        private void TmData_Hora_Tick(object sender, EventArgs e)
+        {
+            LblRelogio.Text = this.Dia + "/" + this.Mes + "/" + this.Ano + "   " + this.Hora;// + ":" + this.Segundos;
+        }
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-
+            TmData_Hora.Start();
         }
 
         private void ClienteFisicoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,23 +152,6 @@ namespace ProjetoTecnico
         }
 
 
-        private void TsPreçoServico_Click(object sender, EventArgs e)
-        {
-            FrmPreco preco = new FrmPreco(Acao_Tela.InserirServico)
-            {
-                MdiParent = this
-            };
-            preco.Show();
-        }
-
-        private void TsPreço_Click(object sender, EventArgs e)
-        {
-            FrmPreco preco = new FrmPreco(Acao_Tela.InserirProduto)
-            {
-                MdiParent = this
-            };
-            preco.Show();
-        }
 
         private void TsOS_Click(object sender, EventArgs e)
         {
@@ -143,11 +164,7 @@ namespace ProjetoTecnico
 
         private void TsPedido_Click(object sender, EventArgs e)
         {
-            FrmPedido pedido = new FrmPedido(Acao_Tela.Inserir, null)
-            {
-                MdiParent = this
-            };
-            pedido.Show();
+            
         }
 
         private void TsPedidos_Click(object sender, EventArgs e)
@@ -238,5 +255,36 @@ namespace ProjetoTecnico
 
             fabri.Show();
         }
+<<<<<<< Updated upstream
+=======
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CaixaSobre sobre = new CaixaSobre();
+            sobre.ShowDialog();
+        }
+
+        private void TsVendas_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TsOrdemDeServicos_Click(object sender, EventArgs e)
+        {
+            FrmPedido pedido = new FrmPedido(Acao_Tela.Inserir, null)
+            {
+                MdiParent = this
+            };
+            pedido.Show();
+        }
+
+        private void TsVenda_Click(object sender, EventArgs e)
+        {
+            FrmPedido vendas = new FrmPedido(Acao_Tela.InserirProduto, null);
+            vendas.MdiParent = this;
+            vendas.Show();
+        }
+
+>>>>>>> Stashed changes
     }
 }

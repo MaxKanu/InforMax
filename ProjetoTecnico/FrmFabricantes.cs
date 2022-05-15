@@ -35,10 +35,12 @@ namespace ProjetoTecnico
         void Cancelar()
         {
             TxtNome.Enabled = false;
+            TxtNome.Clear();
             BtnNovo.Enabled = true;
             BtnSalvar.Enabled = false;
             BtnCancelar.Enabled = false;
-        }void Ativar()
+        }
+        void Ativar()
         {
             TxtNome.Enabled = true;
             BtnNovo.Enabled = false; ;
@@ -96,6 +98,17 @@ namespace ProjetoTecnico
         private void FrmFabricantes_Load(object sender, EventArgs e)
         {
 
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar Cadastro");
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)

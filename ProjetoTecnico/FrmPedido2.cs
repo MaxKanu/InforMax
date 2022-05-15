@@ -60,13 +60,30 @@ namespace ProjetoTecnico
 
         private void BtnVendas_Click(object sender, EventArgs e)
         {
-            //txtIdPedido.Text = 1.ToString();
-            FrmOrdemServico itens = new FrmOrdemServico(Acao_Tela.Inserir, null)
+            if (telaSelecionada.Equals(Acao_Tela.Inserir))
             {
-                Propriedade = new Pedidos()
-            };
-            itens.Propriedade.Cliente = new ClienteFisico
+                //txtIdPedido.Text = 1.ToString();
+                FrmOrdemServico itens = new FrmOrdemServico(Acao_Tela.Inserir, null)
+                {
+                    Propriedade = new Pedidos()
+                };
+                itens.Propriedade.Cliente = new ClienteFisico
+                {
+                    Pessoa = new Pessoa()
+                };
+                itens.Propriedade.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
+                itens.Propriedade.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
+                itens.Propriedade.Cliente.Pessoa.Nome = LblNome.Text;
+                itens.Propriedade.Marcador = txtMarcador.Text;
+                itens.Propriedade.Marca = ComboMarca.Text;
+                itens.Propriedade.TipoAparelho = ComboAparelho.Text;
+                itens.Propriedade.Observacoes = RctObservacoes.Text;
+                itens.Propriedade.Modelo = TxtModelo.Text;
+                itens.ShowDialog();
+            }
+            if (telaSelecionada.Equals(Acao_Tela.InserirProduto))
             {
+<<<<<<< Updated upstream
                 Pessoa = new Pessoa()
             };
             itens.Propriedade.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
@@ -77,10 +94,42 @@ namespace ProjetoTecnico
             itens.Propriedade.Observacoes = RctObservacoes.Text;
             itens.Propriedade.Modelo = TxtModelo.Text;
             itens.ShowDialog();
+=======
+                //txtIdPedido.Text = 1.ToString();
+                FrmVendas itens = new FrmVendas(Acao_Tela.Inserir, null)
+                {
+                    Propriedade = new Pedidos()
+                };
+                itens.Propriedade.Cliente = new ClienteFisico
+                {
+                    Pessoa = new Pessoa()
+                };
+                itens.Propriedade.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
+                itens.Propriedade.Cliente.Pessoa.Id = Convert.ToInt32(LblID.Text);
+                itens.Propriedade.Cliente.Pessoa.Nome = LblNome.Text;
+                itens.Propriedade.Marcador = txtMarcador.Text;
+                itens.ShowDialog();
+            }
+>>>>>>> Stashed changes
         }
 
         private void FrmPedido_Load(object sender, EventArgs e)
         {
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.btnAtualizar, "Atualizar");
+            nomeObjeto.SetToolTip(this.btnConsultarPedidos, "Consultar Pedidos");
+            nomeObjeto.SetToolTip(this.btnNovoCadastro, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.btnPesquisa, "Pesquisar Clientes");
+            nomeObjeto.SetToolTip(this.BtnSair, "Sair");
+            nomeObjeto.SetToolTip(this.btnSalvar, "Salvar");
+            nomeObjeto.SetToolTip(this.btnVendas, "Vendas");
+
             ComboOperacao.DataSource = null;
             colecaoOperacao = Operacao.ComboOperacao("");
             ComboOperacao.DataSource = colecaoOperacao;

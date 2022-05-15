@@ -38,16 +38,16 @@
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
             this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ltvPrincipal = new System.Windows.Forms.ListView();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.PnBotoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -106,65 +106,64 @@
             // 
             // BtnNovo
             // 
+            this.BtnNovo.BackColor = System.Drawing.Color.White;
+            this.BtnNovo.BackgroundImage = global::ProjetoTecnico.Properties.Resources.NovoCetro;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNovo.Location = new System.Drawing.Point(45, 7);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
             this.BtnNovo.TabIndex = 0;
-            this.BtnNovo.Text = "Novo\r\n";
-            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.UseVisualStyleBackColor = false;
             // 
             // BtnSelecionar
             // 
+            this.BtnSelecionar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_adicionar_propriedade_30;
+            this.BtnSelecionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSelecionar.Location = new System.Drawing.Point(158, 7);
             this.BtnSelecionar.Name = "BtnSelecionar";
             this.BtnSelecionar.Size = new System.Drawing.Size(80, 47);
             this.BtnSelecionar.TabIndex = 1;
-            this.BtnSelecionar.Text = "Selecionar";
             this.BtnSelecionar.UseVisualStyleBackColor = true;
             this.BtnSelecionar.Click += new System.EventHandler(this.BtnSelecionar_Click);
             // 
             // BtnExcluir
             // 
+            this.BtnExcluir.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_remover_usuário_masculino_241;
+            this.BtnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7F);
             this.BtnExcluir.Location = new System.Drawing.Point(276, 7);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 47);
             this.BtnExcluir.TabIndex = 2;
-            this.BtnExcluir.Text = "Excluir Item";
             this.BtnExcluir.UseVisualStyleBackColor = true;
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Red;
+            this.BtnCancelar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.kisspng_computer_icons_theme_clip_art_cancel_button_5abbe06e2cbec6_0343187815222621261833;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Location = new System.Drawing.Point(396, 7);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 3;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
             // BtnSair
             // 
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSair.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSair.Location = new System.Drawing.Point(515, 7);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 4;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
-            // PicLogo
-            // 
-            this.PicLogo.Image = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
-            this.PicLogo.Location = new System.Drawing.Point(5, 246);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(313, 332);
-            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicLogo.TabIndex = 48;
-            this.PicLogo.TabStop = false;
             // 
             // dgwPrincipal
             // 
@@ -181,6 +180,7 @@
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(604, 332);
             this.dgwPrincipal.TabIndex = 49;
+            this.dgwPrincipal.TabStop = false;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgwPrincipal_CellFormatting);
             // 
             // IdPedido
@@ -222,10 +222,22 @@
             this.ltvPrincipal.TabIndex = 50;
             this.ltvPrincipal.UseCompatibleStateImageBehavior = false;
             // 
+            // PicLogo
+            // 
+            this.PicLogo.Image = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
+            this.PicLogo.Location = new System.Drawing.Point(5, 246);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(313, 332);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicLogo.TabIndex = 48;
+            this.PicLogo.TabStop = false;
+            // 
             // FrmPesquisaItens
             // 
+            this.AcceptButton = this.BtnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnSair;
             this.ClientSize = new System.Drawing.Size(935, 651);
             this.Controls.Add(this.ltvPrincipal);
             this.Controls.Add(this.dgwPrincipal);
@@ -241,9 +253,13 @@
             this.Name = "FrmPesquisaItens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa Itens";
+<<<<<<< Updated upstream
+=======
+            this.Load += new System.EventHandler(this.FrmPesquisaItens_Load);
+>>>>>>> Stashed changes
             this.PnBotoes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

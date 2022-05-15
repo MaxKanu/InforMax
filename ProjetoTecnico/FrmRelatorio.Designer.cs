@@ -30,13 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+<<<<<<< Updated upstream
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.RecibosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+=======
+            this.RecibosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.RecibosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // RecibosBindingSource
             // 
+<<<<<<< Updated upstream
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DsRelatorio";
             reportDataSource1.Value = this.RecibosBindingSource;
@@ -51,13 +57,32 @@
             // RecibosBindingSource
             // 
             this.RecibosBindingSource.DataSource = typeof(Objetos.Recibos);
+=======
+            this.RecibosBindingSource.DataSource = typeof(Objetos.Recibos);
+            // 
+            // reportViewer
+            // 
+            reportDataSource1.Name = "DsRelatorio";
+            reportDataSource1.Value = this.RecibosBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "ProjetoTecnico.RelatorioO_S1.rdlc";
+            this.reportViewer.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.ServerReport.BearerToken = null;
+            this.reportViewer.Size = new System.Drawing.Size(784, 458);
+            this.reportViewer.TabIndex = 0;
+>>>>>>> Stashed changes
             // 
             // FrmRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+<<<<<<< Updated upstream
             this.Controls.Add(this.reportViewer1);
+=======
+            this.Controls.Add(this.reportViewer);
+>>>>>>> Stashed changes
             this.Font = new System.Drawing.Font("Segoe Print", 8.25F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmRelatorio";
@@ -71,7 +96,11 @@
 
         #endregion
 
+<<<<<<< Updated upstream
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+=======
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+>>>>>>> Stashed changes
         private System.Windows.Forms.BindingSource RecibosBindingSource;
     }
 }

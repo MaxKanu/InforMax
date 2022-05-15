@@ -31,6 +31,7 @@ namespace ProjetoTecnico
         InserirCliente,
         InserirFuncionario,
         InserirJuridico,
-        PesquisarPedidos
+        PesquisarPedidos,
+        Vendas
     }
 }

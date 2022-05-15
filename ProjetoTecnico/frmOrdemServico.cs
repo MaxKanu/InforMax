@@ -1,13 +1,9 @@
 ﻿using Objetos;
 using Negocios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Drawing.Printing;
@@ -27,7 +23,6 @@ namespace ProjetoTecnico
 
         double preco = 0;
         double percentagem = 0;
-        decimal resultado = 0;
         decimal subtotal = 0;
         decimal precoDesconto = 0;
         decimal total = 0;
@@ -69,6 +64,10 @@ namespace ProjetoTecnico
                 TxtCliente.Text = itensPedidos.Pedidos.Cliente.Pessoa.Nome;
                 TxtValorTotal.Text = itensPedidos.Precos.Preco.ToString();
                 TxtAparelho.Text = itensPedidos.Pedidos.TipoAparelho;
+<<<<<<< Updated upstream
+=======
+                TxtMarca.Text = itensPedidos.Pedidos.Marca;
+>>>>>>> Stashed changes
                 TxtModelo.Text = itensPedidos.Pedidos.Modelo;
                 TxtDefeito.Text = itensPedidos.Pedidos.Observacoes;
                 LblNomeOperado.Text = itensPedidos.Pedidos.Marcador;
@@ -209,7 +208,6 @@ namespace ProjetoTecnico
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
 
@@ -269,10 +267,14 @@ namespace ProjetoTecnico
             {
                 colecaoItens = negocioItens.ConsultarPedidos(codigoDigitado);
             }
+<<<<<<< Updated upstream
             /*if (int.TryParse(TxtId.Text, out int codigo) == true)
             {
                 colecaoItens = negocioItens.ConsultarPedidos(null, codigo);
             }*/
+=======
+
+>>>>>>> Stashed changes
             BsPrincipal.DataSource = colecaoItens;
             dgwPrincipal.DataSource = null;
             dgwPrincipal.DataSource = colecaoItens;
@@ -290,6 +292,10 @@ namespace ProjetoTecnico
         }
         public static decimal valorTotal;
         private DataTable dt;
+<<<<<<< Updated upstream
+=======
+        private Bitmap memoryImage;
+>>>>>>> Stashed changes
 
         void SomaTotal()
         {
@@ -310,17 +316,6 @@ namespace ProjetoTecnico
                 total = total + preco;
                 TxtValorTotal.Text = total.ToString();
             }
-            /*
-            foreach (DataGridViewRow col in dgwPrincipal.Rows)
-            {
-                valorTotal = valorTotal += Convert.ToDecimal(col.Cells[1].Value);
-            }
-
-            TxtValorTotal.Text = Convert.ToString(valorTotal);
-             subtotal = Convert.ToDecimal(TxtTotal.Text);
-             total += subtotal;
-             TxtValorTotal.Text = total.ToString();
-             */
         }
         void Soma() //Metodo para realizar o calculo entre as TextBoxes
         {
@@ -341,6 +336,24 @@ namespace ProjetoTecnico
         }
         private void FrmOrdemServico_Load(object sender, EventArgs e)
         {
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar Cadastro");
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.BtnExcluir, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnImprimir, "Imprimir Documento");
+            nomeObjeto.SetToolTip(this.BtnPesquisar, "Pesquisar Cadastro");
+            nomeObjeto.SetToolTip(this.BtnServico, "Pesquisar Serviços");
+            nomeObjeto.SetToolTip(this.BtnProdutos, "Pesquisar Produtos");
+            nomeObjeto.SetToolTip(this.BtnInserir, "Novo Cadastro");
+
             if (telaSelecionada.Equals(Acao_Tela.Inserir))
             {
                 if (!Propriedade.Equals(""))
@@ -351,6 +364,10 @@ namespace ProjetoTecnico
                     TxtCliente.Text = Propriedade.Cliente.Pessoa.Nome;
                     TxtDefeito.Text = Propriedade.Observacoes;
                     TxtAparelho.Text = Propriedade.TipoAparelho;
+<<<<<<< Updated upstream
+=======
+                    TxtMarca.Text = Propriedade.Marca;
+>>>>>>> Stashed changes
                     TxtModelo.Text = Propriedade.Modelo;
                 }
                 else
@@ -359,7 +376,6 @@ namespace ProjetoTecnico
                 }
                 PesquisarLista();
             }
-                //SomaTotal();
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
@@ -393,7 +409,6 @@ namespace ProjetoTecnico
             }
             catch (Exception erro)
             {
-
                 MessageBox.Show("Esta  " + erro, "ATENÇÃO!! ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //throw;
             }
@@ -414,15 +429,7 @@ namespace ProjetoTecnico
             itens.Precos = new Precos();
             itens.Pedidos.Cliente = new ClienteFisico();
             itens.Pedidos.Cliente.Pessoa = new Pessoa();
-            /*
-            preco = Convert.ToDouble(TxtPreco.Text);//recebe o valor do preco
-            quantidade = Convert.ToInt32(TxtQuantidade.Text); //recebe a quantidade
-            percentagem = (100 - Convert.ToDouble(TxtPercentual.Text)) / 100;//pega a porcentagem
-            precoDesconto = Convert.ToDecimal(preco * percentagem);
-            subtotal = precoDesconto * quantidade;
-            resultado = precoDesconto;
-           
-            TxtDesconto.Text = resultado.ToString(); */
+
             if (TxtTotal.Text != "")
             {
                 subtotal = Convert.ToDecimal(TxtTotal.Text);
@@ -456,16 +463,15 @@ namespace ProjetoTecnico
               {
                 int IdItem = Convert.ToInt32(retorno);
                 MessageBox.Show("Item inserido com sucesso! \n\n O codigo gerado foi : " + IdItem.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                PesquisarLista();
+                
                 SomaTotal();
                 Apagar();
               }
               catch (Exception ex)
               {
-                //throw;
                 MessageBox.Show("Nao foi possível concluir a ação");
               }
-
+            PesquisarLista();
         }
 
         private void BtnProdutos_Click(object sender, EventArgs e)
@@ -510,7 +516,7 @@ namespace ProjetoTecnico
 
         private void TxtValor_TextChanged(object sender, EventArgs e)
         {
-           //SomaTotal();
+           
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -521,7 +527,6 @@ namespace ProjetoTecnico
 
             itens.Pedidos = new Pedidos();
             itens.Precos = new Precos();
-            //itens.Precos.Lanches = new Lanches();
 
             itens.Pedidos.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
             itens.Precos.ValorTotal = Convert.ToDecimal(TxtValorTotal.Text);
@@ -549,9 +554,7 @@ namespace ProjetoTecnico
             }
             catch (Exception erro)
             {
-
                 MessageBox.Show("Esta  " + erro, "ATENÇÃO!! ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //throw;
             }
         }
 
@@ -563,8 +566,6 @@ namespace ProjetoTecnico
                 return;
             }
                 PesquisarLista();
-            //SomaTotal();
-            
         }
         void ImprimirGrade()
         {
@@ -581,6 +582,7 @@ namespace ProjetoTecnico
             imprimir.FooterSpacing = 15;
 
             imprimir.PrintDataGridView(dgwPrincipal);
+<<<<<<< Updated upstream
         }
         //recebe os controles para o objeto imprimir
         private void PdImprimirOrdem_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -667,6 +669,27 @@ namespace ProjetoTecnico
             relatorio.Dispose();
             */
         }
+=======
+        }
+        //recebe os controles para o objeto imprimir
+        private void PdImprimirOrdem_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(txtIdPedido.Text, txtIdPedido.Font, Brushes.Black, 100, 100);
+            e.Graphics.DrawString(TxtId.Text, TxtId.Font, Brushes.Black, 100, 150);
+            e.Graphics.DrawString(TxtCliente.Text, TxtCliente.Font, Brushes.Black, 150, 150);
+            e.Graphics.DrawString(TxtAparelho.Text, TxtAparelho.Font, Brushes.Black, 100, 180);
+            e.Graphics.DrawString(TxtModelo.Text, TxtModelo.Font, Brushes.Black, 100, 210);
+            e.Graphics.DrawString(TxtDefeito.Text, TxtDefeito.Font, Brushes.Black, 100, 250);
+        }
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            pedidoSelecionado = dgwPrincipal.DataSource as ItensDePedidoColecao;
+            using (var relatorio = new FrmRelatorio(pedidoSelecionado, TxtAparelho.Text, TxtMarca.Text, TxtModelo.Text, DateTime.Now.ToString("dd/MM/yyyy"), TxtCliente.Text, TxtDefeito.Text, string.Format("R$ {0:0.00}", TxtValorTotal.Text)))
+            {
+                relatorio.ShowDialog();
+            }
+        }
+>>>>>>> Stashed changes
         private void CaptureScreen()
         {
             /*

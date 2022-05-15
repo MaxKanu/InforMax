@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("ProjetoTecnico")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ProjetoTecnico")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyTitle("Programa do Tecnico")]
+[assembly: AssemblyDescription("Este programa é destinado ao uso de assitências de informática, para armazenamento de dados de clientes e funcionários, ordem de serviços, cadastros de produtos e serviços, entre outras finalidades.")]
+[assembly: AssemblyConfiguration(".NET 4.5")]
+[assembly: AssemblyCompany("Informax Informática e desenvolvimento LTDA-ME")]
+[assembly: AssemblyProduct("Programa do Tecnico")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

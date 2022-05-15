@@ -77,10 +77,10 @@
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.PnBotoes = new System.Windows.Forms.Panel();
-            this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.BtnAtualizar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnAtualizar = new System.Windows.Forms.Button();
             this.BtnSair = new System.Windows.Forms.Button();
             this.PnCadastro.SuspendLayout();
             this.PnBotoes.SuspendLayout();
@@ -641,65 +641,73 @@
             this.PnBotoes.Size = new System.Drawing.Size(703, 61);
             this.PnBotoes.TabIndex = 2;
             // 
-            // BtnNovo
-            // 
-            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnNovo.Location = new System.Drawing.Point(83, 7);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(69, 47);
-            this.BtnNovo.TabIndex = 0;
-            this.BtnNovo.Text = "Novo\r\n";
-            this.BtnNovo.UseVisualStyleBackColor = true;
-            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
             // BtnSalvar
             // 
+            this.BtnSalvar.BackColor = System.Drawing.Color.Lime;
             this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSalvar.Image = global::ProjetoTecnico.Properties.Resources.icons8_salvar_32;
             this.BtnSalvar.Location = new System.Drawing.Point(214, 7);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
             this.BtnSalvar.TabIndex = 1;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
-            // BtnAtualizar
-            // 
-            this.BtnAtualizar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnAtualizar.Location = new System.Drawing.Point(351, 7);
-            this.BtnAtualizar.Name = "BtnAtualizar";
-            this.BtnAtualizar.Size = new System.Drawing.Size(75, 47);
-            this.BtnAtualizar.TabIndex = 2;
-            this.BtnAtualizar.Text = "Atualizar";
-            this.BtnAtualizar.UseVisualStyleBackColor = true;
-            this.BtnAtualizar.Click += new System.EventHandler(this.BtnAtualizar_Click);
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Brown;
+            this.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnCancelar.Image = global::ProjetoTecnico.Properties.Resources.icons8_excluir_filled_50;
             this.BtnCancelar.Location = new System.Drawing.Point(488, 7);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 3;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.BackColor = System.Drawing.Color.White;
+            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Image = global::ProjetoTecnico.Properties.Resources.NovoCetro;
+            this.BtnNovo.Location = new System.Drawing.Point(83, 7);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(69, 47);
+            this.BtnNovo.TabIndex = 0;
+            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
+            // BtnAtualizar
+            // 
+            this.BtnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BtnAtualizar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnAtualizar.Image = global::ProjetoTecnico.Properties.Resources.botao_atualizar;
+            this.BtnAtualizar.Location = new System.Drawing.Point(351, 7);
+            this.BtnAtualizar.Name = "BtnAtualizar";
+            this.BtnAtualizar.Size = new System.Drawing.Size(75, 47);
+            this.BtnAtualizar.TabIndex = 2;
+            this.BtnAtualizar.UseVisualStyleBackColor = false;
+            this.BtnAtualizar.Click += new System.EventHandler(this.BtnAtualizar_Click);
             // 
             // BtnSair
             // 
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Image = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
             this.BtnSair.Location = new System.Drawing.Point(625, 7);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 4;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // frmCadastroJuridico
             // 
+            this.AcceptButton = this.BtnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancelar;
             this.ClientSize = new System.Drawing.Size(1034, 542);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnCadastro);

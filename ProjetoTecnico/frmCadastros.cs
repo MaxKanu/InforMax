@@ -29,6 +29,18 @@ namespace ProjetoTecnico
         {
             InitializeComponent();
             enumSelecionado = enumerador;
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.BtnAtualizar, "Fechar");
+
             PnCadastro.Enabled = false;
             ComboTipo.ValueMember = "IdTipo";
             ComboSituacao.ValueMember = "IdSituacao";
@@ -37,6 +49,7 @@ namespace ProjetoTecnico
                 lblTitulo.Text = "Cadastro de Clientes";
                 LblMatricula.Enabled = false;
                 MaskMatricula.Enabled = false;
+                nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar Cliente");
                 ComboTipo.ValueMember = "IdTipo";
                 ComboSituacao.ValueMember = "IdSituacao";
                 Botoes(1);
@@ -99,6 +112,7 @@ namespace ProjetoTecnico
                 lblTitulo.Text = "Cadastro de Funcionarios";
                 LblMatricula.Enabled = true;
                 MaskMatricula.Enabled = true;
+                nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar Funcionário");
                 ComboTipo.ValueMember = "IdTipo";
                 ComboSituacao.ValueMember = "IdSituacao";
                 Botoes(1);

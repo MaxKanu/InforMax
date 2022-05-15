@@ -80,77 +80,93 @@
             // 
             // btnConsultarPedidos
             // 
+            this.btnConsultarPedidos.BackgroundImage = global::ProjetoTecnico.Properties.Resources.PesquisarOrcamento;
+            this.btnConsultarPedidos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnConsultarPedidos.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.btnConsultarPedidos.Location = new System.Drawing.Point(375, 4);
             this.btnConsultarPedidos.Name = "btnConsultarPedidos";
             this.btnConsultarPedidos.Size = new System.Drawing.Size(70, 50);
             this.btnConsultarPedidos.TabIndex = 15;
-            this.btnConsultarPedidos.Text = "Pesquisar Pedidos";
             this.btnConsultarPedidos.UseVisualStyleBackColor = true;
             this.btnConsultarPedidos.Click += new System.EventHandler(this.btnConsultarPedidos_Click);
             // 
             // btnNovoCadastro
             // 
+            this.btnNovoCadastro.BackColor = System.Drawing.Color.White;
+            this.btnNovoCadastro.BackgroundImage = global::ProjetoTecnico.Properties.Resources.NovoCetro;
+            this.btnNovoCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNovoCadastro.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.btnNovoCadastro.Location = new System.Drawing.Point(9, 4);
             this.btnNovoCadastro.Name = "btnNovoCadastro";
             this.btnNovoCadastro.Size = new System.Drawing.Size(70, 50);
             this.btnNovoCadastro.TabIndex = 9;
-            this.btnNovoCadastro.Text = "Novo";
-            this.btnNovoCadastro.UseVisualStyleBackColor = true;
+            this.btnNovoCadastro.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Lime;
+            this.btnSalvar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_salvar_32;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.btnSalvar.Location = new System.Drawing.Point(131, 4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(70, 50);
             this.btnSalvar.TabIndex = 10;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAtualizar
             // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.Orange;
+            this.btnAtualizar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.botao_atualizar;
+            this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAtualizar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.btnAtualizar.Location = new System.Drawing.Point(253, 4);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(70, 50);
             this.btnAtualizar.TabIndex = 11;
+<<<<<<< Updated upstream
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+=======
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+>>>>>>> Stashed changes
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnPesquisa
             // 
+            this.btnPesquisa.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_procurar_usuário_masculino_30;
+            this.btnPesquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPesquisa.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.btnPesquisa.Location = new System.Drawing.Point(497, 4);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(70, 50);
             this.btnPesquisa.TabIndex = 12;
-            this.btnPesquisa.Text = "Pesquisar Clientes";
             this.btnPesquisa.UseVisualStyleBackColor = true;
             this.btnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
             // btnVendas
             // 
+            this.btnVendas.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_vender_estoque_24;
+            this.btnVendas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnVendas.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.btnVendas.Location = new System.Drawing.Point(619, 4);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(70, 50);
             this.btnVendas.TabIndex = 13;
-            this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.BtnVendas_Click);
             // 
             // BtnSair
             // 
+            this.BtnSair.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSair.Location = new System.Drawing.Point(741, 4);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(70, 50);
             this.BtnSair.TabIndex = 14;
-            this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
@@ -400,8 +416,13 @@
             // 
             // FrmPedido
             // 
+            this.AcceptButton = this.btnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
+=======
+            this.CancelButton = this.BtnSair;
+>>>>>>> Stashed changes
             this.ClientSize = new System.Drawing.Size(833, 546);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnPrincipal);

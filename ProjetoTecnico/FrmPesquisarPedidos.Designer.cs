@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
             this.IdPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,29 +35,20 @@
             this.Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marcador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnBotoes = new System.Windows.Forms.Panel();
-            this.BtnNovo = new System.Windows.Forms.Button();
-            this.BtnSelecionar = new System.Windows.Forms.Button();
-            this.BtnExcluir = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnSair = new System.Windows.Forms.Button();
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtPesquisa = new System.Windows.Forms.TextBox();
             this.LblNome = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnSelecionar = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnSair = new System.Windows.Forms.Button();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
             this.PnBotoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PicLogo
-            // 
-            this.PicLogo.Image = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
-            this.PicLogo.Location = new System.Drawing.Point(4, 172);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(268, 297);
-            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicLogo.TabIndex = 41;
-            this.PicLogo.TabStop = false;
             // 
             // dgwPrincipal
             // 
@@ -74,6 +64,7 @@
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(519, 297);
             this.dgwPrincipal.TabIndex = 4;
+            this.dgwPrincipal.TabStop = false;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgwPrincipal_CellFormatting);
             // 
             // IdPedido
@@ -128,59 +119,6 @@
             this.PnBotoes.Size = new System.Drawing.Size(573, 54);
             this.PnBotoes.TabIndex = 5;
             // 
-            // BtnNovo
-            // 
-            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnNovo.Location = new System.Drawing.Point(17, 6);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(59, 42);
-            this.BtnNovo.TabIndex = 0;
-            this.BtnNovo.Text = "Novo\r\n";
-            this.BtnNovo.UseVisualStyleBackColor = true;
-            // 
-            // BtnSelecionar
-            // 
-            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnSelecionar.Location = new System.Drawing.Point(133, 6);
-            this.BtnSelecionar.Name = "BtnSelecionar";
-            this.BtnSelecionar.Size = new System.Drawing.Size(69, 42);
-            this.BtnSelecionar.TabIndex = 1;
-            this.BtnSelecionar.Text = "Selecionar";
-            this.BtnSelecionar.UseVisualStyleBackColor = true;
-            this.BtnSelecionar.Click += new System.EventHandler(this.BtnSelecionar_Click);
-            // 
-            // BtnExcluir
-            // 
-            this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnExcluir.Location = new System.Drawing.Point(259, 6);
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Size = new System.Drawing.Size(64, 42);
-            this.BtnExcluir.TabIndex = 2;
-            this.BtnExcluir.Text = "Excluir Item";
-            this.BtnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnCancelar.Location = new System.Drawing.Point(380, 6);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(64, 42);
-            this.BtnCancelar.TabIndex = 3;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnSair
-            // 
-            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnSair.Location = new System.Drawing.Point(501, 6);
-            this.BtnSair.Name = "BtnSair";
-            this.BtnSair.Size = new System.Drawing.Size(64, 42);
-            this.BtnSair.TabIndex = 4;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
-            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
-            // 
             // BtnPesquisar
             // 
             this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
@@ -223,10 +161,81 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Pesquisar Pedidos";
             // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.kisspng_computer_icons_theme_clip_art_cancel_button_5abbe06e2cbec6_0343187815222621261833;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnCancelar.Location = new System.Drawing.Point(380, 6);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(64, 42);
+            this.BtnCancelar.TabIndex = 3;
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.BackgroundImage = global::ProjetoTecnico.Properties.Resources.NovoCetro;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Location = new System.Drawing.Point(17, 6);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(59, 42);
+            this.BtnNovo.TabIndex = 0;
+            this.BtnNovo.UseVisualStyleBackColor = true;
+            // 
+            // BtnSelecionar
+            // 
+            this.BtnSelecionar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.pedido;
+            this.BtnSelecionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSelecionar.Location = new System.Drawing.Point(133, 6);
+            this.BtnSelecionar.Name = "BtnSelecionar";
+            this.BtnSelecionar.Size = new System.Drawing.Size(69, 42);
+            this.BtnSelecionar.TabIndex = 1;
+            this.BtnSelecionar.UseVisualStyleBackColor = true;
+            this.BtnSelecionar.Click += new System.EventHandler(this.BtnSelecionar_Click);
+            // 
+            // BtnExcluir
+            // 
+            this.BtnExcluir.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_remover_usuário_masculino_241;
+            this.BtnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnExcluir.Location = new System.Drawing.Point(259, 6);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(64, 42);
+            this.BtnExcluir.TabIndex = 2;
+            this.BtnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // BtnSair
+            // 
+            this.BtnSair.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Location = new System.Drawing.Point(501, 6);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(64, 42);
+            this.BtnSair.TabIndex = 4;
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
+            // PicLogo
+            // 
+            this.PicLogo.Image = global::ProjetoTecnico.Properties.Resources.SGN_10_05_2021_1633453034999_1_;
+            this.PicLogo.Location = new System.Drawing.Point(4, 172);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(268, 297);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicLogo.TabIndex = 41;
+            this.PicLogo.TabStop = false;
+            // 
             // FrmPesquisarPedidos
             // 
+            this.AcceptButton = this.BtnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancelar;
             this.ClientSize = new System.Drawing.Size(800, 535);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.BtnPesquisar);
@@ -241,9 +250,14 @@
             this.Name = "FrmPesquisarPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Pedidos";
+<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
+=======
+            this.Load += new System.EventHandler(this.FrmPesquisarPedidos_Load);
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();
             this.PnBotoes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

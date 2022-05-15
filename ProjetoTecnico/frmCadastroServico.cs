@@ -194,5 +194,21 @@ namespace ProjetoTecnico
         {
 
         }
+
+        private void frmCadastroServico_Load(object sender, EventArgs e)
+        {
+
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar Cadastro");
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+        }
     }
 }

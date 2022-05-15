@@ -154,6 +154,19 @@ namespace ProjetoTecnico
 
         private void frmCadastroJuridico_Load(object sender, EventArgs e)
         {
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnAtualizar, "Atualizar");
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar Cadastro");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar Cliente");
+
             ComboTipo.DataSource = null;
             tipocolecao = negocioTipo.CarregarCombo("");
             ComboTipo.DataSource = tipocolecao;

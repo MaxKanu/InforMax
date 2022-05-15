@@ -238,18 +238,24 @@ namespace ProjetoTecnico
 
         private void BtnAlterCliente_Click(object sender, EventArgs e)
         {
-
-            if (dgwPrincipal.SelectedRows.Count.Equals(0))
+            if (enumSelecionado.Equals(Acao_Tela.ConsultarCliente))
             {
-                MessageBox.Show("Escolha uma opção! ", "Atenção");
+                if (dgwPrincipal.SelectedRows.Count.Equals(0))
+                {
+                    MessageBox.Show("Escolha uma opção! ", "Atenção");
+                    return;
+                }
+
+                ClienteFisico fisicoSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as ClienteFisico);
+
+                FrmCadastros cadastroPacientes = new FrmCadastros(Enumeradores.AlterarFisico, fisicoSelecionado, null);
+                //cadastroPacientes.MdiParent = new FRMTelaInicial();
+                cadastroPacientes.ShowDialog();
+            }
+            else
+            {
                 return;
             }
-
-            ClienteFisico fisicoSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as ClienteFisico);
-
-            FrmCadastros cadastroPacientes = new FrmCadastros(Enumeradores.AlterarFisico, fisicoSelecionado, null);
-            //cadastroPacientes.MdiParent = new FRMTelaInicial();
-            cadastroPacientes.ShowDialog();
         }
 
         private void BtnConsCliente_Click(object sender, EventArgs e)
@@ -270,7 +276,7 @@ namespace ProjetoTecnico
             }
             if (enumSelecionado.Equals(Acao_Tela.Consultar))
             {
-                if (dgwPrincipal.SelectedRows.Count.Equals(0))
+                if (dgwPrincipal.SelectedRows.Count == 0)
                 {
                     MessageBox.Show("Nenhuma linha selecionada");
                     return;
@@ -346,7 +352,21 @@ namespace ProjetoTecnico
 
         private void frmPesquisarCadastroFisico_Load(object sender, EventArgs e)
         {
+            ToolTip nomeObjeto = new ToolTip();
 
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnAlterarJuridico, "Alterar Juridico");
+            nomeObjeto.SetToolTip(this.BtnAlterCliente, "Alterar Cliente");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnAlterFuncio, "Alterar Funcio");
+            nomeObjeto.SetToolTip(this.BtnConsCliente, "Consultar Cliente");
+            nomeObjeto.SetToolTip(this.BtnConsulFuncio, "Consultar Funcionario");
+            nomeObjeto.SetToolTip(this.BtnConsultarJuridico, "Consultar Juridico");
+            nomeObjeto.SetToolTip(this.BtnPesquisar, "Nova Pesquisa");
         }
     }
 }

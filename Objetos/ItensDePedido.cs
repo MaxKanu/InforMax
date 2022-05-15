@@ -18,9 +18,16 @@ namespace Objetos
         public string Marca { get; set; }
         public string Observacao { get; set; }
         public string Aparelho { get; set; }
+<<<<<<< Updated upstream
         public double ValorPedido { get; set; }
         public double ValorTotal { get; set; }
         public double ValorDesconto { get; set; }
         public double ValorUnitario { get; set; }
+=======
+        public decimal ValorPedido { get; set; }
+        public decimal ValorTotal { get; set; }
+        public decimal ValorDesconto { get; set; }
+        public decimal ValorUnitario { get; set; }
+>>>>>>> Stashed changes
     }
 }

@@ -31,8 +31,6 @@
             this.comboServicos = new System.Windows.Forms.ComboBox();
             this.comboProdutos = new System.Windows.Forms.ComboBox();
             this.PnPrincipal = new System.Windows.Forms.Panel();
-            this.BtnSelecionar = new System.Windows.Forms.Button();
-            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtPreco2 = new System.Windows.Forms.TextBox();
             this.LblPreco2 = new System.Windows.Forms.Label();
             this.LblId = new System.Windows.Forms.Label();
@@ -47,6 +45,8 @@
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnBotoes = new System.Windows.Forms.Panel();
+            this.BtnSelecionar = new System.Windows.Forms.Button();
+            this.BtnPesquisar = new System.Windows.Forms.Button();
             this.BtnAlterar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
@@ -97,28 +97,6 @@
             this.PnPrincipal.Size = new System.Drawing.Size(551, 399);
             this.PnPrincipal.TabIndex = 0;
             this.PnPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PnPrincipal_Paint);
-            // 
-            // BtnSelecionar
-            // 
-            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnSelecionar.Location = new System.Drawing.Point(345, 81);
-            this.BtnSelecionar.Name = "BtnSelecionar";
-            this.BtnSelecionar.Size = new System.Drawing.Size(75, 29);
-            this.BtnSelecionar.TabIndex = 4;
-            this.BtnSelecionar.Text = "Selecionar";
-            this.BtnSelecionar.UseVisualStyleBackColor = true;
-            this.BtnSelecionar.Click += new System.EventHandler(this.BtnSelecionar_Click);
-            // 
-            // BtnPesquisar
-            // 
-            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.BtnPesquisar.Location = new System.Drawing.Point(264, 81);
-            this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(75, 29);
-            this.BtnPesquisar.TabIndex = 3;
-            this.BtnPesquisar.Text = "Pesquisar";
-            this.BtnPesquisar.UseVisualStyleBackColor = true;
-            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // TxtPreco2
             // 
@@ -227,6 +205,7 @@
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(546, 201);
             this.dgwPrincipal.TabIndex = 13;
+            this.dgwPrincipal.TabStop = false;
             // 
             // Id
             // 
@@ -262,58 +241,87 @@
             this.PnBotoes.Size = new System.Drawing.Size(506, 62);
             this.PnBotoes.TabIndex = 1;
             // 
+            // BtnSelecionar
+            // 
+            this.BtnSelecionar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_selecionado_24;
+            this.BtnSelecionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSelecionar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSelecionar.Location = new System.Drawing.Point(345, 81);
+            this.BtnSelecionar.Name = "BtnSelecionar";
+            this.BtnSelecionar.Size = new System.Drawing.Size(75, 29);
+            this.BtnSelecionar.TabIndex = 4;
+            this.BtnSelecionar.UseVisualStyleBackColor = true;
+            this.BtnSelecionar.Click += new System.EventHandler(this.BtnSelecionar_Click);
+            // 
+            // BtnPesquisar
+            // 
+            this.BtnPesquisar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_pesquisar_16;
+            this.BtnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnPesquisar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnPesquisar.Location = new System.Drawing.Point(264, 81);
+            this.BtnPesquisar.Name = "BtnPesquisar";
+            this.BtnPesquisar.Size = new System.Drawing.Size(39, 29);
+            this.BtnPesquisar.TabIndex = 3;
+            this.BtnPesquisar.UseVisualStyleBackColor = true;
+            this.BtnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
             // BtnAlterar
             // 
+            this.BtnAlterar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.botao_atualizar;
+            this.BtnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnAlterar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnAlterar.Location = new System.Drawing.Point(227, 7);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(75, 47);
             this.BtnAlterar.TabIndex = 2;
-            this.BtnAlterar.Text = "Alterar";
             this.BtnAlterar.UseVisualStyleBackColor = true;
             this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // BtnNovo
             // 
+            this.BtnNovo.BackgroundImage = global::ProjetoTecnico.Properties.Resources.NovoCetro;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnNovo.Location = new System.Drawing.Point(29, 7);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
             this.BtnNovo.TabIndex = 0;
-            this.BtnNovo.Text = "Novo\r\n";
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // BtnSalvar
             // 
+            this.BtnSalvar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_salvar_32;
+            this.BtnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSalvar.Location = new System.Drawing.Point(125, 7);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
             this.BtnSalvar.TabIndex = 1;
-            this.BtnSalvar.Text = "Salvar";
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.kisspng_computer_icons_theme_clip_art_cancel_button_5abbe06e2cbec6_0343187815222621261833;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnCancelar.Location = new System.Drawing.Point(329, 7);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 3;
-            this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSair
             // 
+            this.BtnSair.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSair.Location = new System.Drawing.Point(431, 7);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 4;
-            this.BtnSair.Text = "Sair";
             this.BtnSair.UseVisualStyleBackColor = true;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 

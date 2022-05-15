@@ -312,7 +312,10 @@ C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.FrmPesq
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.FrmPreco.resources
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.FrmPedido.resources
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.FrmRelatorio.resources
+<<<<<<< Updated upstream
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.frmSelecao.resources
+=======
+>>>>>>> Stashed changes
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.Properties.Resources.resources
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.csproj.GenerateResource.cache
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\RdlCompile.cache
@@ -321,6 +324,7 @@ C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.csproj.
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.csproj.CopyComplete
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.exe
 C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.pdb
+<<<<<<< Updated upstream
 C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -416,3 +420,7 @@ C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\obj\Debug\ProjetoTecnic
 C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\obj\Debug\ProjetoTecnico.csproj.CopyComplete
 C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\obj\Debug\ProjetoTecnico.exe
 C:\Users\marca\Documents\GitHub\InforMax_\ProjetoTecnico\obj\Debug\ProjetoTecnico.pdb
+=======
+C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.CaixaSobre.resources
+C:\Users\marca\Desktop\informax2\ProjetoTecnico\obj\Debug\ProjetoTecnico.FrmVendas.resources
+>>>>>>> Stashed changes

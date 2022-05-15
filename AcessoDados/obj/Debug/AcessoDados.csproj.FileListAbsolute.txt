@@ -32,6 +32,7 @@ C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCo
 C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.dll
 C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.pdb
 C:\Users\marca\Desktop\InforMax1\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+<<<<<<< Updated upstream
 C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\bin\Debug\AcessoDados.dll.config
 C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\bin\Debug\AcessoDados.dll
 C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\bin\Debug\AcessoDados.pdb
@@ -39,3 +40,12 @@ C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\obj\Debug\AcessoDados.cspr
 C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
 C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\obj\Debug\AcessoDados.dll
 C:\Users\marca\Documents\GitHub\InforMax_\AcessoDados\obj\Debug\AcessoDados.pdb
+=======
+C:\Users\marca\Desktop\informax2\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\Users\marca\Desktop\informax2\AcessoDados\bin\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\informax2\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\Users\marca\Desktop\informax2\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
+C:\Users\marca\Desktop\informax2\AcessoDados\obj\Debug\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\marca\Desktop\informax2\AcessoDados\obj\Debug\AcessoDados.dll
+C:\Users\marca\Desktop\informax2\AcessoDados\obj\Debug\AcessoDados.pdb
+>>>>>>> Stashed changes

@@ -135,6 +135,7 @@ namespace ProjetoTecnico
                 BtnCancelar.Enabled = false;
                 BtnNovo.Enabled = true;
                 BtnPesquisar.Visible = false;
+                BtnSelecionar.Visible = false;
                 BtnSair.Enabled = true;
                 BtnSalvar.Enabled = false;
             }
@@ -174,6 +175,21 @@ namespace ProjetoTecnico
         }
         private void FrmPreco_Load(object sender, EventArgs e)
         {
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnAlterar, "Alterar");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnSalvar, "Salvar");
+            nomeObjeto.SetToolTip(this.BtnSelecionar, "Selecionar Dado");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Novo Cadastro");
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar");
+            nomeObjeto.SetToolTip(this.BtnPesquisar, "Nova Pesquisa");
+
             NgPd prod = new NgPd();
             NgSv serv = new NgSv();
 
@@ -191,6 +207,9 @@ namespace ProjetoTecnico
             comboServicos.DataSource = servicos;
             comboServicos.DisplayMember = "Descricao";
             comboServicos.Refresh();
+
+            AcceptButton = BtnPesquisar;
+            CancelButton = BtnSair;
         }
 
         private void BtnSair_Click(object sender, EventArgs e)

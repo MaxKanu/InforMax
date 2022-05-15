@@ -24,6 +24,7 @@ namespace ProjetoTecnico
         PesquisarFuncionario = 14,
         PesquisarFisico = 15,
         PesquisarJuridico = 16,
-        PesquisarPedidos = 17
+        PesquisarPedidos = 17,
+        Vendas = 18
     }
 }

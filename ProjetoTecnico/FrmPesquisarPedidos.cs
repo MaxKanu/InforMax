@@ -146,5 +146,21 @@ namespace ProjetoTecnico
             }
         }
 
+        private void FrmPesquisarPedidos_Load(object sender, EventArgs e)
+        {
+
+            ToolTip nomeObjeto = new ToolTip();
+
+            nomeObjeto.AutoPopDelay = 5000;
+            nomeObjeto.InitialDelay = 100;
+            nomeObjeto.ReshowDelay = 100;
+            nomeObjeto.ShowAlways = true;
+
+            nomeObjeto.SetToolTip(this.BtnCancelar, "Cancelar Dados");
+            nomeObjeto.SetToolTip(this.BtnExcluir, "Excluir Dados");
+            nomeObjeto.SetToolTip(this.BtnSair, "Fechar");
+            nomeObjeto.SetToolTip(this.BtnSelecionar, "Selecionar");
+            nomeObjeto.SetToolTip(this.BtnNovo, "Nova Pesquisa");
+        }
     }
 }

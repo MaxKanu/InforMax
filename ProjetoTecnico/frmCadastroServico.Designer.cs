@@ -63,46 +63,52 @@
             // 
             // BtnNovo
             // 
+            this.BtnNovo.BackColor = System.Drawing.Color.White;
             this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnNovo.Image = global::ProjetoTecnico.Properties.Resources.NovoCetro;
             this.BtnNovo.Location = new System.Drawing.Point(12, 6);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
             this.BtnNovo.TabIndex = 4;
-            this.BtnNovo.Text = "Novo\r\n";
-            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click_1);
             // 
             // BtnSalvar
             // 
+            this.BtnSalvar.BackColor = System.Drawing.Color.Lime;
             this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSalvar.Image = global::ProjetoTecnico.Properties.Resources.icons8_salvar_32;
             this.BtnSalvar.Location = new System.Drawing.Point(122, 6);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
             this.BtnSalvar.TabIndex = 5;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Red;
+            this.BtnCancelar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.kisspng_computer_icons_theme_clip_art_cancel_button_5abbe06e2cbec6_0343187815222621261833;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnCancelar.Location = new System.Drawing.Point(238, 6);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 6;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSair
             // 
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnSair.Image = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
             this.BtnSair.Location = new System.Drawing.Point(354, 6);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 7;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // PnPrincipal
@@ -223,8 +229,10 @@
             // 
             // frmCadastroServico
             // 
+            this.AcceptButton = this.BtnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancelar;
             this.ClientSize = new System.Drawing.Size(531, 523);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnPrincipal);
@@ -234,6 +242,7 @@
             this.Name = "frmCadastroServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Servico";
+            this.Load += new System.EventHandler(this.frmCadastroServico_Load);
             this.PnBotoes.ResumeLayout(false);
             this.PnPrincipal.ResumeLayout(false);
             this.PnPrincipal.PerformLayout();

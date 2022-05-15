@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+<<<<<<< Updated upstream
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOrdemServico));
+>>>>>>> Stashed changes
             this.PnPrincipal = new System.Windows.Forms.Panel();
+            this.LblMarca = new System.Windows.Forms.Label();
+            this.TxtMarca = new System.Windows.Forms.TextBox();
             this.LblDefeito = new System.Windows.Forms.Label();
             this.TxtDefeito = new System.Windows.Forms.TextBox();
             this.TxtAparelho = new System.Windows.Forms.TextBox();
@@ -68,6 +74,7 @@
             this.TxtCliente = new System.Windows.Forms.TextBox();
             this.LblCliente = new System.Windows.Forms.Label();
             this.LblId = new System.Windows.Forms.Label();
+            this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.TxtId = new System.Windows.Forms.TextBox();
             this.TxtPreco = new System.Windows.Forms.TextBox();
             this.LblPreco = new System.Windows.Forms.Label();
@@ -85,7 +92,10 @@
             this.BtnSair = new System.Windows.Forms.Button();
             this.PdImprimirOrdem = new System.Drawing.Printing.PrintDocument();
             this.PDialImpressoras = new System.Windows.Forms.PrintDialog();
+<<<<<<< Updated upstream
             this.txtIdPedido = new System.Windows.Forms.TextBox();
+=======
+>>>>>>> Stashed changes
             this.PnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).BeginInit();
@@ -94,6 +104,8 @@
             // 
             // PnPrincipal
             // 
+            this.PnPrincipal.Controls.Add(this.LblMarca);
+            this.PnPrincipal.Controls.Add(this.TxtMarca);
             this.PnPrincipal.Controls.Add(this.LblDefeito);
             this.PnPrincipal.Controls.Add(this.TxtDefeito);
             this.PnPrincipal.Controls.Add(this.TxtAparelho);
@@ -140,6 +152,27 @@
             this.PnPrincipal.Size = new System.Drawing.Size(1032, 596);
             this.PnPrincipal.TabIndex = 0;
             // 
+            // LblMarca
+            // 
+            this.LblMarca.AutoSize = true;
+            this.LblMarca.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.LblMarca.Location = new System.Drawing.Point(286, 183);
+            this.LblMarca.Name = "LblMarca";
+            this.LblMarca.Size = new System.Drawing.Size(42, 17);
+            this.LblMarca.TabIndex = 61;
+            this.LblMarca.Text = "Marca:";
+            // 
+            // TxtMarca
+            // 
+            this.TxtMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.TxtMarca.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtMarca.Location = new System.Drawing.Point(335, 179);
+            this.TxtMarca.MaxLength = 50;
+            this.TxtMarca.Name = "TxtMarca";
+            this.TxtMarca.Size = new System.Drawing.Size(127, 25);
+            this.TxtMarca.TabIndex = 62;
+            this.TxtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // LblDefeito
             // 
             this.LblDefeito.AutoSize = true;
@@ -153,7 +186,7 @@
             // TxtDefeito
             // 
             this.TxtDefeito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            this.TxtDefeito.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.TxtDefeito.Font = new System.Drawing.Font("Segoe Print", 8.5F);
             this.TxtDefeito.Location = new System.Drawing.Point(790, 84);
             this.TxtDefeito.MaxLength = 200;
             this.TxtDefeito.Multiline = true;
@@ -169,7 +202,7 @@
             this.TxtAparelho.Location = new System.Drawing.Point(64, 180);
             this.TxtAparelho.MaxLength = 50;
             this.TxtAparelho.Name = "TxtAparelho";
-            this.TxtAparelho.Size = new System.Drawing.Size(303, 25);
+            this.TxtAparelho.Size = new System.Drawing.Size(163, 25);
             this.TxtAparelho.TabIndex = 58;
             this.TxtAparelho.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -187,7 +220,7 @@
             // 
             this.LblModelo.AutoSize = true;
             this.LblModelo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.LblModelo.Location = new System.Drawing.Point(388, 184);
+            this.LblModelo.Location = new System.Drawing.Point(500, 184);
             this.LblModelo.Name = "LblModelo";
             this.LblModelo.Size = new System.Drawing.Size(47, 17);
             this.LblModelo.TabIndex = 55;
@@ -197,7 +230,7 @@
             // 
             this.TxtModelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.TxtModelo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
-            this.TxtModelo.Location = new System.Drawing.Point(441, 180);
+            this.TxtModelo.Location = new System.Drawing.Point(553, 180);
             this.TxtModelo.MaxLength = 50;
             this.TxtModelo.Name = "TxtModelo";
             this.TxtModelo.Size = new System.Drawing.Size(127, 25);
@@ -452,6 +485,7 @@
             this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(702, 292);
             this.dgwPrincipal.TabIndex = 16;
+            this.dgwPrincipal.TabStop = false;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgwPrincipal_CellFormatting);
             // 
             // IdPedido
@@ -534,6 +568,17 @@
             this.LblId.TabIndex = 1;
             this.LblId.Text = "Id:";
             // 
+            // txtIdPedido
+            // 
+            this.txtIdPedido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.txtIdPedido.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.txtIdPedido.Location = new System.Drawing.Point(77, 38);
+            this.txtIdPedido.MaxLength = 50;
+            this.txtIdPedido.Name = "txtIdPedido";
+            this.txtIdPedido.Size = new System.Drawing.Size(84, 25);
+            this.txtIdPedido.TabIndex = 2;
+            this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // TxtId
             // 
             this.TxtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
@@ -615,12 +660,14 @@
             // 
             // BtnImprimir
             // 
+            this.BtnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BtnImprimir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
+            this.BtnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("BtnImprimir.Image")));
             this.BtnImprimir.Location = new System.Drawing.Point(579, 6);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(40, 47);
             this.BtnImprimir.TabIndex = 50;
-            this.BtnImprimir.UseVisualStyleBackColor = true;
+            this.BtnImprimir.UseVisualStyleBackColor = false;
             this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // TxtValorTotal
@@ -647,56 +694,67 @@
             // 
             // BtnNovo
             // 
+            this.BtnNovo.BackColor = System.Drawing.Color.White;
+            this.BtnNovo.BackgroundImage = global::ProjetoTecnico.Properties.Resources.NovoCetro;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnNovo.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnNovo.Location = new System.Drawing.Point(20, 6);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(69, 47);
             this.BtnNovo.TabIndex = 0;
-            this.BtnNovo.Text = "Novo\r\n";
-            this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.UseVisualStyleBackColor = false;
             // 
             // BtnSalvar
             // 
+            this.BtnSalvar.BackColor = System.Drawing.Color.Lime;
+            this.BtnSalvar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_salvar_32;
+            this.BtnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSalvar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSalvar.Location = new System.Drawing.Point(133, 6);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 47);
             this.BtnSalvar.TabIndex = 1;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.UseVisualStyleBackColor = false;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // BtnExcluir
             // 
+            this.BtnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BtnExcluir.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_remover_usuário_masculino_24;
+            this.BtnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnExcluir.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnExcluir.Location = new System.Drawing.Point(252, 6);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 47);
             this.BtnExcluir.TabIndex = 2;
-            this.BtnExcluir.Text = "Excluir Item";
-            this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.UseVisualStyleBackColor = false;
             this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Red;
+            this.BtnCancelar.BackgroundImage = global::ProjetoTecnico.Properties.Resources.kisspng_computer_icons_theme_clip_art_cancel_button_5abbe06e2cbec6_0343187815222621261833;
+            this.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnCancelar.Location = new System.Drawing.Point(371, 6);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 47);
             this.BtnCancelar.TabIndex = 2;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSair
             // 
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSair.BackgroundImage = global::ProjetoTecnico.Properties.Resources.icons8_sair_26__1_1;
+            this.BtnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSair.Font = new System.Drawing.Font("Segoe Print", 7.5F);
             this.BtnSair.Location = new System.Drawing.Point(490, 6);
             this.BtnSair.Name = "BtnSair";
             this.BtnSair.Size = new System.Drawing.Size(75, 47);
             this.BtnSair.TabIndex = 3;
-            this.BtnSair.Text = "Sair";
-            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.UseVisualStyleBackColor = false;
             this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // PdImprimirOrdem
@@ -707,6 +765,7 @@
             // 
             this.PDialImpressoras.UseEXDialog = true;
             // 
+<<<<<<< Updated upstream
             // txtIdPedido
             // 
             this.txtIdPedido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
@@ -718,10 +777,14 @@
             this.txtIdPedido.TabIndex = 2;
             this.txtIdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+=======
+>>>>>>> Stashed changes
             // FrmOrdemServico
             // 
+            this.AcceptButton = this.BtnSalvar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancelar;
             this.ClientSize = new System.Drawing.Size(1043, 722);
             this.Controls.Add(this.PnBotoes);
             this.Controls.Add(this.PnPrincipal);
@@ -801,5 +864,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Total;
         private System.Windows.Forms.TextBox txtIdPedido;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.Label LblMarca;
+        private System.Windows.Forms.TextBox TxtMarca;
+>>>>>>> Stashed changes
     }
 }
