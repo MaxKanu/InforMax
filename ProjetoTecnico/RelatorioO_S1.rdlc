@@ -86,7 +86,11 @@
                   <TextRun>
                     <Value>Modelo:</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -97,8 +101,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>2.33888cm</Top>
             <Left>7.69465cm</Left>
+=======
+            <Top>1.70388cm</Top>
+            <Left>6.10715cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.73229cm</Height>
             <Width>1.99729cm</Width>
             <Style>
@@ -120,7 +129,11 @@
                   <TextRun>
                     <Value>Aparelho:</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -131,10 +144,17 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>2.33888cm</Top>
             <Left>0.17703cm</Left>
             <Height>0.73229cm</Height>
             <Width>2.32297cm</Width>
+=======
+            <Top>1.70388cm</Top>
+            <Left>0.17703cm</Left>
+            <Height>0.73229cm</Height>
+            <Width>2.10313cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -155,7 +175,11 @@
                   <TextRun>
                     <Value>Cliente:</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -189,7 +213,11 @@
                   <TextRun>
                     <Value>=Parameters!rpModelo.Value</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -199,14 +227,23 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>3.07117cm</Top>
             <Left>7.11256cm</Left>
+=======
+            <Top>2.43617cm</Top>
+            <Left>5.52506cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.73229cm</Height>
             <Width>3.32711cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
+<<<<<<< HEAD
                 <Style>None</Style>
+=======
+                <Style>Solid</Style>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -223,7 +260,11 @@
                   <TextRun>
                     <Value>=Parameters!rpAparelho.Value</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -233,14 +274,22 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>3.07117cm</Top>
+=======
+            <Top>2.43617cm</Top>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Left>0.17703cm</Left>
             <Height>0.73229cm</Height>
             <Width>2.7846cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
+<<<<<<< HEAD
                 <Style>None</Style>
+=======
+                <Style>Solid</Style>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -257,7 +306,11 @@
                   <TextRun>
                     <Value>=Parameters!rpCliente.Value</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -274,7 +327,11 @@
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
+<<<<<<< HEAD
                 <Style>None</Style>
+=======
+                <Style>Solid</Style>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -291,7 +348,11 @@
                   <TextRun>
                     <Value>Data O_S:</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -302,8 +363,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>0.70327cm</Top>
             <Left>8.38256cm</Left>
+=======
+            <Top>0.56642cm</Top>
+            <Left>11.00544cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.6cm</Height>
             <Width>3.47895cm</Width>
             <ZIndex>6</ZIndex>
@@ -326,7 +392,11 @@
                   <TextRun>
                     <Value>Defeito:</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -337,8 +407,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>2.33888cm</Top>
             <Left>12.58132cm</Left>
+=======
+            <Top>1.70388cm</Top>
+            <Left>12.26382cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.73229cm</Height>
             <Width>3.47895cm</Width>
             <ZIndex>7</ZIndex>
@@ -361,7 +436,11 @@
                   <TextRun>
                     <Value>=Parameters!rpData.Value</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
+=======
+                      <FontSize>12pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -371,14 +450,23 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>0.57326cm</Top>
             <Left>12.0379cm</Left>
+=======
+            <Top>0.43641cm</Top>
+            <Left>14.66078cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.73001cm</Height>
             <Width>4.96062cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
+<<<<<<< HEAD
                 <Style>None</Style>
+=======
+                <Style>Solid</Style>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -395,8 +483,12 @@
                   <TextRun>
                     <Value>=Parameters!rpDefeito.Value</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+=======
+                      <FontSize>14pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -406,8 +498,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>3.07117cm</Top>
             <Left>11.00975cm</Left>
+=======
+            <Top>2.43617cm</Top>
+            <Left>10.69225cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>1.83873cm</Height>
             <Width>6.77311cm</Width>
             <ZIndex>9</ZIndex>
@@ -415,7 +512,10 @@
               <Border>
                 <Style>Solid</Style>
               </Border>
+<<<<<<< HEAD
               <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -432,13 +532,21 @@
                   <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
+<<<<<<< HEAD
                   <Width>6.04005cm</Width>
+=======
+                  <Width>6.78778cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.95019cm</Width>
                 </TablixColumn>
                 <TablixColumn>
+<<<<<<< HEAD
                   <Width>2.8455cm</Width>
+=======
+                  <Width>3.47896cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
@@ -457,6 +565,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
+<<<<<<< HEAD
                                   <Value>Id </Value>
                                   <Style />
                                 </TextRun>
@@ -464,6 +573,13 @@
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                                  <Value>Id Pedidos</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -472,7 +588,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -494,9 +613,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -505,7 +628,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -527,9 +653,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
@@ -538,7 +668,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -560,9 +693,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox21</rd:DefaultName>
@@ -571,7 +708,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -593,9 +733,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox23</rd:DefaultName>
@@ -604,7 +748,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -626,9 +773,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox25</rd:DefaultName>
@@ -637,7 +788,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -664,9 +818,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>IdPedidos</rd:DefaultName>
@@ -675,7 +833,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -697,9 +858,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Quantidade</rd:DefaultName>
@@ -708,7 +873,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -730,9 +898,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Descricao</rd:DefaultName>
@@ -741,7 +913,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -763,9 +938,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ValorUnitario</rd:DefaultName>
@@ -774,7 +953,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -796,9 +978,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ValorDesconto</rd:DefaultName>
@@ -807,7 +993,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -829,9 +1018,13 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
+<<<<<<< HEAD
                               <Style>
                                 <TextAlign>Center</TextAlign>
                               </Style>
+=======
+                              <Style />
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ValorTotal</rd:DefaultName>
@@ -840,7 +1033,10 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+<<<<<<< HEAD
                             <VerticalAlign>Middle</VerticalAlign>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -874,10 +1070,17 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsRelatorio</DataSetName>
+<<<<<<< HEAD
             <Top>6.32037cm</Top>
             <Left>0.11784cm</Left>
             <Height>1.2cm</Height>
             <Width>17.86979cm</Width>
+=======
+            <Top>5.05037cm</Top>
+            <Left>0.37042cm</Left>
+            <Height>1.2cm</Height>
+            <Width>19.25098cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -894,7 +1097,11 @@
                   <TextRun>
                     <Value>Valot Total:</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>12pt</FontSize>
+=======
+                      <FontSize>14pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -903,8 +1110,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
+<<<<<<< HEAD
             <Top>7.99013cm</Top>
             <Left>9.21827cm</Left>
+=======
+            <Top>7.54034cm</Top>
+            <Left>11.08481cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.72637cm</Height>
             <Width>3.39958cm</Width>
             <ZIndex>11</ZIndex>
@@ -927,7 +1139,11 @@
                   <TextRun>
                     <Value>=Parameters!rpValorTotal.Value</Value>
                     <Style>
+<<<<<<< HEAD
                       <FontSize>12pt</FontSize>
+=======
+                      <FontSize>14pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -937,8 +1153,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
             <Top>7.94011cm</Top>
             <Left>12.79424cm</Left>
+=======
+            <Top>7.49032cm</Top>
+            <Left>14.66078cm</Left>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
             <Height>0.81167cm</Height>
             <Width>4.96062cm</Width>
             <ZIndex>12</ZIndex>
@@ -946,6 +1167,7 @@
               <Border>
                 <Style>None</Style>
               </Border>
+<<<<<<< HEAD
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -1016,6 +1238,8 @@
               <Border>
                 <Style>None</Style>
               </Border>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1023,6 +1247,7 @@
             </Style>
           </Textbox>
         </ReportItems>
+<<<<<<< HEAD
         <Height>4.06017in</Height>
         <Style />
       </Body>
@@ -1030,6 +1255,15 @@
       <Page>
         <PageHeader>
           <Height>3.175cm</Height>
+=======
+        <Height>3.28125in</Height>
+        <Style />
+      </Body>
+      <Width>14.78199in</Width>
+      <Page>
+        <PageHeader>
+          <Height>5.55625cm</Height>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1040,9 +1274,15 @@
                   <Value>SGN_10_05_2021_16334530349991</Value>
                   <Sizing>Fit</Sizing>
                   <Top>0.36724cm</Top>
+<<<<<<< HEAD
                   <Left>0.43469cm</Left>
                   <Height>2.17276cm</Height>
                   <Width>5.18395cm</Width>
+=======
+                  <Left>0.17703cm</Left>
+                  <Height>4.26297cm</Height>
+                  <Width>6.90374cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -1058,7 +1298,11 @@
                         <TextRun>
                           <Value>Ordem De Serviço e Vendas</Value>
                           <Style>
+<<<<<<< HEAD
                             <FontSize>11pt</FontSize>
+=======
+                            <FontSize>16pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                             <FontWeight>Bold</FontWeight>
                           </Style>
                         </TextRun>
@@ -1069,10 +1313,17 @@
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox32</rd:DefaultName>
+<<<<<<< HEAD
                   <Top>0.04974cm</Top>
                   <Left>6.0123cm</Left>
                   <Height>0.64382cm</Height>
                   <Width>11.25771cm</Width>
+=======
+                  <Top>0.68474cm</Top>
+                  <Left>7.45933cm</Left>
+                  <Height>1.14653cm</Height>
+                  <Width>11.83979cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                   <ZIndex>1</ZIndex>
                   <Style>
                     <Border>
@@ -1091,17 +1342,35 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
+<<<<<<< HEAD
                           <Value>I</Value>
+=======
+                          <Value />
+                          <Style />
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                      </Style>
+                    </Paragraph>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>Informax Informática ME-LTDA</Value>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                           <Style>
                             <FontSize>16pt</FontSize>
                           </Style>
                         </TextRun>
+<<<<<<< HEAD
                         <TextRun>
                           <Value>nformax Informática ME-LTDA</Value>
                           <Style>
                             <FontSize>11pt</FontSize>
                           </Style>
                         </TextRun>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                       </TextRuns>
                       <Style>
                         <TextAlign>Center</TextAlign>
@@ -1112,7 +1381,11 @@
                         <TextRun>
                           <Value>Rua Tabatinga, 341 CEP 02847-2020</Value>
                           <Style>
+<<<<<<< HEAD
                             <FontSize>11pt</FontSize>
+=======
+                            <FontSize>16pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                           </Style>
                         </TextRun>
                       </TextRuns>
@@ -1125,7 +1398,11 @@
                         <TextRun>
                           <Value>Vila Itaberaba    São Paulo - S.P.</Value>
                           <Style>
+<<<<<<< HEAD
                             <FontSize>11pt</FontSize>
+=======
+                            <FontSize>16pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                           </Style>
                         </TextRun>
                       </TextRuns>
@@ -1135,10 +1412,17 @@
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox33</rd:DefaultName>
+<<<<<<< HEAD
                   <Top>1.05516cm</Top>
                   <Left>6.0123cm</Left>
                   <Height>1.88172cm</Height>
                   <Width>11.25771cm</Width>
+=======
+                  <Top>1.69016cm</Top>
+                  <Left>7.45933cm</Left>
+                  <Height>2.94005cm</Height>
+                  <Width>11.83979cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                   <ZIndex>2</ZIndex>
                   <Style>
                     <Border>
@@ -1152,8 +1436,13 @@
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
+<<<<<<< HEAD
               <Height>3.175cm</Height>
               <Width>17.78286cm</Width>
+=======
+              <Height>5.55625cm</Height>
+              <Width>37.54626cm</Width>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1168,7 +1457,11 @@
           </Style>
         </PageHeader>
         <PageFooter>
+<<<<<<< HEAD
           <Height>3.38666cm</Height>
+=======
+          <Height>3.59833cm</Height>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1181,7 +1474,11 @@
                     <TextRun>
                       <Value>Os aparelhos não retirados em 90 dias, serão colocados a venda, para cobrir os gastos do conserto</Value>
                       <Style>
+<<<<<<< HEAD
                         <FontSize>11pt</FontSize>
+=======
+                        <FontSize>14pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1192,9 +1489,15 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox46</rd:DefaultName>
+<<<<<<< HEAD
               <Top>0.17639cm</Top>
               <Left>9.63476cm</Left>
               <Height>1.69044cm</Height>
+=======
+              <Top>0.58498cm</Top>
+              <Left>11.49652cm</Left>
+              <Height>2.53711cm</Height>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <Width>8.1201cm</Width>
               <Style>
                 <Border>
@@ -1215,7 +1518,11 @@
                     <TextRun>
                       <Value>Informax</Value>
                       <Style>
+<<<<<<< HEAD
                         <FontSize>11pt</FontSize>
+=======
+                        <FontSize>16pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1224,7 +1531,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
               <Top>2.0723cm</Top>
+=======
+              <Top>2.86604cm</Top>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <Left>0.17703cm</Left>
               <Height>0.73229cm</Height>
               <Width>2.60583cm</Width>
@@ -1240,7 +1551,11 @@
               </Style>
             </Textbox>
             <Line Name="Line1">
+<<<<<<< HEAD
               <Top>0.42016cm</Top>
+=======
+              <Top>1.05516cm</Top>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <Left>1.40447cm</Left>
               <Height>0cm</Height>
               <Width>7.44771cm</Width>
@@ -1260,7 +1575,11 @@
                     <TextRun>
                       <Value>=Parameters!rpCliente.Value</Value>
                       <Style>
+<<<<<<< HEAD
                         <FontSize>9pt</FontSize>
+=======
+                        <FontSize>11pt</FontSize>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -1271,7 +1590,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
+<<<<<<< HEAD
               <Top>0.59655cm</Top>
+=======
+              <Top>1.23155cm</Top>
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
               <Left>2.53528cm</Left>
               <Height>0.83812cm</Height>
               <Width>5.27812cm</Width>
@@ -1329,10 +1652,13 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+<<<<<<< HEAD
     <ReportParameter Name="rpMarca">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1369,11 +1695,14 @@
           <RowIndex>1</RowIndex>
           <ParameterName>rpValorTotal</ParameterName>
         </CellDefinition>
+<<<<<<< HEAD
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>rpMarca</ParameterName>
         </CellDefinition>
+=======
+>>>>>>> 28b3cb84bf395b7bd89d135fada98161b158b2d8
       </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>

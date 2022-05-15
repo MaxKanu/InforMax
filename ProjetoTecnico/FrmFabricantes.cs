@@ -14,10 +14,23 @@ namespace ProjetoTecnico
 {
     public partial class FrmFabricantes : Form
     {
-        public FrmFabricantes()
+        NgFa fabricante = new NgFa();
+        Fabricante fabri = new Fabricante();
+
+        Acao_Tela telaSelecionada;
+        public FrmFabricantes(Acao_Tela acao)
         {
             InitializeComponent();
+            telaSelecionada = acao;
             Cancelar();
+            if (acao.Equals(Acao_Tela.Inserir))
+            {
+                lblTitulo.Text = "Cadastrar Fabricante";
+            }
+            if (acao.Equals(Acao_Tela.InserirProduto))
+            {
+                lblTitulo.Text = "Cadastrar Marca";
+            }
         }
         void Cancelar()
         {
@@ -44,22 +57,40 @@ namespace ProjetoTecnico
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            NgFa fabricante = new NgFa();
-            Fabricante fabri = new Fabricante();
-
-            fabri.Descricao = TxtNome.Text;
-
-            string retorno = fabricante.Inserir(fabri);
-            try
+            if (telaSelecionada.Equals(Acao_Tela.Inserir))
             {
-                int IdFabricante = Convert.ToInt32(retorno);
-                MessageBox.Show("Produto inserido com sucesso! \n\n O codigo gerado foi : " + IdFabricante.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Cancelar();
+                fabri.Descricao = TxtNome.Text;
+
+                string retorno = fabricante.Inserir(fabri);
+                try
+                {
+                    int IdFabricante = Convert.ToInt32(retorno);
+                    MessageBox.Show("Fabricante inserido com sucesso! \n\n O codigo gerado foi : " + IdFabricante.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cancelar();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
-            catch (Exception)
+            if (telaSelecionada.Equals(Acao_Tela.InserirProduto))
             {
-                throw;
+                fabri.Descricao = TxtNome.Text;
+
+                string retorno = fabricante.InserirMarca(fabri);
+                try
+                {
+                    int IdFabricante = Convert.ToInt32(retorno);
+                    MessageBox.Show("Marca inserida com sucesso! \n\n O codigo gerado foi : " + IdFabricante.ToString(), "SUCESSO!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cancelar();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
+           
+           
         }
 
         private void FrmFabricantes_Load(object sender, EventArgs e)

@@ -20,8 +20,29 @@ namespace Negocios
             acesso.AdicionarParametros("@Situacao", pedido.Situacao.IdSituacao);
             acesso.AdicionarParametros("@Cliente", pedido.Cliente.Pessoa.Id);
             acesso.AdicionarParametros("@Marcador", pedido.Marcador);
+            acesso.AdicionarParametros("@TipoAparelho", pedido.IdTipoAparelho);
+            acesso.AdicionarParametros("@Marca", pedido.IdMarca);
+            acesso.AdicionarParametros("@Modelo", pedido.Modelo);
+            acesso.AdicionarParametros("@Observacoes", pedido.Observacoes);
 
             string IdPedido = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspInserirPedido").ToString();
+            return IdPedido;
+        }
+        public string AtualizarPedido(Pedidos pedido)
+        {
+            acesso.LimparParametros();
+            acesso.AdicionarParametros("@IDPedido", pedido.IdPedidos);
+            acesso.AdicionarParametros("@DataHora", pedido.Cadastro);
+            acesso.AdicionarParametros("@Operacao", pedido.Operacao.IdOperacao);
+            acesso.AdicionarParametros("@Situacao", pedido.Situacao.IdSituacao);
+            acesso.AdicionarParametros("@Cliente", pedido.Cliente.Pessoa.Id);
+            acesso.AdicionarParametros("@Marcador", pedido.Marcador);
+            acesso.AdicionarParametros("@TipoAparelho", pedido.IdTipoAparelho);
+            acesso.AdicionarParametros("@Marca", pedido.IdMarca);
+            acesso.AdicionarParametros("@Modelo", pedido.Modelo);
+            acesso.AdicionarParametros("@Observacoes", pedido.Observacoes);
+
+            string IdPedido = acesso.ExecutarManipulacao(CommandType.StoredProcedure, "uspAlterarPedido").ToString();
             return IdPedido;
         }
         public PedidoColecao Pedidos(int? id, string pedido)
@@ -44,13 +65,21 @@ namespace Negocios
                     pedidos.Cliente.Pessoa = new Pessoa();
 
                     pedidos.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
-                    pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdCliente"]);
+                    pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
                     pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
-                    pedidos.Operacao.Descricao = Convert.ToString(linha["Descricao"]);
+                    pedidos.Operacao.IdOperacao = Convert.ToInt32(linha["IdOperacao"]);
+                    pedidos.Operacao.Descricao = Convert.ToString(linha["Operacao"]);
+                    pedidos.Situacao.IdSituacao = Convert.ToInt32(linha["IdSituacao"]);
                     pedidos.Situacao.Situacao = Convert.ToString(linha["Situacao"]);
+                    pedidos.IdTipoAparelho = Convert.ToInt32(linha["IdTipoAparelho"]);
+                    pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
+                    pedidos.IdMarca = Convert.ToInt32(linha["IdMarca"]);
+                    pedidos.Marca = Convert.ToString(linha["Marca"]);
                     pedidos.Cadastro = Convert.ToDateTime(linha["Cadastro"]);
                     pedidos.Marcador = Convert.ToString(linha["Marcador"]);
-
+                    pedidos.Modelo = Convert.ToString(linha["Modelo"]);
+                    pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
+                    
                     colecao.Add(pedidos);
                 }
                 return colecao;

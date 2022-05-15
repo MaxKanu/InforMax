@@ -691,7 +691,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe Print", 19F);
-            this.lblTitulo.Location = new System.Drawing.Point(413, 18);
+            this.lblTitulo.Location = new System.Drawing.Point(312, 15);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(136, 45);
             this.lblTitulo.TabIndex = 0;

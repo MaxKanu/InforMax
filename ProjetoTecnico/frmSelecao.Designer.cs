@@ -54,7 +54,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmSelecao";
-            this.Text = "frmSelecao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Selecao";
             this.ResumeLayout(false);
 
         }

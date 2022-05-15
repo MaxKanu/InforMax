@@ -53,17 +53,76 @@ namespace Negocios
                     itens.Precos = new Precos();
                     itens.Pedidos.Cliente = new ClienteFisico();
                     itens.Pedidos.Cliente.Pessoa = new Pessoa();
-
-                    itens.Pedidos.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
+                    /*
+                                        itens.Pedidos.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
+                                        itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
+                                        itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
+                                        itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
+                                        itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
+                                        itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
+                                        itens.Precos.Descricao = Convert.ToString(linha["Descricao"]);
+                                        itens.Quantidade = Convert.ToInt32(linha["Quantidade"]);
+                                        itens.Precos.ValorUnitario = Convert.ToDecimal(linha["ValorUnitario"]);
+                                        itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
+                                        itens.Precos.ValorDesconto = Convert.ToDecimal(linha["ValorDesconto"]);
+                                        itens.Precos.ValorTotal = Convert.ToDecimal(linha["ValorTotal"]);
+                                        itens.Precos.Preco = Convert.ToDecimal(linha["ValorPedido"]);
+                    */
+                    itens.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
                     itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
                     itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
-                    itens.Precos.Descricao = Convert.ToString(linha["Descricao"]);
+                    itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
+                    itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
+                    itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
+                    itens.Descricao = Convert.ToString(linha["Descricao"]);
                     itens.Quantidade = Convert.ToInt32(linha["Quantidade"]);
-                    itens.Precos.ValorUnitario = Convert.ToDecimal(linha["ValorUnitario"]);
+                    itens.ValorUnitario = Convert.ToDouble(linha["ValorUnitario"]);
                     itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
-                    itens.Precos.ValorDesconto = Convert.ToDecimal(linha["ValorDesconto"]);
-                    itens.Precos.ValorTotal = Convert.ToDecimal(linha["ValorTotal"]);
-                    itens.Precos.Preco = Convert.ToDecimal(linha["ValorPedido"]);
+                    itens.ValorDesconto = Convert.ToDouble(linha["ValorDesconto"]);
+                    itens.ValorTotal = Convert.ToDouble(linha["ValorTotal"]);
+                    itens.ValorPedido = Convert.ToDouble(linha["ValorPedido"]);
+
+                    colecao.Add(itens);
+                }
+                return colecao;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public ItensDePedidoColecao ConsultarPedidos()
+        {
+            ItensDePedidoColecao colecao = new ItensDePedidoColecao();
+            try
+            {
+                acesso.LimparParametros();
+                acesso.AdicionarParametros("@IdPedido", null);
+                //acesso.AdicionarParametros("@IdCliente", ids);
+                DataTable table = acesso.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarItensPedidos");
+
+                foreach (DataRow linha in table.Rows)
+                {
+                    ItensDePedido itens = new ItensDePedido();
+                    itens.Pedidos = new Pedidos();
+                    itens.Precos = new Precos();
+                    itens.Pedidos.Cliente = new ClienteFisico();
+                    itens.Pedidos.Cliente.Pessoa = new Pessoa();
+
+                    itens.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
+                    itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdPessoa"]);
+                    itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
+                    itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
+                    itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
+                    itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
+                    itens.Descricao = Convert.ToString(linha["Descricao"]);
+                    itens.Quantidade = Convert.ToInt32(linha["Quantidade"]);
+                    itens.ValorUnitario = Convert.ToDouble(linha["ValorUnitario"]);
+                    itens.Precos.Percentual = Convert.ToDecimal(linha["PercentualDesconto"]);
+                    itens.ValorDesconto = Convert.ToDouble(linha["ValorDesconto"]);
+                    itens.ValorTotal = Convert.ToDouble(linha["ValorTotal"]);
+                    itens.ValorPedido = Convert.ToDouble(linha["ValorPedido"]);
 
                     colecao.Add(itens);
                 }
@@ -96,6 +155,10 @@ namespace Negocios
                     itens.Pedidos.IdPedidos = Convert.ToInt32(linha["IdPedido"]);
                     itens.Pedidos.Cliente.Pessoa.Id = Convert.ToInt32(linha["IdCliente"]);
                     itens.Pedidos.Cliente.Pessoa.Nome = Convert.ToString(linha["Nome"]);
+                    itens.Pedidos.TipoAparelho = Convert.ToString(linha["Aparelho"]);
+                    itens.Pedidos.Modelo = Convert.ToString(linha["Modelo"]);
+                    itens.Pedidos.Observacoes = Convert.ToString(linha["Observacoes"]);
+                    itens.Pedidos.Marcador = Convert.ToString(linha["Marcador"]);
                     itens.Precos.Preco = Convert.ToDecimal(linha["ValorPedido"]);
 
                     colecao.Add(itens);

@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProjetoTecnico</RootNamespace>
     <AssemblyName>ProjetoTecnico</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +54,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acao_Tela.cs" />
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="frmCadastroJuridico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,11 +153,6 @@
     <Compile Include="frmSelecao.Designer.cs">
       <DependentUpon>frmSelecao.cs</DependentUpon>
     </Compile>
-    <Compile Include="InformaxDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InformaxDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -210,19 +208,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Relatorio_O_S.rdlc" />
-    <None Include="InformaxDataSet.xsc">
-      <DependentUpon>InformaxDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="InformaxDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InformaxDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="InformaxDataSet.xss">
-      <DependentUpon>InformaxDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="RelatorioO_S1.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FrmOrdemServico.datasource" />
+    <None Include="Properties\DataSources\InformaxDataSet.tblItensDePedidosDataTable.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgCj.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgCl.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgFa.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgFu.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgIp.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgOpSi.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgPd.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgPe.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgPr.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgSv.datasource" />
+    <None Include="Properties\DataSources\Negocios.NgTp.datasource" />
+    <None Include="Properties\DataSources\Objetos.ItensDePedido.datasource" />
+    <None Include="Properties\DataSources\Objetos.Pedidos.datasource" />
+    <None Include="Properties\DataSources\Objetos.Precos.datasource" />
+    <None Include="Properties\DataSources\Objetos.Recibos.datasource" />
+    <None Include="Properties\DataSources\ProjetoTecnico.InformaxDataSetTableAdapters.uspConsultarItensPedidosTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ProjetoTecnico.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\ProjetoTecnico.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

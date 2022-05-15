@@ -240,7 +240,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmPesquisarPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPesquisarPedidos";
+            this.Text = "Pesquisar Pedidos";
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();
             this.PnBotoes.ResumeLayout(false);

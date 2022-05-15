@@ -105,7 +105,7 @@ namespace ProjetoTecnico
 
         private void TsFabricante_Click(object sender, EventArgs e)
         {
-            FrmFabricantes fabri = new FrmFabricantes
+            FrmFabricantes fabri = new FrmFabricantes(Acao_Tela.Inserir)
             {
                 MdiParent = this
             };
@@ -227,6 +227,16 @@ namespace ProjetoTecnico
                 MdiParent = this
             };
             pesquisa.Show();
+        }
+
+        private void TsMarca_Click(object sender, EventArgs e)
+        {
+            FrmFabricantes fabri = new FrmFabricantes(Acao_Tela.InserirProduto)
+            {
+                MdiParent = this
+            };
+
+            fabri.Show();
         }
     }
 }

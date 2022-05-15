@@ -175,7 +175,10 @@
             this.Nome,
             this.Valor_Total});
             this.dgwPrincipal.Location = new System.Drawing.Point(324, 246);
+            this.dgwPrincipal.MultiSelect = false;
             this.dgwPrincipal.Name = "dgwPrincipal";
+            this.dgwPrincipal.ReadOnly = true;
+            this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(604, 332);
             this.dgwPrincipal.TabIndex = 49;
             this.dgwPrincipal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgwPrincipal_CellFormatting);
@@ -236,7 +239,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmPesquisaItens";
-            this.Text = "FrmPesquisaItens";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pesquisa Itens";
             this.PnBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPrincipal)).EndInit();

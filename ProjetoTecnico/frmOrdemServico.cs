@@ -16,7 +16,10 @@ namespace ProjetoTecnico
 {
     public partial class FrmOrdemServico : Form
     {
+        private BindingSource BsPrincipal = new BindingSource();
         public Pedidos Propriedade = new Pedidos();
+        //vai pegar os dados selecionado e armazenar no objeto criado
+        public ItensDePedidoColecao pedidoSelecionado;
         public Precos precoSelecionado;
         ItensDePedidoColecao colecaoItens = new ItensDePedidoColecao();
         ItensDePedido itens = new ItensDePedido();
@@ -42,17 +45,22 @@ namespace ProjetoTecnico
             {
                 PesquisarLista();
                 BtnPesquisar.Visible = false;
+                txtIdPedido.Enabled = false;
             }
             if (acao_Tela.Equals(Acao_Tela.InserirServico))
             {
                 PesquisarLista();
                 BtnPesquisar.Visible = false;
+                txtIdPedido.Enabled = false;
             }
             if (acao_Tela.Equals(Acao_Tela.Consultar))
             {
                 txtIdPedido.Enabled = true;
-                BtnProdutos.Enabled = false; BtnServico.Enabled = false;
-                Caixas(); BtnInserir.Enabled = false;
+                BtnPesquisar.Enabled = true;
+                BtnProdutos.Enabled = false;
+                BtnServico.Enabled = false;
+                BtnInserir.Enabled = false;
+                Caixas();
             }
             if (acao_Tela.Equals(Acao_Tela.ConsultarCliente))
             {
@@ -60,6 +68,10 @@ namespace ProjetoTecnico
                 TxtId.Text = itensPedidos.Pedidos.Cliente.Pessoa.Id.ToString();
                 TxtCliente.Text = itensPedidos.Pedidos.Cliente.Pessoa.Nome;
                 TxtValorTotal.Text = itensPedidos.Precos.Preco.ToString();
+                TxtAparelho.Text = itensPedidos.Pedidos.TipoAparelho;
+                TxtModelo.Text = itensPedidos.Pedidos.Modelo;
+                TxtDefeito.Text = itensPedidos.Pedidos.Observacoes;
+                LblNomeOperado.Text = itensPedidos.Pedidos.Marcador;
                 BtnProdutos.Enabled = false; BtnServico.Enabled = false;
                 Caixas(); BtnInserir.Enabled = false; PesquisarLista();
                 printButton.Text = "Print Form";
@@ -75,7 +87,7 @@ namespace ProjetoTecnico
         void Caixas()
         {
             TxtCliente.Enabled = false; TxtDesconto.Enabled = false;
-            TxtId.Enabled = false; txtIdPedido.Enabled = false;
+            TxtId.Enabled = false; //txtIdPedido.Enabled = false;
             TxtIdTarefa.Enabled = false; TxtPercentual.Enabled = false;
             TxtPreco.Enabled = false; TxtProdutos.Enabled = false;
             TxtServico.Enabled = false; TxtQuantidade.Enabled = false;
@@ -261,7 +273,7 @@ namespace ProjetoTecnico
             {
                 colecaoItens = negocioItens.ConsultarPedidos(null, codigo);
             }*/
-
+            BsPrincipal.DataSource = colecaoItens;
             dgwPrincipal.DataSource = null;
             dgwPrincipal.DataSource = colecaoItens;
             dgwPrincipal.Update();
@@ -277,6 +289,8 @@ namespace ProjetoTecnico
             Apagar();
         }
         public static decimal valorTotal;
+        private DataTable dt;
+
         void SomaTotal()
         {
             // vamos somar todos os valores da coluna de preços
@@ -335,6 +349,9 @@ namespace ProjetoTecnico
                     LblNomeOperado.Text = Propriedade.Marcador;
                     TxtId.Text = Propriedade.Cliente.Pessoa.Id.ToString();
                     TxtCliente.Text = Propriedade.Cliente.Pessoa.Nome;
+                    TxtDefeito.Text = Propriedade.Observacoes;
+                    TxtAparelho.Text = Propriedade.TipoAparelho;
+                    TxtModelo.Text = Propriedade.Modelo;
                 }
                 else
                 {
@@ -389,7 +406,8 @@ namespace ProjetoTecnico
             // Metodo para para o codigo
             if (!Validar())
                 return;
-
+            string[] itp = new string[6];
+            ListViewItem l = new ListViewItem(itp);
             itens.Pedidos = new Pedidos();
             itens.Pedidos.Tarefas = new Tarefas();
             itens.Pedidos.Tarefas.Produtos = new Produtos();
@@ -415,6 +433,14 @@ namespace ProjetoTecnico
             }
             total = total + subtotal;
             TxtValorTotal.Text = total.ToString("N");
+            
+            itp[0] = TxtIdTarefa.Text;
+            itp[4] = TxtProdutos.Text;
+            itp[1] = TxtQuantidade.Text;
+            itp[2] = TxtPreco.Text;
+            itp[3] = TxtDesconto.Text;
+            itp[5] = TxtTotal.Text;
+            
 
             itens.Pedidos.IdPedidos = Convert.ToInt32(txtIdPedido.Text);
             itens.Pedidos.Tarefas.Produtos.IdProdutos = Convert.ToInt32(TxtIdTarefa.Text);
@@ -540,16 +566,10 @@ namespace ProjetoTecnico
             //SomaTotal();
             
         }
-        //recebe os controles para o objeto imprimir
-        private void PdImprimirOrdem_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        void ImprimirGrade()
         {
-            e.Graphics.DrawImage(memoryImage, 0, 0);
-        }
-
-        private void BtnImprimir_Click(object sender, EventArgs e)
-        {
-            /*
             DGVPrinter imprimir = new DGVPrinter();
+            
             imprimir.Title = "Ordem de Serviço";
             imprimir.SubTitle = "Informax Informática e Componentes";
             imprimir.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
@@ -559,23 +579,105 @@ namespace ProjetoTecnico
             imprimir.HeaderCellAlignment = StringAlignment.Near;
             imprimir.Footer = "Informax Informática";
             imprimir.FooterSpacing = 15;
-            
+
             imprimir.PrintDataGridView(dgwPrincipal);
-            */
+        }
+        //recebe os controles para o objeto imprimir
+        private void PdImprimirOrdem_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(txtIdPedido.Text, txtIdPedido.Font, Brushes.Black, 100, 100);
+            e.Graphics.DrawString(TxtId.Text, TxtId.Font, Brushes.Black, 100, 150);
+            e.Graphics.DrawString(TxtCliente.Text, TxtCliente.Font, Brushes.Black, 150, 150);
+            e.Graphics.DrawString(TxtAparelho.Text, TxtAparelho.Font, Brushes.Black, 100, 180);
+            e.Graphics.DrawString(TxtModelo.Text, TxtModelo.Font, Brushes.Black, 100, 210);
+            e.Graphics.DrawString(TxtDefeito.Text, TxtDefeito.Font, Brushes.Black, 100, 250);
+        }
+        /*private DataTable GerarO_S()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("IdPedido", typeof(int));
+            dt.Columns.Add("Quantidade", typeof(int));
+            dt.Columns.Add("Descrição", typeof(string));
+            dt.Columns.Add("Preço", typeof(decimal));
+            dt.Columns.Add("Desconto", typeof(decimal));
+            dt.Columns.Add("Valor_Total", typeof(decimal));
+            foreach (DataGridViewRow item in dgwPrincipal.Rows)
+            {
+                dt.Rows.Add(item.Cells["IdPedidos"].Value);
+                dt.Rows.Add(item.Cells["Quant"].Value);
+                dt.Rows.Add(item.Cells["Descricao"].Value);
+                dt.Rows.Add(item.Cells["Valor"].Value);
+                dt.Rows.Add(item.Cells["Desconto"].Value);
+                dt.Rows.Add(item.Cells["Valor_Total"].Value);
+            }
+            return dt;
+        }*/
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            pedidoSelecionado = dgwPrincipal.DataSource as ItensDePedidoColecao;
+            //var dt = GerarO_S();
+            using (var relatorio = new FrmRelatorio(pedidoSelecionado, TxtAparelho.Text, TxtModelo.Text, DateTime.Now.ToString("dd/MM/yyyy"), TxtCliente.Text, TxtDefeito.Text, string.Format("R$ {0:0.00}", TxtValorTotal.Text)))
+            {
+                relatorio.ShowDialog();
+            }
+            /*using (var relatorio = new FrmRelatorio(dt, TxtAparelho.Text, TxtModelo.Text, DateTime.Now.ToString("dd/MM/yyyy"), TxtCliente.Text, TxtDefeito.Text, string.Format("R$ {0:0.00}", TxtValorTotal.Text)))
+            {
+                relatorio.ShowDialog();
+            }
+            //CaptureScreen();
+            if(PDialImpressoras.ShowDialog() == DialogResult.OK)
+            {
+                
+                
+                PdImprimirOrdem.PrinterSettings = PDialImpressoras.PrinterSettings; //Escolhe a Impressora
+                PdImprimirOrdem.DefaultPageSettings.Landscape = true;//Define a orientação da pagina
+                PrintPreviewDialog ppd = new PrintPreviewDialog { Document = PdImprimirOrdem };//abre uma janela de dialogo com a vizualição do documento
+                ((Form)ppd).WindowState = FormWindowState.Maximized;//Abertura da tela maximizada
+                PdImprimirOrdem.PrintPage += delegate (object ev, PrintPageEventArgs ep)
+                {
+                    const int DGV_ALTO = 35;
+                    int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top;//define a area dentro da pagina(retangular)
+                    foreach(DataGridViewColumn col in dgwPrincipal.Columns)
+                    {
+                        ep.Graphics.DrawString(col.HeaderText, new Font("Segoe Print", 16, FontStyle.Bold), Brushes.Black, left ,top);//Define a cor e a fonte do cabeçalho
+                        left += col.Width;
+                    }
+                    left = ep.MarginBounds.Left;
+                    ep.Graphics.FillRectangle(Brushes.Black,left, top + 40, ep.MarginBounds.Right - left, 3);//preenche o tamanho interno do cabeçalho
+                    foreach(DataGridViewRow linha in dgwPrincipal.Rows)//percorre cada linha do datagrid
+                    {
+                        if (linha.Index.Equals(dgwPrincipal.RowCount - 1)) break;//para a leitura, se nao houver nenhuma linha
+                        left = ep.MarginBounds.Left;
+                        foreach(DataGridViewCell celula in linha.Cells)//faz a contagem de cada celula na linha
+                        {
+                            ep.Graphics.DrawString(Convert.ToString(celula.Value), new Font("Segoe Print", 13), Brushes.Black, left, top + 4);//ira fazer os textos, com as fontes e as cores das letras
+                            left += celula.OwningColumn.Width;//Pega a coluna que tem a celula
+                        }
+                        top += DGV_ALTO;
+                    }
+                };
+                //PdImprimirOrdem.Print();
+                //ImprimirGrade();
+                
+            }*/
+
+            /*
             FrmRelatorio relatorio = new FrmRelatorio();
             relatorio.ShowDialog();
             relatorio.Dispose();
+            */
         }
-        Bitmap memoryImage;
-
         private void CaptureScreen()
         {
+            /*
             Graphics myGraphics = this.CreateGraphics();
             Size s = this.Size;
             memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+            */
         }
+
         
     }
 }

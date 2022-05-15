@@ -73,6 +73,7 @@
     <Compile Include="Produtos.cs" />
     <Compile Include="ProdutosColecao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recibos.cs" />
     <Compile Include="Servicos.cs" />
     <Compile Include="ServicosColecao.cs" />
     <Compile Include="Situacoes.cs" />
@@ -80,6 +81,9 @@
     <Compile Include="Tarefas.cs" />
     <Compile Include="Telefone.cs" />
     <Compile Include="TelefoneColecao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Recibos.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
